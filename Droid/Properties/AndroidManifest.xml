@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.referenceguide">
+	<uses-sdk android:minSdkVersion="15" />
+	<application android:label="referenceguide" android:icon="@drawable/icon">
+		<activity android:name="microsoft.identity.client.BrowserTabActivity">
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="msal2cc5b21e-3ac2-482c-8027-47265e2b4b11" android:host="auth" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest>

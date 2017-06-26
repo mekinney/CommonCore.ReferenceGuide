@@ -1,0 +1,49 @@
+﻿{
+  "AzureSettings": {
+    "AzureHubName": "AzureHubName",
+    "AzureListenConnection": "AzureListenConnection"
+  },
+  "HttpSettings": {
+    "HttpTimeOut": 0,
+    "HttpAllowAutoRedirect": false,
+    "IOSHttpHandler": "ModernHttpClient",
+    "AndroidHttpHandler": "ModernHttpClient"
+  },
+  "SocialMedia": {
+    "GoogleSettings": {
+      "GoogleAppId": "",
+      "OAuthClientID_iOS": "",
+      "OAuthClientID_Android": "",
+      "OAuthClientID_UWP": ""
+    },
+    "FaceBookAppId": "",
+    "MicrosoftAppId": ""
+  },
+  "SqliteSettings": {
+    "SQLiteDatabase": "db.db3",
+    "TableNames": [
+      { "tableName": "referenceguide.Appointment" }
+    ]
+  },
+  "MobileCenter_HockeyApp": {
+    "IOSAppId": "IOSAppId",
+    "AndroidAppId": "IOSAppId",
+    "UWPAppId": "IOSAppId"
+  },
+  "WebApi": [
+    {
+      "name": "randomuser",
+      "url": "https://randomuser.me/api/?results=200"
+    },
+    {
+      "name": "randomuserpaginated",
+      "url": "https://randomuser.me/api/?page={0}&results=30"
+    }
+  ],
+  "CustomSettings": [
+    {
+      "name": "",
+      "value": ""
+    }
+  ]
+}
