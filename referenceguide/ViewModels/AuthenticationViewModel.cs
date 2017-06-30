@@ -84,7 +84,7 @@ namespace referenceguide
                     Authenticator = authenticator,
                 };
 
-                await AppData.Instance.AppNav.PushAsync(ap);
+                await this.Navigation.PushAsync(ap);
             }
 
         }

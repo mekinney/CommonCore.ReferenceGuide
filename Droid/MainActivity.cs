@@ -6,6 +6,7 @@ using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using System;
 using Microsoft.Identity.Client;
+using Android.Support.V4.App;
 
 namespace referenceguide.Droid
 {
@@ -27,7 +28,6 @@ namespace referenceguide.Droid
             LoadApplication(new App());
 
             Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0)); //here
-
 
         }
 

@@ -22,6 +22,7 @@ Global
 		QA|Any CPU = QA|Any CPU
 		QA|iPhone = QA|iPhone
 		QA|iPhoneSimulator = QA|iPhoneSimulator
+		Turkey|Any CPU = Turkey|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
@@ -42,6 +43,8 @@ Global
 		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.QA|iPhone.Build.0 = Release|iPhone
 		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.QA|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.QA|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.Turkey|Any CPU.ActiveCfg = Debug|iPhoneSimulator
+		{6D17C96D-A484-4370-AC24-D1043E9ABC5D}.Turkey|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{91806BB2-2DAB-4899-B281-9B953904B733}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{91806BB2-2DAB-4899-B281-9B953904B733}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{91806BB2-2DAB-4899-B281-9B953904B733}.Release|iPhone.ActiveCfg = Release|Any CPU
@@ -60,6 +63,8 @@ Global
 		{91806BB2-2DAB-4899-B281-9B953904B733}.QA|iPhone.Build.0 = Debug|Any CPU
 		{91806BB2-2DAB-4899-B281-9B953904B733}.QA|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{91806BB2-2DAB-4899-B281-9B953904B733}.QA|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{91806BB2-2DAB-4899-B281-9B953904B733}.Turkey|Any CPU.ActiveCfg = Debug|Any CPU
+		{91806BB2-2DAB-4899-B281-9B953904B733}.Turkey|Any CPU.Build.0 = Debug|Any CPU
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.Release|iPhone.ActiveCfg = Release|Any CPU
@@ -78,5 +83,7 @@ Global
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhone.Build.0 = QA|iPhone
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhoneSimulator.ActiveCfg = QA|iPhoneSimulator
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhoneSimulator.Build.0 = QA|iPhoneSimulator
+		{86F351D7-2AA0-457C-A729-131910C7B6BC}.Turkey|Any CPU.ActiveCfg = Debug|Any CPU
+		{86F351D7-2AA0-457C-A729-131910C7B6BC}.Turkey|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

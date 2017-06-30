@@ -79,7 +79,7 @@ namespace referenceguide
 			{
 				SendViewMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, this.Appt);
 				Appt = new Appointment();
-				await AppData.Instance.AppNav.PopAsync(true);
+				await this.Navigation.PopAsync(true);
 			}
 		}
 	}

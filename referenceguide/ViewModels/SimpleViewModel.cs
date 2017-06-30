@@ -189,7 +189,7 @@ namespace referenceguide
 
 			CreateCalendar = new RelayCommand(async (obj) =>
 			{
-				await Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
+				await this.Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
 			});
 
 			PushRegister = new RelayCommand((obj) =>
@@ -256,7 +256,7 @@ namespace referenceguide
             });
 
             CommTest = new RelayCommand(async(obj) => {
-                await AppData.Instance.AppNav.PushAsync(new CommunicationPage());
+                await this.Navigation.PushAsync(new CommunicationPage());
             });
 		}
 

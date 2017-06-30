@@ -87,13 +87,22 @@ namespace referenceguide
             pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
             pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
 
-
+            var btnNav = new GradientButton()
+            {
+                Text = "Navigation Example",
+                Style = AppStyles.LightOrange,
+                AutomationId = "btnNav",
+                Command = new Command(async (obj) =>
+                {
+                    await AppData.Instance.AppNav.PushAsync(new Nav1());
+                })
+            };
 
 			var stack = new StackLayout()
 			{
 				Padding = 20,
 				Spacing = 10,
-				Children = { dlg, not, overlay, blur, snack, playSound, commTest, cal, pnRegister }
+				Children = { dlg, not, overlay, blur, snack, playSound, commTest, cal, pnRegister, btnNav }
 			};
 
             Content = new ScrollView()

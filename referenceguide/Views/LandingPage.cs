@@ -16,6 +16,11 @@ namespace referenceguide
 				Source = "sharedcode.png"
 			};
 
+			var customFont = new Label()
+			{
+				Style = AppStyles.FontLabel,
+				Text = "Xamarin.Forms.CommonCore"
+			};
 
 			var fs = new FormattedString();
 			
@@ -32,10 +37,13 @@ namespace referenceguide
 
 			var lbl = new Label() { FormattedText = fs, Margin = 10 };
 
-			var pnl = new StackLayout()
-			{
-				Children = { topImage, lbl }
-			};
+
+            var pnl = new StackLayout()
+            {
+                Children = { topImage, 
+                    customFont,
+                    lbl }
+            };
 
 			Content = new ScrollView()
 			{
