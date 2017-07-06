@@ -66,7 +66,7 @@
       </intent-filter>
     </activity>
     <activity android:name="microsoft.identity.client.AuthenticationActivity" />
-    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md531e46b185997765898cde66852db2a40.ConnectivityChangeBroadcastReceiver" />
+    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5c503aba5a949febe272c915bf7b398c6.ConnectivityChangeBroadcastReceiver" />
     <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
     <activity android:label="Web Authenticator" android:name="md53c585be971e02235139fd1aef11fc0c1.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="md53c585be971e02235139fd1aef11fc0c1.WebAuthenticatorActivity" />

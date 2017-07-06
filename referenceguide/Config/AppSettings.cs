@@ -1,10 +1,11 @@
 ﻿using System;
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class AppSettings
+    public class AppSettings: CoreSettings
 	{
 		public const string RefreshAppoints = "RefreshAppoints";
 
@@ -16,22 +17,11 @@ namespace referenceguide
 				return CrossSettings.Current;
 			}
 		}
-		public static string AESEncryptionKey
-		{
-			get { return _appSettings.GetValueOrDefault<string>("AESEncryptionKey", null); }
-			set { _appSettings.AddOrUpdateValue<string>("AESEncryptionKey", value); }
-		}
 
 		public static long LastSync
 		{
-			get { return _appSettings.GetValueOrDefault<long>("LastSync", AppSettings.DefaultUTCTicks); }
-			set { _appSettings.AddOrUpdateValue<long>("LastSync", value); }
-		}
-
-		public static string InstallationId
-		{
-			get { return _appSettings.GetValueOrDefault<string>("InstallationId", null); }
-			set { _appSettings.AddOrUpdateValue<string>("InstallationId", value); }
+			get { return _appSettings.GetValueOrDefault("LastSync", AppSettings.DefaultUTCTicks); }
+			set { _appSettings.AddOrUpdateValue("LastSync", value); }
 		}
 
 	}

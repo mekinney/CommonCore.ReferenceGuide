@@ -407,6 +407,7 @@ android/support/v7/app/AppCompatDelegateImplV11.class
 android/support/v4/media/MediaBrowserServiceCompat$3.class
 com/google/android/exoplayer2/text/cea/CeaUtil.class
 android/support/v4/media/MediaBrowserCompat.class
+md5c503aba5a949febe272c915bf7b398c6/ConnectivityChangeBroadcastReceiver.class
 android/support/v7/widget/RecyclerView$RecyclerViewDataObserver.class
 android/support/v7/widget/RecyclerView$ChildDrawingOrderCallback.class
 android/support/v7/media/MediaRouteDescriptor$Builder.class
@@ -697,7 +698,6 @@ android/support/v4/widget/CursorAdapter.class
 android/support/v7/media/MediaRouteProvider$RouteController.class
 android/support/v7/widget/RecyclerView$ItemAnimator$ItemAnimatorListener.class
 com/google/android/exoplayer2/drm/ExoMediaDrm$KeyRequest.class
-md531e46b185997765898cde66852db2a40/ConnectivityChangeBroadcastReceiver.class
 com/google/android/exoplayer2/upstream/DataSource$Factory.class
 android/support/v4/view/ViewCompat$JbMr1ViewCompatImpl.class
 com/google/android/exoplayer2/C$StreamType.class

@@ -98,8 +98,8 @@ namespace referenceguide
         private async Task AuthenticateMicrosoftUser()
         {
 
-            var identityClientApp = new PublicClientApplication(AppData.Instance.MicrosoftAppId);
-            identityClientApp.RedirectUri = $"msal{AppData.Instance.MicrosoftAppId}://auth";
+            var identityClientApp = new PublicClientApplication(CoreSettings.Config.SocialMedia.MicrosoftAppId);
+            identityClientApp.RedirectUri = $"msal{CoreSettings.Config.SocialMedia.MicrosoftAppId}://auth";
             string[] scopes = { "User.Read", "User.ReadBasic.All ", "Mail.Send" };
             UIParent uiParent = null;
 

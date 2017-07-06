@@ -1,4 +1,5 @@
 ﻿{
+  "AESEncryptionKey": "8675309",
   "AzureSettings": {
     "AzureHubName": "referenceguide",
     "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
@@ -21,8 +22,16 @@
   },
   "SqliteSettings": {
     "SQLiteDatabase": "referenceguide.db3",
+    "EncryptionEnabled": true,
     "TableNames": [
-      { "tableName": "referenceguide.Appointment" }
+      {
+        "Name": "referenceguide.Appointment",
+        "EncryptedProperties": [ "Title" ]
+      },
+      {
+        "Name": "referenceguide.PostItem",
+        "EncryptedProperties": [ "Password" ]
+      }
     ]
   },
   "MobileCenter_HockeyApp": {
@@ -30,32 +39,16 @@
     "AndroidAppId": "18a8936c-d627-4b55-b794-e48fa7172d3e",
     "UWPAppId": "IOSAppId"
   },
-  "WebApi": [
-    {
-      "name": "randomuser",
-      "url": "https://randomuser.me/api/?results=200"
-    },
-    {
-      "name": "randomuserpaginated",
-      "url": "https://randomuser.me/api/?page={0}&results=30"
-    },
-    {
-      "name": "referencewebtestpost",
-      "url": "http://homedev:8080/api/SimplePost/TestPersonPost"
-    },
-    {
-      "name": "largefile",
-      "url": "http://www.azdevelop.net/california.json"
-    }
-  ],
-  "CustomSettings": [
-    {
-      "name": "googleClienId",
-      "value": "638673396107-p4kma7k79bhs1c06aev7g4tvj48kjsbb.apps.googleusercontent.com"
-    },
-    {
-      "name": "googleClientSecret",
-      "value": "BliQR6sE2bNn7E5TL5o1_8e-"
-    }
-  ]
+  "WebApi": 
+  {
+    "randomuser": "https://randomuser.me/api/?results=200",
+    "randomuserpaginated": "https://randomuser.me/api/?page={0}&results=30",
+    "referencewebtestpost":"http://homedev:8080/api/SimplePost/TestPersonPost",
+    "largefile": "http://www.azdevelop.net/california.json"
+  },
+  "CustomSettings": 
+  {
+    "googleClienId": "638673396107-p4kma7k79bhs1c06aev7g4tvj48kjsbb.apps.googleusercontent.com",
+    "googleClientSecret": "BliQR6sE2bNn7E5TL5o1_8e-"
+  }
 }

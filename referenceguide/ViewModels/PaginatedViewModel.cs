@@ -47,7 +47,7 @@ namespace referenceguide
 			this.LoadingMessageHUD = "Performing download...";
 			this.IsLoadingHUD = true;
 
-			var url = this.AppData.WebApis["randomuserpaginated"];
+			var url = this.WebApis["randomuserpaginated"];
             url = string.Format(url, pageIndex);
             pageIndex++;
 

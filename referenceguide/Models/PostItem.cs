@@ -1,4 +1,6 @@
 ﻿using System;
+using Xamarin.Forms.CommonCore;
+
 namespace referenceguide
 {
 	public class PostItem
@@ -6,6 +8,9 @@ namespace referenceguide
 		public Guid Id { get; set; }
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
+
+        public string Password { get; set; }
+
 		public int Age { get; set; }
 	}
 }

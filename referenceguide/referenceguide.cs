@@ -11,20 +11,15 @@ namespace referenceguide
 	{
 		public App()
 		{
-           
-			if (string.IsNullOrEmpty(AppSettings.InstallationId))
-				AppSettings.InstallationId = Guid.NewGuid().ToString();
 
-			AppSettings.AESEncryptionKey = "8675309";
-            
-			AppData.Instance.NotificationTags.Add("referenceguide");
+			AppSettings.NotificationTags.Add("referenceguide");
 			
 			MainPage = new MainPage();
 		}
 
 		private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
 		{
-			AppData.Instance.IsConnected = args.IsConnected;
+			AppSettings.IsConnected = args.IsConnected;
 		}
 
 		protected override void OnStart()

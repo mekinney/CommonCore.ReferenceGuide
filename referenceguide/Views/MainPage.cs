@@ -20,7 +20,7 @@ namespace referenceguide
 					BarBackgroundColor = Color.FromHex("#b85921"),
 					BarTextColor = Color.White
 				};
-				AppData.Instance.AppNav = Detail.Navigation;
+				AppSettings.AppNav = Detail.Navigation;
 				MainPage.CurrentDetail = Detail;
 			}
 			catch (Exception ex)

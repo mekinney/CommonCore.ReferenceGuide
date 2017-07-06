@@ -94,7 +94,7 @@ namespace referenceguide
                 AutomationId = "btnNav",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PushAsync(new Nav1());
+                    await AppSettings.AppNav.PushAsync(new Nav1());
                 })
             };
 

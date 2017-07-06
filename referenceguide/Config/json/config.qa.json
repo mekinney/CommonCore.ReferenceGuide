@@ -1,7 +1,8 @@
 ﻿{
+  "AESEncryptionKey": "123",
   "AzureSettings": {
-    "AzureHubName": "AzureHubName",
-    "AzureListenConnection": "AzureListenConnection"
+    "AzureHubName": "hubname",
+    "AzureListenConnection": ""
   },
   "HttpSettings": {
     "HttpTimeOut": 0,
@@ -20,30 +21,29 @@
     "MicrosoftAppId": ""
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "db.db3",
+    "SQLiteDatabase": "app.db3",
+    "EncryptionEnabled": true,
     "TableNames": [
-      { "tableName": "referenceguide.Appointment" }
+      {
+        "Name": "namespace.tableName",
+      },
+      {
+        "Name": "namespace.tableName2",
+        "EncryptedProperties": [ "PropertyName" ]
+      }
     ]
   },
   "MobileCenter_HockeyApp": {
-    "IOSAppId": "IOSAppId",
-    "AndroidAppId": "IOSAppId",
-    "UWPAppId": "IOSAppId"
+    "IOSAppId": "",
+    "AndroidAppId": "",
+    "UWPAppId": ""
   },
-  "WebApi": [
-    {
-      "name": "randomuser",
-      "url": "https://randomuser.me/api/?results=200"
-    },
-    {
-      "name": "randomuserpaginated",
-      "url": "https://randomuser.me/api/?page={0}&results=30"
-    }
-  ],
-  "CustomSettings": [
-    {
-      "name": "",
-      "value": ""
-    }
-  ]
+  "WebApi": {
+    "customName": "https://someurl.com",
+    "customName2": "https://someurl2.com"
+  },
+  "CustomSettings": {
+    "CustomName": "somevalue",
+    "customName2": "somevalue2"
+  }
 }

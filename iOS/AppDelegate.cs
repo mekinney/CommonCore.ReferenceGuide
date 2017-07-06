@@ -20,20 +20,16 @@ namespace referenceguide.iOS
         {
 
 #if DEBUG
-            AppBuid.CurrentBuid = "dev";
+            AppSettings.CurrentBuid = "dev";
 #elif QA
-            AppBuid.CurrentBuid = "qa";
+            AppSettings.CurrentBuid = "qa";
 #elif RELEASE
-			AppBuid.CurrentBuid = "prod";
+			AppSettings.CurrentBuid = "prod";
 #endif
 
             global::Xamarin.Forms.Forms.Init();
 
-            CachedImageRenderer.Init();
-            CarouselViewRenderer.Init();
-
-            CrossPushNotification.Initialize<CrossPushNotificationListener>();
-            CrossPushNotification.Current.Register();
+            InitGlobalLibraries();
 
             LoadApplication(new App());
 
@@ -42,9 +38,11 @@ namespace referenceguide.iOS
             return base.FinishedLaunching(app, options);
         }
 
+
+
         public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
-            AppData.Instance.DeviceToken = deviceToken;
+            AppSettings.DeviceToken = deviceToken;
             if (CrossPushNotification.Current is IPushNotificationHandler)
             {
                 ((IPushNotificationHandler)CrossPushNotification.Current).OnRegisteredSuccess(deviceToken);
@@ -76,22 +74,35 @@ namespace referenceguide.iOS
         }
 
 
-        public override bool OpenUrl(UIApplication application,NSUrl url,string sourceApplication,NSObject annotation)
+        public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
         {
             var absoluteUrl = url.AbsoluteString;
-            var msurl = $"msal{AppData.Instance.MicrosoftAppId}://auth";
+            var msurl = $"msal{CoreSettings.Config.SocialMedia.MicrosoftAppId}://auth";
 
             if (absoluteUrl.StartsWith(msurl, StringComparison.CurrentCultureIgnoreCase))
             {
                 AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(url);
             }
-            else{
-				Uri uri_netfx = new Uri(url.AbsoluteString);
-				AuthenticationState.Authenticator.OnPageLoading(uri_netfx);
+            else
+            {
+                Uri uri_netfx = new Uri(url.AbsoluteString);
+                AuthenticationState.Authenticator.OnPageLoading(uri_netfx);
             }
 
             return true;
         }
+
+        private void InitGlobalLibraries()
+        {
+			CachedImageRenderer.Init();
+			CarouselViewRenderer.Init();
+
+			CrossPushNotification.Initialize<CrossPushNotificationListener>();
+			CrossPushNotification.Current.Register();
+        }
+
+
+
     }
 
 

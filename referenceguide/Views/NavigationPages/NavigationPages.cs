@@ -17,7 +17,7 @@ namespace referenceguide
                 Command = new Command(async (obj) =>
                 {
                     
-                    await AppData.Instance.AppNav.PushAsync(new Nav2());
+                    await AppSettings.AppNav.PushAsync(new Nav2());
                 })
             };
 
@@ -41,7 +41,7 @@ namespace referenceguide
                 AutomationId = "btn",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PushAsync(new Nav3());
+                    await AppSettings.AppNav.PushAsync(new Nav3());
                 })
             };
 
@@ -52,7 +52,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PopAsync(true);
+                    await AppSettings.AppNav.PopAsync(true);
                 })
             };
 
@@ -76,7 +76,7 @@ namespace referenceguide
                 AutomationId = "btn",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PushAsync(new Nav4());
+                    await AppSettings.AppNav.PushAsync(new Nav4());
                 })
             };
 
@@ -87,7 +87,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PopTo<Nav1>(true);
+                    await AppSettings.AppNav.PopTo<Nav1>(true);
                 })
             };
 
@@ -112,7 +112,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PopTo<Nav2>(true);
+                    await AppSettings.AppNav.PopTo<Nav2>(true);
                 })
             };
 

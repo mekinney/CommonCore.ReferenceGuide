@@ -10,6 +10,7 @@ public class CarouselViewRenderer
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_onAttachedToWindow:()V:GetOnAttachedToWindowHandler\n" +
 			"";
 		mono.android.Runtime.register ("CarouselView.FormsPlugin.Android.CarouselViewRenderer, CarouselView.FormsPlugin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", CarouselViewRenderer.class, __md_methods);
 	}
@@ -37,6 +38,14 @@ public class CarouselViewRenderer
 		if (getClass () == CarouselViewRenderer.class)
 			mono.android.TypeManager.Activate ("CarouselView.FormsPlugin.Android.CarouselViewRenderer, CarouselView.FormsPlugin.Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "Android.Content.Context, Mono.Android, Version=0.0.0.0, Culture=neutral, PublicKeyToken=84e04ff9cfb79065", this, new java.lang.Object[] { p0 });
 	}
+
+
+	public void onAttachedToWindow ()
+	{
+		n_onAttachedToWindow ();
+	}
+
+	private native void n_onAttachedToWindow ();
 
 	private java.util.ArrayList refList;
 	public void monodroidAddReference (java.lang.Object obj)

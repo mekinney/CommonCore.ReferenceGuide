@@ -79,7 +79,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PushAsync(new MaterialDesignPage());
+                    await AppSettings.AppNav.PushAsync(new MaterialDesignPage());
                 })
             };
 
@@ -89,7 +89,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    await AppData.Instance.AppNav.PushAsync(new PaginagedListControl());
+                    await AppSettings.AppNav.PushAsync(new PaginagedListControl());
                 })
             };
 
@@ -100,7 +100,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                {
-                   await AppData.Instance.AppNav.PushAsync(new SearchContentPage());
+                   await AppSettings.AppNav.PushAsync(new SearchContentPage());
                })
             };
 
@@ -120,7 +120,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command(async (obj) =>
 			   {
-				   await AppData.Instance.AppNav.PushAsync(new CarouselMain());
+				   await AppSettings.AppNav.PushAsync(new CarouselMain());
 			   })
 			};
 
@@ -130,7 +130,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command(async(obj) =>
 			   {
-				   await AppData.Instance.AppNav.PushAsync(new BackgroundImagePage());
+				   await AppSettings.AppNav.PushAsync(new BackgroundImagePage());
 			   })
 			};
 

@@ -101,13 +101,13 @@ namespace referenceguide
                 {
                     if (!string.IsNullOrEmpty(ClearText))
                     {
-                        EncryptedText = this.EncryptionService.AesEncrypt(ClearText, AppSettings.AESEncryptionKey);
+                        EncryptedText = this.EncryptionService.AesEncrypt(ClearText, this.AESEncryptionKey);
                         ClearText = string.Empty;
                     }
                 }
                 else
                 {
-                    ClearText = this.EncryptionService.AesDecrypt(EncryptedText, AppSettings.AESEncryptionKey);
+                    ClearText = this.EncryptionService.AesDecrypt(EncryptedText, this.AESEncryptionKey);
                     EncryptedText = string.Empty;
                 }
             });
@@ -140,7 +140,7 @@ namespace referenceguide
             HttpPost = new RelayCommand(async (obj) =>
             {
 
-                var url = AppData.Instance.WebApis["referencewebtestpost"];
+                var url = this.WebApis["referencewebtestpost"];
 
                 var p = new PostItem() { FirstName = "Jack", LastName = "Sparrow", Age = 21 };
                 var response = await HttpService.Post<PostItem>(url, p);
@@ -165,7 +165,7 @@ namespace referenceguide
             });
             LongDownload = new RelayCommand(async(obj) => {
                 downloadClient = HttpService.GetWebDownloadClient();
-                downloadClient.DownloadUrl = AppData.Instance.WebApis["largefile"];
+                downloadClient.DownloadUrl = this.WebApis["largefile"];
                 downloadClient.PercentageChanged += (percent) => {
                     Device.BeginInvokeOnMainThread(()=>{
                         ProgressIndicator.ShowProgress("Downloading...", percent);
@@ -204,7 +204,7 @@ namespace referenceguide
             this.LoadingMessageHUD = "Performing download...";
             this.IsLoadingHUD = true;
 
-            var url = this.AppData.WebApis["randomuser"];
+            var url = this.WebApis["randomuser"];
 
             //var isAvailable = await this.HttpService.PingDomain(url);
 
