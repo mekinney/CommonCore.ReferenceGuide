@@ -72,7 +72,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { http, httpPost, httpDownload, sqlite, encrypt, timerSrv }
+                Children = { http, httpPost, httpDownload, sqlite, encrypt, timerSrv,new StackLayout() { HeightRequest = 5 } }
             };
 
             Content = new ScrollView()

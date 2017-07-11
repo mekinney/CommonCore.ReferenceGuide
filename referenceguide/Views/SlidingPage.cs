@@ -50,7 +50,7 @@ namespace referenceguide
 		}
 	}
 
-	public class SlidingPage : BoundPage<SlidingViewModel>
+	public class SlidingPage : BoundPage<MasterDetailViewModel>
 	{
 
 		public SlidingPage()
@@ -104,6 +104,9 @@ namespace referenceguide
 					listView
 				}
 			};
+
+        
+
 		}
 	}
 }

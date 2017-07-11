@@ -38,5 +38,21 @@ namespace referenceguide.Droid
             base.OnActivityResult(requestCode, resultCode, data);
             AuthenticationContinuationHelper.SetAuthenticationContinuationEventArgs(requestCode, resultCode, data);
         }
+
+        public override void OnTrimMemory(Android.Content.TrimMemory level)
+        {
+            switch(level){
+                case Android.Content.TrimMemory.RunningCritical:
+                    break;
+				case Android.Content.TrimMemory.RunningLow:
+					break;
+				case Android.Content.TrimMemory.RunningModerate:
+					break;
+				case Android.Content.TrimMemory.UiHidden:
+					break;
+            }
+            base.OnTrimMemory(level);
+        }
+
     }
 }

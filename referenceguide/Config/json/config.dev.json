@@ -5,6 +5,7 @@
     "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
   },
   "HttpSettings": {
+    "DisplayRawJson": false,
     "HttpTimeOut": 0,
     "HttpAllowAutoRedirect": false,
     "IOSHttpHandler": "ModernHttpClient",

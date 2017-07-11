@@ -63,13 +63,13 @@ namespace referenceguide
             playSound.SetBinding(Button.CommandProperty, "PlaySound");
 
 
-			var commTest = new GradientButton()
-			{
-				Style = AppStyles.LightOrange,
-				Text = "Communication Dependencies",
-				AutomationId = "commTest"
-			};
-			commTest.SetBinding(Button.CommandProperty, "CommTest");
+            var commTest = new GradientButton()
+            {
+                Style = AppStyles.LightOrange,
+                Text = "Communication Dependencies",
+                AutomationId = "commTest"
+            };
+            commTest.SetBinding(Button.CommandProperty, "CommTest");
 
             var cal = new GradientButton()
             {
@@ -79,11 +79,11 @@ namespace referenceguide
             };
             cal.SetBinding(Button.CommandProperty, "CreateCalendar");
 
-			var pnRegister = new GradientButton()
-			{
-				Style = AppStyles.LightOrange,
-				AutomationId = "pnRegister"
-			};
+            var pnRegister = new GradientButton()
+            {
+                Style = AppStyles.LightOrange,
+                AutomationId = "pnRegister"
+            };
             pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
             pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
 
@@ -98,12 +98,13 @@ namespace referenceguide
                 })
             };
 
-			var stack = new StackLayout()
-			{
-				Padding = 20,
-				Spacing = 10,
-				Children = { dlg, not, overlay, blur, snack, playSound, commTest, cal, pnRegister, btnNav }
-			};
+
+            var stack = new StackLayout()
+            {
+                Padding = 20,
+                Spacing = 10,
+                Children = { dlg, not, overlay, blur, snack, playSound, commTest, cal, pnRegister, btnNav, new StackLayout() { HeightRequest = 5 } }
+            };
 
             Content = new ScrollView()
             {

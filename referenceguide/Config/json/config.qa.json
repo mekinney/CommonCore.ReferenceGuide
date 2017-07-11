@@ -5,6 +5,7 @@
     "AzureListenConnection": ""
   },
   "HttpSettings": {
+    "DisplayRawJson": false,
     "HttpTimeOut": 0,
     "HttpAllowAutoRedirect": false,
     "IOSHttpHandler": "ModernHttpClient",

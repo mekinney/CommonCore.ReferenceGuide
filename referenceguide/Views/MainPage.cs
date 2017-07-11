@@ -7,11 +7,12 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class MainPage : MasterDetailPage
+	public class MainPage : BoundMasterDetailPage<MasterDetailViewModel>
 	{
 		public static Page CurrentDetail { get; set; }
 		public MainPage()
 		{
+            
 			try
 			{
                 Master = new SlidingPage();
@@ -22,11 +23,14 @@ namespace referenceguide
 				};
 				AppSettings.AppNav = Detail.Navigation;
 				MainPage.CurrentDetail = Detail;
+
 			}
 			catch (Exception ex)
 			{
 				var x = ex.Message;
 			}
+
+            this.SetBinding(MasterDetailPage.IsPresentedProperty, new Binding("IsPresented",BindingMode.TwoWay));
 
 		}
 	}

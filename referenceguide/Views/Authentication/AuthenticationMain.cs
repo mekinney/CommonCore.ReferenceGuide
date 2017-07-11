@@ -42,7 +42,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { googleAuth, facebookAuth, msAuth, lblToken }
+                Children = { googleAuth, facebookAuth, msAuth, lblToken,new StackLayout() { HeightRequest = 5 } }
             };
 
 			Content = new ScrollView()
