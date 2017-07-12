@@ -2,16 +2,17 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/FileStore.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/NavigationPages/NavigationPages.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/HttpService.cs" Line="225" Column="2" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/FileStore.cs" Line="119" Column="1" />
-      <File FileName="referenceguide/Views/NavigationPages/NavigationPages.cs" Line="162" Column="25" />
+      <File FileName="referenceguide/Views/NavigationPages/NavigationPages.cs" Line="105" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="105" column="24" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="48" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

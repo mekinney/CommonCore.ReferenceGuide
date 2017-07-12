@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace referenceguide
 {
@@ -15,12 +16,12 @@ namespace referenceguide
 			this.OverrideBackButton = true;
 #endif
 
-			var btn = new GradientButton()
+            var btn = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
-                Command = new Command(async(obj) =>
+                Command = new Command(async (obj) =>
                 {
                     await Navigation.PushAsync(new Nav2());
 
@@ -41,6 +42,11 @@ namespace referenceguide
         {
             return true;
         }
+
+        public override void ReleaseResources()
+        {
+            var x = 10;
+        }
     }
     public class Nav2 : BoundPage<Nav2ViewModel>
     {
@@ -50,7 +56,7 @@ namespace referenceguide
 #if __IOS__
 			this.OverrideBackButton = true;
 #endif
-			this.Title = "Nav2";
+            this.Title = "Nav2";
             var btn = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
@@ -93,6 +99,12 @@ namespace referenceguide
         {
             await Navigation.PopTo<Nav1>(true);
         }
+
+        public override void ReleaseResources()
+        {
+            var x = 10;
+
+        }
     }
     public class Nav3 : BoundPage<Nav3ViewModel>
     {
@@ -102,7 +114,7 @@ namespace referenceguide
 #if __IOS__
 			this.OverrideBackButton = true;
 #endif
-			this.Title = "Nav3";
+            this.Title = "Nav3";
             var btn = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
@@ -133,12 +145,19 @@ namespace referenceguide
             };
         }
     }
+	public class Animal
+	{
+		public string Description { get; set; }
+	}
     public class Nav4ViewModel : ObservableViewModel
     {
-        class Animal
+        private string animalDescription;
+        public string AnimalDescription
         {
-            public string Description { get; set; }
+            get { return animalDescription; }
+            set { SetProperty(ref animalDescription, value); }
         }
+
         public override bool OnBackButtonPressed()
         {
             Navigation.PopTo<Nav2>(false).ContinueOn();
@@ -150,17 +169,18 @@ namespace referenceguide
             Navigation.PopTo<Nav2>(false).ContinueOn();
         }
 
-        public async override void LoadViewModelResources()
+        public override void LoadResources()
         {
-
-			var d = await FileStore.GetAsync<Animal>("test");
-            var dd = d;
+            Task.Run(async () =>
+            {
+                var d = await FileStore.GetAsync<Animal>("test");
+                AnimalDescription = d?.Response?.Description;
+            });
         }
 
-        public override void ReleadViewModelResources()
+        public override void ReleaseResources()
         {
             FileStore.SaveAsync<Animal>("test", new Animal() { Description = "Dog" }).ContinueOn();
-           
         }
     }
     public class Nav4 : BoundPage<Nav4ViewModel>
@@ -181,28 +201,44 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
                 {
-                    InjectionManager.ReleaseAllViewModelResourcesExcept<Nav4ViewModel>();
                     await Navigation.PopTo<Nav1>(true);
                 })
             };
+
+            var btnRelease = new GradientButton()
+            {
+                Style = AppStyles.LightOrange,
+                Text = "Release Resources",
+                AutomationId = "btnRelease",
+                Command = new Command((obj) =>
+                {
+                    InjectionManager.ReleaseResourcesExcept<Nav4ViewModel>();
+                })
+            };
+
+            var lbl = new Label()
+            {
+                Margin=5
+            };
+            lbl.SetBinding(Label.TextProperty, "AnimalDescription");
 
             Content = new StackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { btnBack }
+                Children = { btnBack, btnRelease,lbl }
             };
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            VM.LoadViewModelResources();
+            VM.LoadResources();
         }
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-			VM.ReleadViewModelResources();
+            VM.ReleaseResources();
         }
     }
 }
