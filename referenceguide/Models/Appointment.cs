@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore;
 namespace referenceguide
 {
 
-	public class Appointment : DataModel
+	public class Appointment : SqlDataModel
 	{
 		private string title;
 		private string description;
