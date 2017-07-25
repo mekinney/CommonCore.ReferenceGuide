@@ -77,6 +77,7 @@ namespace referenceguide
         public ICommand ShowSnack { get; set; }
         public ICommand PlaySound { get; set; }
         public ICommand CommTest { get; set; }
+        public ICommand ContextMenu { get; set; }
 
 		public SimpleViewModel()
 		{
@@ -258,6 +259,10 @@ namespace referenceguide
             CommTest = new RelayCommand(async(obj) => {
                 await this.Navigation.PushAsync(new CommunicationPage());
             });
+			ContextMenu = new RelayCommand(async (obj) =>
+			{
+				await this.Navigation.PushAsync(new ContextMenuPage());
+			});
 		}
 
 		public void DisplayNotification(LocalNotification note)

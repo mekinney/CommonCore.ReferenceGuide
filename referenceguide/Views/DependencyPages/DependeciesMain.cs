@@ -79,6 +79,14 @@ namespace referenceguide
             };
             cal.SetBinding(Button.CommandProperty, "CreateCalendar");
 
+			var ctxMnu = new GradientButton()
+			{
+				Style = AppStyles.LightOrange,
+				Text = "Native Context Menu",
+				AutomationId = "contextMenu"
+			};
+			ctxMnu.SetBinding(Button.CommandProperty, "ContextMenu");
+
             var pnRegister = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
@@ -103,7 +111,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { dlg, not, overlay, blur, snack, playSound, commTest, cal, pnRegister, btnNav, new StackLayout() { HeightRequest = 5 } }
+                Children = { dlg, not, overlay, blur, snack, playSound, commTest, ctxMnu, cal, pnRegister, btnNav, new StackLayout() { HeightRequest = 5 } }
             };
 
             Content = new ScrollView()
