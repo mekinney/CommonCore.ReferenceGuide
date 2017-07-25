@@ -134,6 +134,22 @@ namespace referenceguide
 			   })
 			};
 
+            var pnl = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 10,
+                Children ={
+                    new Label(){
+                        Margin=5,
+                        Text="Toggle A Selection",
+                        HorizontalOptions= LayoutOptions.StartAndExpand
+                    },
+                    new SwitchControl(){
+                        TrueColor=Color.FromHex("#DF8049")
+                    }
+                }
+            };
+
             var ranking = new RankingControl()
             {
                 Margin=5,
@@ -154,7 +170,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { listPage, md, searchPage, popup, carouselPage, bckImage,ranking,starLbl }
+                Children = { listPage, md, searchPage, popup, carouselPage, bckImage, pnl, ranking,starLbl }
             };
 
             Content = new ScrollView()

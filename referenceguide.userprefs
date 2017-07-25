@@ -1,18 +1,14 @@
-﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/DependencyPages/ContextMenuPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Controls/SegmentControl.cs">
     <Files>
-      <File FileName="referenceguide/Views/DependencyPages/ContextMenuPage.cs" Line="13" Column="23" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/SwitchControlRenderer.Droid.cs" Line="8" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/SwitchControlRenderer.IOS.cs" Line="39" Column="17" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/SwitchControl.cs" Line="3" Column="2" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/SegmentControl.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="referenceguide" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
