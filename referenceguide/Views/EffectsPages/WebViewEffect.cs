@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class WebViewEffect:ContentPage
+    public class WebViewEffect: ContentPage
     {
         public WebViewEffect()
         {
@@ -27,6 +27,11 @@ namespace referenceguide
             {
                 Children = { webView }
             };
+
+			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
+			{
+				InjectionManager.GetViewModel<SimpleViewModel>().Log.LogAnalytics(this.GetType().FullName);
+			}
         }
     }
 }

@@ -60,13 +60,13 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PCLCrypto.2.0.147/lib/xamarinios10/PCLCrypto.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.BCrypt.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.BCrypt.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.BCrypt.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.BCrypt.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Kernel32.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.Kernel32.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Kernel32.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Kernel32.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.NCrypt.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.NCrypt.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.NCrypt.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.NCrypt.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
@@ -80,7 +80,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/sqlite-net-pcl.1.3.3/lib/netstandard1.1/SQLite-net.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/SQLitePCLRaw.bundle_green.1.1.7/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll" \
 	-r \
@@ -424,13 +424,13 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PCLCrypto.2.0.147/lib/xamarinios10/PCLCrypto.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.BCrypt.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.BCrypt.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.BCrypt.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.BCrypt.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Kernel32.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.Kernel32.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Kernel32.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Kernel32.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.NCrypt.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.NCrypt.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.NCrypt.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.NCrypt.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.86/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
@@ -444,7 +444,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugins.Settings.3.0.1/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/sqlite-net-pcl.1.3.3/lib/netstandard1.1/SQLite-net.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/sqlite-net-pcl.1.4.118/lib/netstandard1.1/SQLite-net.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/SQLitePCLRaw.bundle_green.1.1.7/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll" \
 	-r \

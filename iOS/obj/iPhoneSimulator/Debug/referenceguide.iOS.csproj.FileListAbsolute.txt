@@ -47,8 +47,6 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Microsoft.Practices.ServiceLocation.dll.mdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Microsoft.Practices.ServiceLocation.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/ModernHttpClient.dll.mdb
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll.mdb
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Microsoft.Practices.Unity.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PCLCrypto.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/WebP.Touch.xml
@@ -74,10 +72,6 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.xml
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.Windows.Core.xml
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.Kernel32.xml
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.BCrypt.xml
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.NCrypt.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.xml
@@ -88,6 +82,12 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.Abstractions.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.Abstractions.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.xml
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.Windows.Core.xml
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.Kernel32.xml
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.BCrypt.xml
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/PInvoke.NCrypt.xml
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.pdb
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/af/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/ar/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/bg/Humanizer.resources.dll
@@ -179,8 +179,8 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/star_outline.png
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/star_selected.png
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/optimized/
-/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.referenceguide.iOS.exe.config
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.pdb
+/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache

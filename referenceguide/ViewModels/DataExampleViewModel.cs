@@ -190,6 +190,7 @@ namespace referenceguide
             this.IsLoadingHUD = true;
 
             var result = await this.SqliteDb.GetByQuery<Appointment>((x) => x.MarkedForDelete == false);
+            Log.LogResponse(result);
 
             this.IsLoadingHUD = false;
             if (result.Success)
@@ -209,6 +210,8 @@ namespace referenceguide
             //var isAvailable = await this.HttpService.PingDomain(url);
 
             var result = await this.HttpService.Get<RootObject>(url);
+			Log.LogResponse(result);
+
             this.IsLoadingHUD = false;
             if (result.Success)
             {

@@ -67,6 +67,7 @@ namespace referenceguide
                 },
                 (error) =>
                 {
+                    Log.LogException(error);
                     AccessToken = error.Message;
                 });
 
@@ -122,6 +123,7 @@ namespace referenceguide
 			}
 			catch (MsalException ex)
 			{
+                Log.LogException(ex);
                 AccessToken = ex.Message;
 			}
         }

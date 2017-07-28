@@ -55,6 +55,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\PostItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\NavigationPages\NavigationPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\ContextMenuPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\AnalyticsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\ErrorsPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoggingViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />

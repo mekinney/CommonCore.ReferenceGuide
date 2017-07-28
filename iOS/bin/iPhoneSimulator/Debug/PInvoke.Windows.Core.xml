@@ -118,6 +118,21 @@
             The "api-ms-win-core-libraryloader-l1-1-1.dll" constant.
             </summary>
         </member>
+        <member name="F:PInvoke.ApiSets.api_ms_win_core_errorhandling_l1_1_1">
+            <summary>
+            The "api-ms-win-core-errorhandling-l1-1-1.dll" constant.
+            </summary>
+        </member>
+        <member name="F:PInvoke.ApiSets.api_ms_win_security_sddl_l1_1_0">
+            <summary>
+            The "api-ms-win-security-sddl-l1-1-0.dll" constant.
+            </summary>
+        </member>
+        <member name="F:PInvoke.ApiSets.api_ms_win_core_registry_l1_1_0">
+            <summary>
+            The "api-ms-win-core-registry-l1-1-0.dll" constant.
+            </summary>
+        </member>
         <member name="T:PInvoke.Constants">
             <summary>
             Constants defined by common C or Windows headers.

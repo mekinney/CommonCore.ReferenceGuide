@@ -59,6 +59,28 @@ namespace referenceguide
                 })
             };
 
+			var analytics = new GradientButton()
+			{
+				Text = "Analytics",
+				Style = AppStyles.LightOrange,
+				AutomationId = "analytics",
+				Command = new Command(async (obj) =>
+				{
+					await Navigation.PushAsync(new AnalyticsPage());
+				})
+			};
+
+			var errors = new GradientButton()
+			{
+				Text = "Errors",
+				Style = AppStyles.LightOrange,
+				AutomationId = "errors",
+				Command = new Command(async (obj) =>
+				{
+					await Navigation.PushAsync(new ErrorsPage());
+				})
+			};
+
 			var timerSrv = new GradientButton()
 			{
 				Text = "Background Timer",
@@ -68,11 +90,11 @@ namespace referenceguide
             timerSrv.SetBinding(GradientButton.TextProperty,"BackgroundButtonTitle");
             timerSrv.SetBinding(GradientButton.CommandProperty,"StartBackgrounding");
 
-			var stack = new StackLayout()
+            var stack = new StackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { http, httpPost, httpDownload, sqlite, encrypt, timerSrv,new StackLayout() { HeightRequest = 5 } }
+                Children = { http, httpPost, httpDownload, sqlite, encrypt, analytics, errors, timerSrv, new StackLayout() { HeightRequest = 5 } }
             };
 
             Content = new ScrollView()

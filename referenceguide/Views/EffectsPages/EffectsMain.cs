@@ -54,6 +54,11 @@ namespace referenceguide
 			{
 				Content = stack
 			};
+
+			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
+			{
+				InjectionManager.GetViewModel<SimpleViewModel>().Log.LogAnalytics(this.GetType().FullName);
+			}
 		}
 	}
 }

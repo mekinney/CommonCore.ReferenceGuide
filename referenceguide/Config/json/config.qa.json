@@ -1,4 +1,5 @@
 ﻿{
+  "AnalyticsEnabled": false,
   "AESEncryptionKey": "123",
   "AzureSettings": {
     "AzureHubName": "hubname",

@@ -2022,6 +2022,12 @@
                 otherwise, it is NULL.
             </returns>
         </member>
+        <member name="M:PInvoke.Kernel32.SetLastError(System.UInt32)">
+            <summary>
+            Sets the last-error code for the calling thread.
+            </summary>
+            <param name="dwErrCode">The last-error code for the thread.</param>
+        </member>
         <member name="M:PInvoke.Kernel32.FindClose(System.IntPtr)">
             <summary>
                 Closes a file search handle opened by the FindFirstFile, FindFirstFileEx, FindFirstFileNameW,

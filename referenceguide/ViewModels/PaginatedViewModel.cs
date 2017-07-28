@@ -52,6 +52,8 @@ namespace referenceguide
             pageIndex++;
 
 			var result = await this.HttpService.Get<RootObject>(url);
+			Log.LogResponse(result);
+
 			this.IsLoadingHUD = false;
 			if (result.Success)
 			{
