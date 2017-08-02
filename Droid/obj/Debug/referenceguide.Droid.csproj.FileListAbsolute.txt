@@ -114,7 +114,6 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.Abstractions.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.Abstractions.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.pdb
-/Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.dll.mdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.xml
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Settings.Abstractions.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Settings.Abstractions.dll.mdb
@@ -221,6 +220,8 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/res/drawable/beach.jpeg
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/R.cs.flag
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/uploadflags.txt
+/Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/referenceguide.Droid.csprojResolveAssemblyReference.cache
+/Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/Plugin.Connectivity.dll.mdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/dda502ec.proguard.stamp
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/proguard/a35ed7280.txt
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/a35ed728.proguard.stamp

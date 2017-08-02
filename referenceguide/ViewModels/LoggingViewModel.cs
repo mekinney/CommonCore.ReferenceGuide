@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
-
+using System.Linq;
 namespace referenceguide
 {
     public class LoggingViewModel : ObservableViewModel
@@ -33,8 +33,7 @@ namespace referenceguide
             AnalyticLogs = new ObservableCollection<AnalyticLog>();
 
             CreateErrorEntry = new RelayCommand(async(obj) => {
-                var exp = new ApplicationException("There is a snake in the watering hole");
-                Log.LogException(exp);
+                PerformErrorLogic();
                 var result =  await Log.GetHistoricalLogs(LogType.Error);
                 ErrorLogs = result.ToObservable<ErrorLog>();
             });
@@ -71,6 +70,22 @@ namespace referenceguide
                     });
 				}
 			});
+        }
+
+        private void PerformErrorLogic()
+        {
+            try
+            {
+                var x = 10;
+                var y = 0;
+                var total = x / y;
+                Console.WriteLine($"The total is {total}");
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite(true);
+                Log.LogException(ex);
+            }
         }
 
     }

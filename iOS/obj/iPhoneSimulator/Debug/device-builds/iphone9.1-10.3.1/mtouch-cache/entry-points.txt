@@ -1,4 +1,5 @@
 WebPGetDecoderVersion
+xamarin_start_wwan
 xamarin_localized_string_format
 xamarin_localized_string_format_1
 xamarin_localized_string_format_2
@@ -317,7 +318,6 @@ xamarin_simd__Vector2_objc_msgSendSuper_nint
 xamarin_simd__Vector2_objc_msgSend_stret_nint
 xamarin_simd__Vector2_objc_msgSendSuper_stret_nint
 UIApplicationMain
-xamarin_start_wwan
 xamarin_get_block_descriptor
 CreateZStream
 CloseZStream

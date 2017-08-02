@@ -57,7 +57,7 @@ void xamarin_setup_impl ()
 int main (int argc, char **argv)
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	int rv = xamarin_main (argc, argv, XamarinLaunchModeApp);
+	int rv = xamarin_main (argc, argv, false);
 	[pool drain];
 	return rv;
 }

@@ -2,19 +2,12 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ServicesPages/AnalyticsPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/BackgroundTimerService.Droid.cs">
     <Files>
-      <File FileName="referenceguide/ViewModels/LoggingViewModel.cs" Line="66" Column="26" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="11" Column="32" />
-      <File FileName="referenceguide/Views/ServicesPages/ErrorsPage.cs" Line="62" Column="30" />
-      <File FileName="referenceguide/Views/ServicesPages/AnalyticsPage.cs" Line="48" Column="30" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/ILogService.cs" Line="63" Column="9" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/LogService.cs" Line="123" Column="14" />
-      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="95" Column="17" />
-      <File FileName="referenceguide/Views/ServicesPages/EncryptionPage.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/BackgroundTimerService.Droid.cs" Line="37" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="105" column="24" />
@@ -23,7 +16,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.988820375530335359" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N724" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

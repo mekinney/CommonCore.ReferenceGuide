@@ -144,7 +144,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Plugin.Connectivity.Reachability.InternetConnectionStatuses">
+        <member name="M:Plugin.Connectivity.Reachability.GetActiveConnectionType">
             <summary>
             Checks internet connection status
             </summary>

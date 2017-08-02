@@ -1,11 +1,12 @@
-# Version: 10.11.0.126 (master: 7571635e)
+# Version: 10.10.0.36 (d15-2: d2270eec)
 # [first argument, ignore] # --cache
-/Library/Frameworks/Xamarin.iOS.framework/Versions/10.11.0.126/lib/mtouch/mtouch.exe \
+/Library/Frameworks/Xamarin.iOS.framework/Versions/10.10.0.36/lib/mtouch/mtouch.exe \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/mtouch-cache" \
 	--sim \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/iOS/bin/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3.1/referenceguide.iOS.app" \
 	--executable \
 	referenceguide.iOS \
+	--fastdev \
 	--debug \
 	--profiling \
 	--nolink \
@@ -15,7 +16,6 @@
 	10.3 \
 	--targetver \
 	8.0 \
-	--aot-options=-O=-float32 \
 	--http-message-handler=HttpClientHandler \
 	--abi=x86_64 \
 	--symbollist \
@@ -68,9 +68,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.2/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.2/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll" \
 	-r \
@@ -432,9 +432,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/PInvoke.Windows.Core.0.5.97/lib/portable-net45+win8+wpa81/PInvoke.Windows.Core.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.2/lib/Xamarin.iOS10/Plugin.Connectivity.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.1/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
+	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Xam.Plugin.Connectivity.3.0.2/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ReferenceGuide/packages/Plugin.Permissions.2.0.1/lib/Xamarin.iOS10/Plugin.Permissions.Abstractions.dll" \
 	-r \
