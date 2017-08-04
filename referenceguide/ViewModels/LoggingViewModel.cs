@@ -48,7 +48,7 @@ namespace referenceguide
 			});
         }
 
-        public override void LoadResources()
+        public override void LoadResources(string parameter = null)
         {
 			Log.GetHistoricalLogs(LogType.Analytic).ContinueWith((x) =>
 			{

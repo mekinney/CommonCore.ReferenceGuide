@@ -43,7 +43,7 @@ namespace referenceguide
             return true;
         }
 
-        public override void ReleaseResources()
+        public override void ReleaseResources(string parameter = null)
         {
             var x = 10;
         }
@@ -100,7 +100,7 @@ namespace referenceguide
             await Navigation.PopTo<Nav1>(true);
         }
 
-        public override void ReleaseResources()
+        public override void ReleaseResources(string parameter = null)
         {
             var x = 10;
 
@@ -169,7 +169,7 @@ namespace referenceguide
             Navigation.PopTo<Nav2>(false).ContinueOn();
         }
 
-        public override void LoadResources()
+        public override void LoadResources(string parameter = null)
         {
             Task.Run(async () =>
             {
@@ -178,7 +178,7 @@ namespace referenceguide
             });
         }
 
-        public override void ReleaseResources()
+        public override void ReleaseResources(string parameter = null)
         {
             FileStore.SaveAsync<Animal>("test", new Animal() { Description = "Dog" }).ContinueOn();
         }

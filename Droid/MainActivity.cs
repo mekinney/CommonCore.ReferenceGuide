@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.Views;
 using Android.OS;
 using Microsoft.Identity.Client;
+using Xamarin.Forms.CommonCore;
 
 namespace referenceguide.Droid
 {
@@ -12,6 +13,7 @@ namespace referenceguide.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            this.EnableStrictMode();
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;

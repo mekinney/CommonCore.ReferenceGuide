@@ -407,7 +407,6 @@ android/support/v7/app/AppCompatDelegateImplV11.class
 android/support/v4/media/MediaBrowserServiceCompat$3.class
 com/google/android/exoplayer2/text/cea/CeaUtil.class
 android/support/v4/media/MediaBrowserCompat.class
-md5c503aba5a949febe272c915bf7b398c6/ConnectivityChangeBroadcastReceiver.class
 android/support/v7/widget/RecyclerView$RecyclerViewDataObserver.class
 android/support/v7/widget/RecyclerView$ChildDrawingOrderCallback.class
 android/support/v7/media/MediaRouteDescriptor$Builder.class
@@ -652,6 +651,7 @@ android/support/v4/app/NotificationCompat$BigTextStyle.class
 android/support/v4/media/MediaDescriptionCompat.class
 android/support/v4/media/session/MediaSessionCompat$QueueItem.class
 android/support/v7/media/MediaRouteProviderService$ProviderCallback.class
+md5a7903531ac28e2eb4c8576cdf2655bda/ConnectivityChangeBroadcastReceiver.class
 android/support/v4/view/ViewPager$DecorView.class
 mono/MonoPackageManager_Resources.class
 android/support/v7/widget/TintTypedArray.class
