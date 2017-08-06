@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/SqlDataModel.cs">
     <Files>
       <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="16" Column="1" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="28" Column="4" />
@@ -15,6 +15,8 @@
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/IDeviceInfo.cs" Line="17" Column="33" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DeviceInfo.Droid.cs" Line="14" Column="48" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DeviceInfo.IOS.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Models/Appointment.cs" Line="8" Column="41" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqlDataModel.cs" Line="12" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -25,7 +27,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.988820375530335359" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N424" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>
