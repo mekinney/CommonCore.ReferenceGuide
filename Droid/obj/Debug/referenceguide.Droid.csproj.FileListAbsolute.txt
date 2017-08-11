@@ -1,3 +1,4 @@
+/Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/referenceguide.Droid.csprojResolveAssemblyReference.cache
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/referenceguide.Droid.dll
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/referenceguide.Droid.pdb
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/com.companyname.referenceguide.apk
@@ -173,7 +174,6 @@
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/zh-CN/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/zh-Hans/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/bin/Debug/zh-Hant/Humanizer.resources.dll
-/Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/referenceguide.Droid.csprojResolveAssemblyReference.cache
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Annotations.dll.stamp
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Compat.dll.stamp
 /Volumes/Personal 240/CommonCore.ReferenceGuide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Core.UI.dll.stamp

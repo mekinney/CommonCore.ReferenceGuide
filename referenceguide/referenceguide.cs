@@ -4,6 +4,7 @@ using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
 using System;
 using PushNotification.Plugin;
+using System.Json;
 
 namespace referenceguide
 {
@@ -11,7 +12,7 @@ namespace referenceguide
 	{
 		public App()
 		{
-
+		
 			AppSettings.NotificationTags.Add("referenceguide");
 			
 			MainPage = new MainPage();

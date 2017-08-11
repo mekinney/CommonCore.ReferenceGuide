@@ -1,22 +1,22 @@
-﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/SqlDataModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
     <Files>
-      <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="16" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="28" Column="4" />
-      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="82" Column="78" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="279" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" Line="32" Column="17" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="11" Column="28" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="231" Column="39" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/IEncryptionService.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/IDeviceInfo.cs" Line="17" Column="33" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DeviceInfo.Droid.cs" Line="14" Column="48" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DeviceInfo.IOS.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Models/Appointment.cs" Line="8" Column="41" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqlDataModel.cs" Line="12" Column="18" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="227" Column="33" />
+      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/IContextMenuService.cs" Line="6" Column="41" />
+      <File FileName="referenceguide/Views/DependencyPages/ContextMenuPage.cs" Line="76" Column="33" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="63" Column="43" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationGcmListener.cs" Line="28" Column="10" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationImplementation.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationService.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationsReceiver.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationRegistrationIntentService.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationInstanceIDListenerService.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/referenceguide.cs" Line="15" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
