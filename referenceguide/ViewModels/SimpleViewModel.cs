@@ -78,6 +78,7 @@ namespace referenceguide
         public ICommand PlaySound { get; set; }
         public ICommand CommTest { get; set; }
         public ICommand ContextMenu { get; set; }
+        public ICommand BindingTextChanged { get; set; }
 
 		public SimpleViewModel()
 		{
@@ -263,6 +264,10 @@ namespace referenceguide
 			{
 				await this.Navigation.PushAsync(new ContextMenuPage());
 			});
+            BindingTextChanged = new RelayCommand((obj) =>
+            {
+                //here is where the event now lands.
+            });
 		}
 
 		public void DisplayNotification(LocalNotification note)

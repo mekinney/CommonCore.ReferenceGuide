@@ -1,33 +1,32 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/ReadMe.txt">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="227" Column="33" />
-      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/IContextMenuService.cs" Line="6" Column="41" />
-      <File FileName="referenceguide/Views/DependencyPages/ContextMenuPage.cs" Line="76" Column="33" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="63" Column="43" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationGcmListener.cs" Line="28" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationImplementation.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationService.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationsReceiver.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationRegistrationIntentService.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationInstanceIDListenerService.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/referenceguide.cs" Line="15" Column="3" />
+      <File FileName="referenceguide/ViewModels/PaginatedViewModel.cs" Line="8" Column="2" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Collections/OptimizedObservableCollection.cs" Line="13" Column="36" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/readme.authentication.txt" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/IAuthenticatorService.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/Authentication/AuthenticationMain.cs" Line="7" Column="55" />
+      <File FileName="referenceguide/ViewModels/AuthenticationViewModel.cs" Line="6" Column="7" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/IAccountService.cs" Line="15" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ReadMe.txt" Line="24" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" line="312" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="94" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="169" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="163" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore/Config/InjectionManager.cs" line="33" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N424" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.988820375530335359" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

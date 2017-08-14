@@ -10,6 +10,8 @@ namespace referenceguide
         private RegExBehavior phoneRequiredValidator;
         private PhoneMaskBehavior phoneMask;
         private PropertyChangedBehavior propBehavior;
+        private EventToCommandBehavior txtChangedBehavior;
+
 
         public BehaviorsMain()
         {
@@ -26,6 +28,14 @@ namespace referenceguide
                 ErrorMessage = "Requred Field",
                 RegexExp = @"^[\s\t\r\n]*\S+"
             };
+
+            txtChangedBehavior = new EventToCommandBehavior()
+            {
+                EventName = "TextChanged"
+            };
+            txtChangedBehavior.SetBinding(EventToCommandBehavior.CommandProperty, "BindingTextChanged");
+
+
             phoneMask = new PhoneMaskBehavior();
 
             propBehavior = new PropertyChangedBehavior(VM, (prop, ctrl) =>
@@ -107,13 +117,27 @@ namespace referenceguide
             phoneErrorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: phoneRequiredValidator, path: "HasError", mode: BindingMode.OneWay));
 
 
+			var lblBindingEvent = new Label()
+			{
+				TextColor = Color.Gray,
+				Text = "Event To Command Binding",
+				FontSize = 14,
+				Margin = new Thickness(5, 5, 5, 1)
+			};
+			var bindingEntry = new Entry()
+			{
+				Margin = new Thickness(5, 1, 5, 1),
+				AutomationId = "bindingEntry"
+			};
+            bindingEntry.Behaviors.Add(txtChangedBehavior);
+
             var customLabel = new Label() { Margin = 5, AutomationId = "customLabel" };
             customLabel.Behaviors.Add(propBehavior);
 
             Content = new StackLayout()
             {
                 Padding = 15,
-                Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel }
+                Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel, lblBindingEvent, bindingEntry }
             };
         }
     }

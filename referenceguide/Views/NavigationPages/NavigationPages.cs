@@ -201,7 +201,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
                 {
-                    await Navigation.PopTo<Nav1>(true);
+                    await Navigation.PopTo<Nav2>(true);
                 })
             };
 
