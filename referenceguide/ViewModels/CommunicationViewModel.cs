@@ -9,27 +9,10 @@ namespace referenceguide
 {
     public class CommunicationViewModel : ObservableViewModel
     {
-        private string communicationNumber;
-        private string communicationMessage;
-        private string communicationEmail;
-
-		public string CommunicationEmail
-		{
-			get { return communicationEmail; }
-			set { SetProperty(ref communicationEmail, value); }
-		}
-
-        public string CommunicationNumber
-        {
-            get { return communicationNumber; }
-            set { SetProperty(ref communicationNumber, value); }
-        }
-
-        public string CommunicationMessage
-        {
-            get { return communicationMessage; }
-            set { SetProperty(ref communicationMessage, value); }
-        }
+        
+		public string CommunicationEmail{ get; set; }
+        public string CommunicationNumber{ get; set; }
+        public string CommunicationMessage{ get; set; }
 
         public ICommand SendSMS { get; set; }
         public ICommand SendEmail { get; set; }
@@ -51,8 +34,8 @@ namespace referenceguide
                     !string.IsNullOrEmpty(CommunicationMessage))
                     Communication.SendEmail(new EmailMessage()
                     {
-                        EmailAddress = communicationEmail,
-                        Message = communicationMessage,
+                        EmailAddress = CommunicationEmail,
+                        Message = CommunicationMessage,
                         Subject = "Email Test",
                         Title = "Mobile Email"
                     });

@@ -9,21 +9,10 @@ namespace referenceguide
 {
 	public class MasterDetailViewModel : ObservableViewModel
 	{
-		private ObservableCollection<SlidingPageItem> masterPageItems;
 		private Dictionary<string, NavigationPage> navPages { get; set; } = new Dictionary<string, NavigationPage>();
-		private bool isPresented;
-
-		public bool IsPresented
-		{
-			get { return isPresented; }
-			set { SetProperty(ref isPresented, value); }
-		}
-
-		public ObservableCollection<SlidingPageItem> MasterPageItems
-		{
-			get { return masterPageItems ?? (masterPageItems = new ObservableCollection<SlidingPageItem>()); }
-			set { SetProperty(ref masterPageItems, value); }
-		}
+	
+		public bool IsPresented{ get; set; }
+		public ObservableCollection<SlidingPageItem> MasterPageItems{ get; set; }
 
 		public ICommand NavClicked { get; set; }
 

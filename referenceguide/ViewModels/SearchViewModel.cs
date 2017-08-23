@@ -19,23 +19,12 @@ namespace referenceguide
     }
     public class SearchViewModel : ObservableViewModel, ISearchProvider
     {
-        private ObservableCollection<Person> people;
-        public ObservableCollection<Person> People
-        {
-            get
-            {
-                return people ?? (people = new ObservableCollection<Person>());
-            }
-            set
-            {
-                SetProperty(ref people, value);
-            }
-        }
+
+        public ObservableCollection<Person> People { get; set; } = new ObservableCollection<Person>();
+		public bool SearchIsDefaultAction { get; set; } = false;
+		public string QueryHint { get; set; } = "Last Name";
+
         public ICommand SearchCommand { get; set; }
-
-        public bool SearchIsDefaultAction { get; set; } = false;
-
-        public string QueryHint { get; set; } = "Last Name";
 
         public SearchViewModel()
         {

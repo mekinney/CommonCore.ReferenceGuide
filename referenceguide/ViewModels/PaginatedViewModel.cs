@@ -13,13 +13,9 @@ namespace referenceguide
 	public class PaginatedViewModel : ObservableViewModel
     {
         private RandomUser selectedUser;
-        private OptimizedObservableCollection<RandomUser> randomUsers;
         private int pageIndex = 0;
-        public OptimizedObservableCollection<RandomUser> RandomUsers
-        {
-            get { return randomUsers ?? (randomUsers = new OptimizedObservableCollection<RandomUser>()); }
-            set { SetProperty(ref randomUsers, value); }
-        }
+
+        public OptimizedObservableCollection<RandomUser> RandomUsers { get; set; } = new OptimizedObservableCollection<RandomUser>();
 
         public ICommand LoadMore { get; set; }
 
@@ -28,9 +24,10 @@ namespace referenceguide
             get { return selectedUser; }
             set
             {
-                if (value != null)
+                if (value != null && selectedUser!=value)
                 {
-                    SetProperty(ref selectedUser, value);
+                    selectedUser = value;
+                    OnPropertyChanged("SelectedUser");
                     PageTitle = selectedUser?.FullName;
                 }
             }
@@ -64,10 +61,20 @@ namespace referenceguide
             {
                 using (var updated = RandomUsers.BeginMassUpdate())
                 {
-                    randomUsers.AddRange(result.Response.results.ToRandomUserList());
+                    RandomUsers.AddRange(result.Response.results.ToRandomUserList());
                 }
             }
 
         }
+
+		public override void SaveState()
+		{
+			this.SaveState<PaginatedViewModel>();
+
+		}
+		public override void LoadState()
+		{
+			this.LoadState<PaginatedViewModel>();
+		}
     }
 }

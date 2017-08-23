@@ -20,53 +20,28 @@ namespace referenceguide
     }
 	public class SimpleViewModel : ObservableViewModel
 	{
-		private string firstName;
-		private string pushButtonLabel;
-        private long phoneNumber;
         private int selectedRank;
-        private string selectedRankText;
         private IAudioPlayer audioplayer;
-		private ObservableCollection<State> states;
         private AudioState playingState;
 
         public int SelectedRank
         {
 			get { return selectedRank; }
 			set 
-            { 
-                SetProperty(ref selectedRank, value);
+            {
+
+                selectedRank = value;
+                OnPropertyChanged("SelectedRank");
                 var plural = value == 1 ? "star" : "stars";
                 SelectedRankText = $"You selected {value} {plural}";
             }
         }
-        public string SelectedRankText
-        {
-			get { return selectedRankText; }
-			set { SetProperty(ref selectedRankText, value); }
-        }
-        public long PhoneNumber
-        {
-            get { return phoneNumber; }
-            set { SetProperty(ref phoneNumber, value); }
-        }
-		public string FirstName
-		{
-			get { return firstName; }
-			set { SetProperty(ref firstName, value); }
 
-		}
-		public ObservableCollection<State> States
-		{
-			get { return states ?? (states = new ObservableCollection<State>()); }
-			set { SetProperty(ref states, value); }
-		}
-
-		public string PushButtonLabel
-		{
-			get { return pushButtonLabel; }
-			set { SetProperty(ref pushButtonLabel, value); }
-		}
-
+        public string SelectedRankText{ get; set; }
+        public long PhoneNumber{ get; set; }
+		public string FirstName{ get; set; }
+        public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
+		public string PushButtonLabel{ get; set; }
 
 		public ICommand DialogClick { get; set; }
 		public ICommand NotificationClick { get; set; }
@@ -139,7 +114,6 @@ namespace referenceguide
 
             States = lst.ToObservable();
 			
-
 			DialogClick = new RelayCommand((obj) =>
 			{
 				DialogPrompt.ShowMessage(new Prompt()

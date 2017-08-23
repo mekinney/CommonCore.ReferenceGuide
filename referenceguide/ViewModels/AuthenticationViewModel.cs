@@ -14,12 +14,7 @@ namespace referenceguide
     {
         private string accessToken;
 
-        public string AccessToken
-        {
-            get { return accessToken; }
-            set { SetProperty(ref accessToken, value); }
-        }
-
+        public string AccessToken { get; set; }
         public ICommand GoogleAuth { get; set; }
         public ICommand FaceBookAuth { get; set; }
         public ICommand MicrosoftAuth { get; set; }
@@ -108,8 +103,8 @@ namespace referenceguide
             if(Xamarin.Forms.Device.RuntimePlatform =="Android")
                 uiParent =new UIParent(Xamarin.Forms.Forms.Context as Android.App.Activity);
 #endif
-			try
-			{
+            try
+            {
                 var Client = new GraphServiceClient("https://graph.microsoft.com/v1.0",
                       new DelegateAuthenticationProvider(async (requestMessage) =>
                 {
@@ -118,14 +113,14 @@ namespace referenceguide
                     requestMessage.Headers.Authorization = new AuthenticationHeaderValue("bearer", tokenRequest.AccessToken);
                 }));
 
-				var userInfo = await Client.Me.Request().GetAsync();
-		
-			}
-			catch (MsalException ex)
-			{
+                var userInfo = await Client.Me.Request().GetAsync();
+
+            }
+            catch (MsalException ex)
+            {
                 Log.LogException(ex);
                 AccessToken = ex.Message;
-			}
+            }
         }
 
     }

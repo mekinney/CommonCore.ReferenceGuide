@@ -151,12 +151,8 @@ namespace referenceguide
 	}
     public class Nav4ViewModel : ObservableViewModel
     {
-        private string animalDescription;
-        public string AnimalDescription
-        {
-            get { return animalDescription; }
-            set { SetProperty(ref animalDescription, value); }
-        }
+
+        public string AnimalDescription { get; set; }
 
         public override bool OnBackButtonPressed()
         {
@@ -212,7 +208,7 @@ namespace referenceguide
                 AutomationId = "btnRelease",
                 Command = new Command((obj) =>
                 {
-                    InjectionManager.ReleaseResourcesExcept<Nav4ViewModel>();
+                    InjectionManager.ReleaseResources<Nav4ViewModel>();
                 })
             };
 

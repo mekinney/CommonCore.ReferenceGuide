@@ -12,26 +12,10 @@ namespace referenceguide
 		private TimeSpan startTime;
 		private TimeSpan endTime;
 
-		public TimeSpan StartTime
-		{
-			get { return startTime; }
-			set { SetProperty(ref startTime, value); }
-		}
-
-		public TimeSpan EndTime
-		{
-			get { return endTime; }
-			set { SetProperty(ref endTime, value); }
-		}
-
-		public Appointment Appt
-		{
-			get { return appt; }
-			set { SetProperty(ref appt, value); }
-		}
-
+		public TimeSpan StartTime{ get; set; }
+		public TimeSpan EndTime{ get; set; }
+		public Appointment Appt{ get; set; }
 		public bool DevicePersistOnly { get; set; }
-
 
 		public ICommand CreateEvent { get; set; }
 

@@ -9,61 +9,16 @@ namespace referenceguide
 {
     public class DataExampleViewModel : ObservableViewModel
     {
-        private string clearText;
-        private string encryptedText;
-        private string clearHash1;
-        private string clearHash2;
-        private string hashMatchMessage;
-        private string backgroundButtonTitle;
-        private ObservableCollection<RandomUser> randomUsers;
-        private ObservableCollection<Appointment> appointments;
-
         private WebDownloadClient downloadClient;
 
-        public ObservableCollection<Appointment> Appointments
-        {
-            get { return appointments ?? (appointments = new ObservableCollection<Appointment>()); }
-            set { SetProperty(ref appointments, value); }
-        }
-
-        public ObservableCollection<RandomUser> RandomUsers
-        {
-            get { return randomUsers ?? (randomUsers = new ObservableCollection<RandomUser>()); }
-            set { SetProperty(ref randomUsers, value); }
-        }
-
-        public string HashMatchMessage
-        {
-            get { return hashMatchMessage; }
-            set { SetProperty(ref hashMatchMessage, value); }
-        }
-        public string ClearHash1
-        {
-            get { return clearHash1; }
-            set { SetProperty(ref clearHash1, value); }
-        }
-        public string ClearHash2
-        {
-            get { return clearHash2; }
-            set { SetProperty(ref clearHash2, value); }
-        }
-
-        public string ClearText
-        {
-            get { return clearText; }
-            set { SetProperty(ref clearText, value); }
-        }
-        public string EncryptedText
-        {
-            get { return encryptedText; }
-            set { SetProperty(ref encryptedText, value); }
-        }
-
-        public string BackgroundButtonTitle
-        {
-            get { return backgroundButtonTitle; }
-            set { SetProperty(ref backgroundButtonTitle, value); }
-        }
+        public ObservableCollection<Appointment> Appointments { get; set; } = new ObservableCollection<Appointment>();
+        public ObservableCollection<RandomUser> RandomUsers { get; set; } = new ObservableCollection<RandomUser>();
+        public string HashMatchMessage{ get; set; }
+        public string ClearHash1{ get; set; }
+        public string ClearHash2{ get; set; }
+        public string ClearText{ get; set; }
+        public string EncryptedText{ get; set; }
+        public string BackgroundButtonTitle{ get; set; }
 
 
         public ICommand EncryptText { get; set; }
@@ -78,8 +33,6 @@ namespace referenceguide
         public DataExampleViewModel()
         {
             BackgroundButtonTitle = "Background Timer";
-            Appointments = new ObservableCollection<Appointment>();
-            RandomUsers = new ObservableCollection<RandomUser>();
 
             HashText = new RelayCommand((obj) =>
             {
@@ -227,5 +180,15 @@ namespace referenceguide
                 GetDbAppointments().ContinueWith((t) => { });
             }
         }
+
+		public override void SaveState()
+		{
+			this.SaveState<DataExampleViewModel>();
+
+		}
+		public override void LoadState()
+		{
+			this.LoadState<DataExampleViewModel>();
+		}
     }
 }

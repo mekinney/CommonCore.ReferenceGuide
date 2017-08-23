@@ -8,20 +8,9 @@ namespace referenceguide
 {
     public class LoggingViewModel : ObservableViewModel
     {
-        private ObservableCollection<ErrorLog> errorLogs;
-        private ObservableCollection<AnalyticLog> analyticLogs;
 
-        public ObservableCollection<ErrorLog> ErrorLogs
-        {
-            get { return errorLogs ?? (errorLogs = new ObservableCollection<ErrorLog>()); }
-            set { SetProperty(ref errorLogs, value); }
-        }
-
-		public ObservableCollection<AnalyticLog> AnalyticLogs
-		{
-			get { return analyticLogs ?? (analyticLogs = new ObservableCollection<AnalyticLog>()); }
-			set { SetProperty(ref analyticLogs, value); }
-		}
+        public ObservableCollection<ErrorLog> ErrorLogs { get; set; } = new ObservableCollection<ErrorLog>();
+        public ObservableCollection<AnalyticLog> AnalyticLogs { get; set; } = new ObservableCollection<AnalyticLog>();
 
         public ICommand CreateErrorEntry { get; set; }
         public ICommand ClearErrorEntries { get; set; }
@@ -29,9 +18,7 @@ namespace referenceguide
 
         public LoggingViewModel()
         {
-			ErrorLogs = new ObservableCollection<ErrorLog>();
-            AnalyticLogs = new ObservableCollection<AnalyticLog>();
-
+            
             CreateErrorEntry = new RelayCommand(async(obj) => {
                 PerformErrorLogic();
                 var result =  await Log.GetHistoricalLogs(LogType.Error);

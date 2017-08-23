@@ -7,50 +7,18 @@ namespace referenceguide
 
 	public class Appointment : SqlDataModel
 	{
-		private string title;
-		private string description;
-		private string location;
-		private DateTime startDate;
-		private DateTime endDate;
-		private bool hasReminder;
-
+        
 		public string ID { get; set; }
 
-		public string Title
-		{
-			get { return title; }
-			set { SetProperty(ref title, value); }
-		}
+        public string Title { get; set; }
+        public string Description { get; set; }
+		public string Location{ get; set; }
 
-		public string Description
-		{
-			get { return description; }
-			set { SetProperty(ref description, value); }
-		}
+		public DateTime StartDate{ get; set; }
 
-		public string Location
-		{
-			get { return location; }
-			set { SetProperty(ref location, value); }
-		}
+		public DateTime EndDate{ get; set; }
 
-		public DateTime StartDate
-		{
-			get { return startDate; }
-			set { SetProperty(ref startDate, value); }
-		}
-
-		public DateTime EndDate
-		{
-			get { return endDate; }
-			set { SetProperty(ref endDate, value); }
-		}
-
-		public bool HasReminder
-		{
-			get { return hasReminder; }
-			set { SetProperty(ref hasReminder, value); }
-		}
+		public bool HasReminder{ get; set; }
 
 		public Appointment()
 		{

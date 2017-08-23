@@ -1,14 +1,12 @@
-﻿using Xamarin.Forms.CommonCore;
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
+using Xamarin.Forms.CommonCore;
 using System;
-using PushNotification.Plugin;
-using System.Json;
 
 namespace referenceguide
 {
-	public class App : Application
+    public class App : Application
 	{
 		public App()
 		{
@@ -22,23 +20,31 @@ namespace referenceguide
 		{
 			AppSettings.IsConnected = args.IsConnected;
 		}
+        private void AppScreenSizeChanged(object sender, EventArgs args)
+        {
+            AppSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
+        }
 
 		protected override void OnStart()
 		{
-			//var mobileCenterKeys = $"android={AppData.Instance.MobileCenter_HockeyAppAndroid};ios={AppData.Instance.MobileCenter_HockeyAppiOS}";
-			//MobileCenter.Start(mobileCenterKeys, typeof(Analytics), typeof(Crashes));
-			
+            MainPage.SizeChanged += AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
 		}
 
 		protected override void OnSleep()
 		{
+            MainPage.SizeChanged -= AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
+            this.SaveViewModelState();
 		}
 
 		protected override void OnResume()
 		{
+			MainPage.SizeChanged += AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
+            this.LoadViewModelState();
 		}
+
+
 	}
 }

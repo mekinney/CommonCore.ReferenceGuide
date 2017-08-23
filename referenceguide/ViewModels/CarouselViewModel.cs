@@ -12,26 +12,10 @@ namespace referenceguide
     }
     public class CarouselViewModel: ObservableViewModel
     {
-        private ObservableCollection<CarouselBindingObject> itemSource;
-        private ObservableCollection<string> images;
-        private int position;
+        public int Position{ get; set; }
+        public ObservableCollection<string> Images{ get; set; }
 
-        public int Position
-        {
-            get { return position; }
-            set { SetProperty(ref position, value); }
-        }
-        public ObservableCollection<string> Images
-        {
-            get { return images ?? (images = new ObservableCollection<string>()); }
-            set { SetProperty(ref images, value); }
-        }
-
-        public ObservableCollection<CarouselBindingObject> ItemSource
-        {
-            get { return itemSource ?? (itemSource = new ObservableCollection<CarouselBindingObject>()); }
-            set { SetProperty(ref itemSource, value); }
-        }
+        public ObservableCollection<CarouselBindingObject> ItemSource{ get; set; }
 
         public CarouselViewModel()
         {
