@@ -160,12 +160,6 @@
     <Reference Include="Validation">
       <HintPath>..\packages\Validation.2.4.15\lib\netstandard1.3\Validation.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Graph.Core">
-      <HintPath>..\packages\Microsoft.Graph.Core.1.5.0\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Graph">
-      <HintPath>..\packages\Microsoft.Graph.1.4.0\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\netstandard1.3\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -252,6 +246,30 @@
     </Reference>
     <Reference Include="WebP.Touch">
       <HintPath>..\packages\WebP.Touch.1.0.4\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph.Core">
+      <HintPath>..\packages\Microsoft.Graph.Core.1.6.1\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph">
+      <HintPath>..\packages\Microsoft.Graph.1.5.1\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Analytics">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Analytics.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Analytics.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Crashes">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Crashes.iOS.Bindings">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.14.2\lib\Xamarin.iOS10\Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
