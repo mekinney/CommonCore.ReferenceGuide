@@ -58,6 +58,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\AnalyticsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\ErrorsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoggingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Animations\AnimationsMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AnimationsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />
@@ -70,5 +72,6 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\CarouselPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\NavigationPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Animations\" />
   </ItemGroup>
 </Project>

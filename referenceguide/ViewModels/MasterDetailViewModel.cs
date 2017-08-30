@@ -45,6 +45,12 @@ namespace referenceguide
 			var lst = new List<SlidingPageItem>();
 			lst.Add(new SlidingPageItem
 			{
+				Title = "Animations",
+				IconSource = "index24.png",
+				TargetType = typeof(AnimationsMain)
+			});
+			lst.Add(new SlidingPageItem
+			{
 				Title = "Behaviors",
 				IconSource = "index24.png",
 				TargetType = typeof(BehaviorsMain)
