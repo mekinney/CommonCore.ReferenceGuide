@@ -13,9 +13,9 @@ namespace referenceguide
             var bounceButton = CreateAnimation(
                 "Bounce In",
                 Color.Red,
-				new BeginAnimation()
+				new CoreTriggerAction()
 				{
-					Animation = new BounceInAnimation()
+					Animation = new CoreBounceInAnimation()
 					{
 						Duration = "500"
 					}
@@ -25,9 +25,9 @@ namespace referenceguide
 			var flipButton = CreateAnimation(
 				"Flip",
 				Color.Olive,
-				new BeginAnimation()
+				new CoreTriggerAction()
 				{
-					Animation = new FlipAnimation()
+					Animation = new CoreFlipAnimation()
 					{
 						Duration = "500"
 					}
@@ -37,9 +37,9 @@ namespace referenceguide
 			var roateButton = CreateAnimation(
             	"Rotate",
             	Color.Gray,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new RotateToAnimation()
+            		Animation = new CoreRotateToAnimation()
             		{
             			Duration = "500",
                         Rotation= 360
@@ -51,9 +51,9 @@ namespace referenceguide
 			var fadeButton = CreateAnimation(
             	"Fade",
             	Color.ForestGreen,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new FadeToAnimation()
+            		Animation = new CoreFadeToAnimation()
             		{
             			Duration = "500",
             			Opacity=0
@@ -64,9 +64,9 @@ namespace referenceguide
 			var scaleButton = CreateAnimation(
             	"Scale",
             	Color.DarkTurquoise,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new ScaleToAnimation()
+            		Animation = new CoreScaleToAnimation()
             		{
             			Duration = "500",
             			Scale=0.5
@@ -77,9 +77,9 @@ namespace referenceguide
             var translateButton = CreateAnimation(
                 "Translate",
                 Color.DarkOrange,
-                new BeginAnimation()
+                new CoreTriggerAction()
                 {
-                    Animation = new TranslateToAnimation()
+                    Animation = new CoreTranslateToAnimation()
                     {
                         Duration = "250",
                         TranslateX = -5,
@@ -91,9 +91,9 @@ namespace referenceguide
 			var turnsTileButton = CreateAnimation(
             	"Turnstile Out",
             	Color.Cyan,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new TurnstileOutAnimation()
+            		Animation = new CoreTurnstileOutAnimation()
             		{
             			Duration = "150",
             		}
@@ -103,18 +103,18 @@ namespace referenceguide
             var shakeButton = CreateAnimation(
                 "Shake",
                 Color.BlanchedAlmond,
-                new BeginAnimation()
+                new CoreTriggerAction()
                 {
-                    Animation = new ShakeAnimation()
+                    Animation = new CoreShakeAnimation()
             	}
             );
 
 			var heartBeatButton = CreateAnimation(
             	"Heartbeat",
             	Color.DarkRed,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new HeartAnimation()
+            		Animation = new CorePulseAnimation()
             		{
             			Duration = "250"
             		}
@@ -124,9 +124,9 @@ namespace referenceguide
 			var jumpButton = CreateAnimation(
             	"Jump",
             	Color.Aquamarine,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new HeartAnimation()
+            		Animation = new CorePulseAnimation()
             		{
             			Duration = "500"
             		}
@@ -136,13 +136,13 @@ namespace referenceguide
 			var storyboardButton = CreateAnimation(
             	"StoryBoard",
             	Color.Brown,
-            	new BeginAnimation()
+            	new CoreTriggerAction()
             	{
-            		Animation = new StoryBoard()
+            		Animation = new CoreStoryBoard()
             		{
                         Animations={
-                            new ShakeAnimation(),
-    						new ScaleToAnimation()
+                            new CoreShakeAnimation(),
+    						new CoreScaleToAnimation()
         					{
         						Duration = "500",
         						Scale=0.8
@@ -179,7 +179,7 @@ namespace referenceguide
         }
 
 
-        public Grid CreateAnimation(string buttonText, Color boxColor, BeginAnimation animation)
+        public Grid CreateAnimation(string buttonText, Color boxColor, CoreTriggerAction animation)
         {
             var box = new BoxView()
             {
@@ -196,7 +196,7 @@ namespace referenceguide
                 Actions = { animation }
             };
 
-            var btn = new GradientButton()
+            var btn = new CoreButton()
             {
                 Text = buttonText,
                 Style = AppStyles.LightOrange,
@@ -219,9 +219,9 @@ namespace referenceguide
 				BackgroundColor = Color.Crimson
 			};
 
-            var fadeAnimation = new BeginAnimation()
+            var fadeAnimation = new CoreTriggerAction()
             {
-                Animation = new FadeToAnimation()
+                Animation = new CoreFadeToAnimation()
                 {
                     Target = box,
                     Duration = "300",
@@ -237,13 +237,13 @@ namespace referenceguide
             };
 
         
-			var btn = new GradientButton()
+			var btn = new CoreButton()
 			{
                 Text = "Data Trigger (3)",
 				Style = AppStyles.LightOrange,
 				Triggers = { trigger }
 			};
-            btn.SetBinding(GradientButton.CommandProperty,"ClickEvent");
+            btn.SetBinding(CoreButton.CommandProperty,"ClickEvent");
 
 			var grid = new Grid();
 

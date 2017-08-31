@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Net;
-using FFImageLoading.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class MainPage : BoundMasterDetailPage<MasterDetailViewModel>
+    public class MainPage : BoundMasterDetailPage<MasterDetailViewModel>
 	{
 		public static Page CurrentDetail { get; set; }
 		public MainPage()

@@ -33,7 +33,7 @@ namespace referenceguide
             };
             encryptedLabel.SetBinding(Label.TextProperty, "EncryptedText");
 
-            var btnEncrypt = new GradientButton()
+            var btnEncrypt = new CoreButton()
             {
                 Text = "Encryption",
                 Style = AppStyles.LightOrange,
@@ -73,7 +73,7 @@ namespace referenceguide
             };
             clearHash2.SetBinding(Entry.TextProperty, "ClearHash2");
 
-            var btnHash = new GradientButton()
+            var btnHash = new CoreButton()
             {
                 Text = "Compare Clear Hash",
                 Style = AppStyles.LightOrange,

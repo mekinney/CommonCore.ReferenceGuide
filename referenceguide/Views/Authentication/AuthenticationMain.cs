@@ -10,30 +10,30 @@ namespace referenceguide
         {
             this.Title = "Authentications";
 
-			var googleAuth = new GradientButton()
+			var googleAuth = new CoreButton()
 			{
 				Style = AppStyles.LightOrange,
 				Text = "Google Authentication",
 				AutomationId = "googleAuth"
 			};
-			googleAuth.SetBinding(GradientButton.CommandProperty, "GoogleAuth");
+			googleAuth.SetBinding(CoreButton.CommandProperty, "GoogleAuth");
 
 
-			var facebookAuth = new GradientButton()
+			var facebookAuth = new CoreButton()
 			{
 				Style = AppStyles.LightOrange,
 				Text = "FaceBook Authentication",
 				AutomationId = "facebookAuth"
 			};
-			facebookAuth.SetBinding(GradientButton.CommandProperty, "FaceBookAuth");
+			facebookAuth.SetBinding(CoreButton.CommandProperty, "FaceBookAuth");
 
-			var msAuth = new GradientButton()
+			var msAuth = new CoreButton()
 			{
 				Style = AppStyles.LightOrange,
 				Text = "Microsoft Authentication",
 				AutomationId = "msAuth"
 			};
-			msAuth.SetBinding(GradientButton.CommandProperty, "MicrosoftAuth");
+			msAuth.SetBinding(CoreButton.CommandProperty, "MicrosoftAuth");
 
 			var lblToken = new Label();
 			lblToken.SetBinding(Label.TextProperty, "AccessToken");

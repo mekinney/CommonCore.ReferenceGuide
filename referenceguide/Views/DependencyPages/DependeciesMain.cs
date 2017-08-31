@@ -11,7 +11,7 @@ namespace referenceguide
         {
             this.Title = "Dependencies";
 
-            var dlg = new GradientButton()
+            var dlg = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Dialog",
@@ -20,7 +20,7 @@ namespace referenceguide
             dlg.SetBinding(Button.CommandProperty, "DialogClick");
 
 
-            var not = new GradientButton()
+            var not = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Notification",
@@ -29,7 +29,7 @@ namespace referenceguide
             not.SetBinding(Button.CommandProperty, "NotificationClick");
 
 
-            var overlay = new GradientButton()
+            var overlay = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Overlay",
@@ -38,7 +38,7 @@ namespace referenceguide
             overlay.SetBinding(Button.CommandProperty, "OverlayClick");
 
 
-            var blur = new GradientButton()
+            var blur = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Create Blur",
@@ -46,7 +46,7 @@ namespace referenceguide
             };
             blur.SetBinding(Button.CommandProperty, "Blur");
 
-            var snack = new GradientButton()
+            var snack = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "SnackBar",
@@ -54,7 +54,7 @@ namespace referenceguide
             };
             snack.SetBinding(Button.CommandProperty, "ShowSnack");
 
-            var playSound = new GradientButton()
+            var playSound = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Play Sound",
@@ -63,7 +63,7 @@ namespace referenceguide
             playSound.SetBinding(Button.CommandProperty, "PlaySound");
 
 
-            var commTest = new GradientButton()
+            var commTest = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Communication Dependencies",
@@ -71,7 +71,7 @@ namespace referenceguide
             };
             commTest.SetBinding(Button.CommandProperty, "CommTest");
 
-            var cal = new GradientButton()
+            var cal = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Create Calendar Event",
@@ -79,7 +79,7 @@ namespace referenceguide
             };
             cal.SetBinding(Button.CommandProperty, "CreateCalendar");
 
-			var ctxMnu = new GradientButton()
+			var ctxMnu = new CoreButton()
 			{
 				Style = AppStyles.LightOrange,
 				Text = "Native Context Menu",
@@ -87,7 +87,7 @@ namespace referenceguide
 			};
 			ctxMnu.SetBinding(Button.CommandProperty, "ContextMenu");
 
-            var pnRegister = new GradientButton()
+            var pnRegister = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 AutomationId = "pnRegister"
@@ -95,7 +95,7 @@ namespace referenceguide
             pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
             pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
 
-            var btnNav = new GradientButton()
+            var btnNav = new CoreButton()
             {
                 Text = "Navigation Example",
                 Style = AppStyles.LightOrange,

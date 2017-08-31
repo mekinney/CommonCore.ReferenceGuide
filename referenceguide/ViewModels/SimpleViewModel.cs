@@ -41,6 +41,8 @@ namespace referenceguide
         public long PhoneNumber{ get; set; }
 		public string FirstName{ get; set; }
         public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
+        public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
+        public int SelectedRadioIndex { get; set; } = -1;
 		public string PushButtonLabel{ get; set; }
 
 		public ICommand DialogClick { get; set; }
@@ -111,6 +113,11 @@ namespace referenceguide
                     new State { Value = "WI", Text = "Wisconsin" },
                     new State { Value = "WY", Text = "Wyoming" }
             });
+
+            var radioOptions = new List<string>(
+                new string[] { "Blue", "Red", "Green" }
+            );
+            RadioOptions = radioOptions.ToObservable<string>();
 
             States = lst.ToObservable();
 			

@@ -4,13 +4,13 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class EffectsMain : ContentPage
+	public class EffectsMain : BasePages
 	{
 		public EffectsMain()
 		{
 			this.Title = "Effects";
 
-			var removeEmptyRowsEffect = new GradientButton()
+			var removeEmptyRowsEffect = new CoreButton()
             {
                 Text = "Remove Empty Cell",
                 Style = AppStyles.LightOrange,
@@ -21,7 +21,7 @@ namespace referenceguide
                 })
             };
 
-			var hideListSeparatorEffect = new GradientButton()
+			var hideListSeparatorEffect = new CoreButton()
 			{
 				Text = "Hide List Separator",
 				Style = AppStyles.LightOrange,
@@ -32,7 +32,7 @@ namespace referenceguide
 				})
 			};
 
-			var disableWebViewScrollEffect = new GradientButton()
+			var disableWebViewScrollEffect = new CoreButton()
 			{
 				Text = "WebView Scroll Disable",
 				Style = AppStyles.LightOrange,
@@ -55,10 +55,6 @@ namespace referenceguide
 				Content = stack
 			};
 
-			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
-			{
-				InjectionManager.GetViewModel<SimpleViewModel>().Log.LogAnalytics(this.GetType().FullName);
-			}
 		}
 	}
 }

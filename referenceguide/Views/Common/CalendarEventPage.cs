@@ -72,14 +72,14 @@ namespace referenceguide
             };
             swReminder.SetBinding(Switch.IsToggledProperty, "Appt.HasReminder");
 
-            var btnCreate = new GradientButton()
+            var btnCreate = new CoreButton()
             {
                 Text = "Create Event",
                 Style = AppStyles.LightOrange,
                 Margin = 5,
                 AutomationId = "btnCreate"
             };
-            btnCreate.SetBinding(GradientButton.CommandProperty, "CreateEvent");
+            btnCreate.SetBinding(CoreButton.CommandProperty, "CreateEvent");
 
             Content = new StackLayout()
             {

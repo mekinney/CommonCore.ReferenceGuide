@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
@@ -28,13 +29,13 @@ namespace referenceguide
                 Children = { lbl }
             };
 
-            var lstView = new ListControl(ListViewCachingStrategy.RecycleElement)
+            var lstView = new CoreListView(ListViewCachingStrategy.RecycleElement)
             {
                 VerticalOptions = LayoutOptions.CenterAndExpand,
                 ItemTemplate = new DataTemplate(typeof(StateViewCell)),
                 MaintainSelection=true
             };
-            lstView.SetBinding(ListControl.ItemsSourceProperty,"States");
+            lstView.SetBinding(CoreListView.ItemsSourceProperty,"States");
 
             var placeholder = new StackLayout() { 
                 HorizontalOptions = LayoutOptions.StartAndExpand
@@ -73,7 +74,7 @@ namespace referenceguide
         {
             this.Title = "Controls";
 
-            var md = new GradientButton()
+            var md = new CoreButton()
             {
                 Text = "Material Design",
                 Style = AppStyles.LightOrange,
@@ -83,7 +84,7 @@ namespace referenceguide
                 })
             };
 
-            var listPage = new GradientButton()
+            var listPage = new CoreButton()
             {
                 Text = "List Control",
                 Style = AppStyles.LightOrange,
@@ -94,7 +95,7 @@ namespace referenceguide
             };
 
 
-            var searchPage = new GradientButton()
+            var searchPage = new CoreButton()
             {
                 Text = "Search Page",
                 Style = AppStyles.LightOrange,
@@ -104,7 +105,7 @@ namespace referenceguide
                })
             };
 
-            var popup = new GradientButton()
+            var popup = new CoreButton()
             {
                 Text = "Popup Control",
                 Style = AppStyles.LightOrange,
@@ -114,7 +115,7 @@ namespace referenceguide
                })
             };
 
-			var carouselPage = new GradientButton()
+			var carouselPage = new CoreButton()
 			{
 				Text = "Carousel Page",
 				Style = AppStyles.LightOrange,
@@ -124,7 +125,7 @@ namespace referenceguide
 			   })
 			};
 
-			var bckImage = new GradientButton()
+			var bckImage = new CoreButton()
 			{
 				Text = "Background Image",
 				Style = AppStyles.LightOrange,
@@ -144,33 +145,51 @@ namespace referenceguide
                         Text="Toggle A Selection",
                         HorizontalOptions= LayoutOptions.StartAndExpand
                     },
-                    new SwitchControl(){
+                    new CoreSwitch(){
                         TrueColor=Color.FromHex("#DF8049")
                     }
                 }
             };
 
-            var ranking = new RankingControl()
+            var ranking = new CoreRanking()
             {
-                Margin=5,
-                Count=5,
-                UnSelectedImage="star_outline.png",
+                Margin = 5,
+                Count = 5,
+                UnSelectedImage = "star_outline.png",
                 SelectedImage = "star_selected.png",
             };
-            ranking.SetBinding(RankingControl.SelectedRankProperty,new Binding("SelectedRank",BindingMode.TwoWay));
+            ranking.SetBinding(CoreRanking.SelectedRankProperty, new Binding("SelectedRank", BindingMode.TwoWay));
 
-            var starLbl = new Label() 
-            { 
+            var starLbl = new Label()
+            {
                 Margin = 5,
-                HorizontalOptions = LayoutOptions.Center 
+                HorizontalOptions = LayoutOptions.Center
             };
-            starLbl.SetBinding(Label.TextProperty,"SelectedRankText");
+            starLbl.SetBinding(Label.TextProperty, "SelectedRankText");
+
+
+
+            var x = Font.Default.WithSize(10);
+
+            var radioGroup = new CoreRadioGroup()
+            {
+                Spacing=15,
+                SelectedImage = "checked.png",
+                UnSelectedImage = "unchecked.png",
+                CheckedCommand = new RelayCommand((obj) => {
+                    
+                    var z = obj;
+                })
+
+            };
+            radioGroup.SetBinding(CoreRadioGroup.ItemsSourceProperty, "RadioOptions");
+            radioGroup.SetBinding(CoreRadioGroup.SelectedIndexProperty, "SelectedRadioIndex");
 
             var stack = new StackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { listPage, md, searchPage, popup, carouselPage, bckImage, pnl, ranking,starLbl }
+                Children = { listPage, md, searchPage, popup, carouselPage, bckImage, pnl, ranking, starLbl, radioGroup }
             };
 
             Content = new ScrollView()

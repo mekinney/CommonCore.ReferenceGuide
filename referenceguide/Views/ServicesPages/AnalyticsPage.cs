@@ -29,19 +29,19 @@ namespace referenceguide
         {
 			this.Title = "App Analytics";
 
-			var lst = new ListControl()
+			var lst = new CoreListView()
 			{
 				ItemTemplate = new DataTemplate(typeof(AnalyticsPageCell))
 			};
-			lst.SetBinding(ListControl.ItemsSourceProperty, "AnalyticLogs");
+			lst.SetBinding(CoreListView.ItemsSourceProperty, "AnalyticLogs");
 
-			var btnClear = new GradientButton()
+			var btnClear = new CoreButton()
 			{
 				Text = "Clear",
 				Style = AppStyles.LightOrange,
 				AutomationId = "btnClear"
 			};
-			btnClear.SetBinding(GradientButton.CommandProperty, "ClearAnalyticEntries");
+			btnClear.SetBinding(CoreButton.CommandProperty, "ClearAnalyticEntries");
 
 			Content = new StackLayout()
 			{

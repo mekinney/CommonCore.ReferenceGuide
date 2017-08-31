@@ -22,11 +22,11 @@ namespace referenceguide
         {
             this.Title = "Search Page";
 
-            var lstPeople = new ListControl()
+            var lstPeople = new CoreListView()
             {
                 ItemTemplate = new DataTemplate(typeof(PeopleCell))
             };
-            lstPeople.SetBinding(ListControl.ItemsSourceProperty, "People");
+            lstPeople.SetBinding(CoreListView.ItemsSourceProperty, "People");
 
             StackLayout container = null;
             if(Device.RuntimePlatform=="iOS"){

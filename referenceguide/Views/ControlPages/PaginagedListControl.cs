@@ -9,15 +9,15 @@ namespace referenceguide
         public PaginagedListControl()
         {
             
-			var lstView = new ListControl(ListViewCachingStrategy.RecycleElement)
+			var lstView = new CoreListView(ListViewCachingStrategy.RecycleElement)
 			{
 				HasUnevenRows = true,
 				ItemTemplate = new DataTemplate(typeof(RandomUserCell)),
 				AutomationId = "lstView"
 			};
-			lstView.SetBinding(ListControl.ItemsSourceProperty, "RandomUsers");
-            lstView.SetBinding(ListControl.LoadMoreCommandProperty, "LoadMore");
-            lstView.SetBinding(ListControl.SelectedItemProperty, "SelectedUser");
+			lstView.SetBinding(CoreListView.ItemsSourceProperty, "RandomUsers");
+            lstView.SetBinding(CoreListView.LoadMoreCommandProperty, "LoadMore");
+            lstView.SetBinding(CoreListView.SelectedItemProperty, "SelectedUser");
 
 			Content = new StackLayout()
 			{

@@ -83,15 +83,15 @@ namespace referenceguide
 				Children = { monkey, new StackLayout() { Children = { navTitle, navSubtitle } } }
 			};
 
-			var listView = new ListControl
+			var listView = new CoreListView
 			{
 				BackgroundColor = Color.White,
 				ItemTemplate = new DataTemplate(typeof(SlidingPageCell)),
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				SeparatorVisibility = SeparatorVisibility.None,
 			};
-            listView.SetBinding(ListControl.ItemsSourceProperty,"MasterPageItems");
-            listView.SetBinding(ListControl.ItemClickCommandProperty,"NavClicked");
+            listView.SetBinding(CoreListView.ItemsSourceProperty,"MasterPageItems");
+            listView.SetBinding(CoreListView.ItemClickCommandProperty,"NavClicked");
 
 			Padding = new Thickness(0, 40, 0, 0);
 			Icon = "hamburger.png";
@@ -104,8 +104,6 @@ namespace referenceguide
 					listView
 				}
 			};
-
-        
 
 		}
 	}

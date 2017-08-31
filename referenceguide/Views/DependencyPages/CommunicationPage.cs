@@ -10,10 +10,10 @@ namespace referenceguide
 		private Entry phoneNum;
         private Entry message;
         private Entry emailAddr;
-        private GradientButton btnSMS;
-        private GradientButton btnEmail;
-        private GradientButton btnCall;
-        private GradientButton btnCallEvent;
+        private CoreButton btnSMS;
+        private CoreButton btnEmail;
+        private CoreButton btnCall;
+        private CoreButton btnCallEvent;
 
         public CommunicationPage()
         {
@@ -27,7 +27,7 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1)
             };
 
-            phoneNum = new MaskedTextField()
+            phoneNum = new CoreMaskedEntry()
             {
                 MaskPattern="(###) ###-####",
                 Margin = new Thickness(5, 1, 5, 1),
@@ -68,37 +68,37 @@ namespace referenceguide
             };
             emailAddr.SetBinding(Entry.TextProperty, "CommunicationEmail");
 
-            btnSMS = new GradientButton()
+            btnSMS = new CoreButton()
             {
                 Text = "Send SMS",
                 Style = AppStyles.LightOrange,
                 Margin = 5,
             };
-            btnSMS.SetBinding(GradientButton.CommandProperty, "SendSMS");
+            btnSMS.SetBinding(CoreButton.CommandProperty, "SendSMS");
 
-            btnEmail = new GradientButton()
+            btnEmail = new CoreButton()
             {
                 Text = "Send Email",
                 Style = AppStyles.LightOrange,
                 Margin = 5,
             };
-            btnEmail.SetBinding(GradientButton.CommandProperty, "SendEmail");
+            btnEmail.SetBinding(CoreButton.CommandProperty, "SendEmail");
 
-            btnCall = new GradientButton()
+            btnCall = new CoreButton()
             {
                 Text = "Call",
                 Style = AppStyles.LightOrange,
                 Margin = 5,
             };
-            btnCall.SetBinding(GradientButton.CommandProperty, "MakeCall");
+            btnCall.SetBinding(CoreButton.CommandProperty, "MakeCall");
 
-            btnCallEvent = new GradientButton()
+            btnCallEvent = new CoreButton()
             {
                 Text = "Call With Event",
                 Style = AppStyles.LightOrange,
                 Margin = 5,
             };
-            btnCallEvent.SetBinding(GradientButton.CommandProperty, "MakeCallEvent");
+            btnCallEvent.SetBinding(CoreButton.CommandProperty, "MakeCallEvent");
 
             this.SetAutomationIds();
             Content = new StackLayout()

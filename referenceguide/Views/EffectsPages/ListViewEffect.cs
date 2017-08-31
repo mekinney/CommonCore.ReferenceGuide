@@ -25,7 +25,7 @@ namespace referenceguide
             };
         }
     }
-    public class ListViewEffect: ContentPage
+    public class ListViewEffect: BasePages
     {
         public ListViewEffect(bool hideSeparators = false)
         {
@@ -40,10 +40,12 @@ namespace referenceguide
                 ItemTemplate = new DataTemplate(typeof(SimpleCell)),
                 ItemsSource = lst
             };
-
+#if __IOS__
             lstView.Effects.Add(new RemoveEmptyRowsEffect());
+#endif
 
-            if(hideSeparators)
+
+			if(hideSeparators)
                 lstView.Effects.Add(new HideListSeparatorEffect());
 
             Content = new StackLayout()
@@ -51,10 +53,6 @@ namespace referenceguide
                 Children = { lstView }
             };
 
-			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
-			{
-				InjectionManager.GetViewModel<SimpleViewModel>().Log.LogAnalytics(this.GetType().FullName);
-			}
         }
     }
 }

@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class LandingPage : ContentPage
+	public class LandingPage : BasePages
 	{
 		public LandingPage()
 		{
@@ -50,10 +50,6 @@ namespace referenceguide
 				Content = pnl
 			};
 
-			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
-			{
-				InjectionManager.GetViewModel<SimpleViewModel>().Log.LogAnalytics(this.GetType().FullName);
-			}
 		}
 	}
 }

@@ -71,10 +71,11 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1)
             };
 
-            var fNameEntry = new Entry()
+            var fNameEntry = new CoreUnderlineEntry()
             {
                 AutomationId = "fNameEntry",
-                Margin = new Thickness(5, 1, 5, 1)
+                Margin = new Thickness(5, 1, 5, 1),
+                EntryColor = Color.DarkGray
             };
             fNameEntry.SetBinding(Entry.TextProperty, "FirstName");
             fNameEntry.Behaviors.Add(nameRequiredValidator);
@@ -98,10 +99,11 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1),
                 AutomationId = "lblPhone"
             };
-            var phoneEntry = new Entry()
+            var phoneEntry = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
-                AutomationId = "phoneEntry"
+                AutomationId = "phoneEntry",
+                EntryColor = Color.DarkGray
             };
             phoneEntry.Behaviors.Add(phoneMask);
             phoneEntry.Behaviors.Add(phoneRequiredValidator);
@@ -124,10 +126,11 @@ namespace referenceguide
 				FontSize = 14,
 				Margin = new Thickness(5, 5, 5, 1)
 			};
-			var bindingEntry = new Entry()
+			var bindingEntry = new CoreUnderlineEntry()
 			{
 				Margin = new Thickness(5, 1, 5, 1),
-				AutomationId = "bindingEntry"
+				AutomationId = "bindingEntry",
+                EntryColor = Color.DarkGray
 			};
             bindingEntry.Behaviors.Add(txtChangedBehavior);
 

@@ -27,7 +27,7 @@ namespace referenceguide
         {
             this.Title = "App Errors";
 
-            var lst = new ListControl()
+            var lst = new CoreListView()
             {
                 ItemTemplate = new DataTemplate(typeof(ErrorsPageCell)),
                 ItemClickCommand= new Command((obj) => {
@@ -39,23 +39,23 @@ namespace referenceguide
                     });
                 })
             };
-            lst.SetBinding(ListControl.ItemsSourceProperty, "ErrorLogs");
+            lst.SetBinding(CoreListView.ItemsSourceProperty, "ErrorLogs");
 
-			var btnAdd = new GradientButton()
+			var btnAdd = new CoreButton()
 			{
 				Text = "Add",
                 Style = AppStyles.LightOrange,
                 AutomationId = "btnAdd",
 			};
-			btnAdd.SetBinding(GradientButton.CommandProperty, "CreateErrorEntry");
+			btnAdd.SetBinding(CoreButton.CommandProperty, "CreateErrorEntry");
 
-            var btnClear = new GradientButton()
+            var btnClear = new CoreButton()
             {
                 Text = "Clear",
                 Style = AppStyles.LightOrange,
                 AutomationId = "btnClear"
             };
-            btnClear.SetBinding(GradientButton.CommandProperty,"ClearErrorEntries");
+            btnClear.SetBinding(CoreButton.CommandProperty,"ClearErrorEntries");
            
             Content = new StackLayout()
             {

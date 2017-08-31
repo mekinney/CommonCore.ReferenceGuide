@@ -16,7 +16,7 @@ namespace referenceguide
 			this.OverrideBackButton = true;
 #endif
 
-            var btn = new GradientButton()
+            var btn = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
@@ -57,7 +57,7 @@ namespace referenceguide
 			this.OverrideBackButton = true;
 #endif
             this.Title = "Nav2";
-            var btn = new GradientButton()
+            var btn = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
@@ -68,7 +68,7 @@ namespace referenceguide
                 })
             };
 
-            var btnBack = new GradientButton()
+            var btnBack = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Back",
@@ -115,7 +115,7 @@ namespace referenceguide
 			this.OverrideBackButton = true;
 #endif
             this.Title = "Nav3";
-            var btn = new GradientButton()
+            var btn = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
@@ -126,7 +126,7 @@ namespace referenceguide
                 })
             };
 
-            var btnBack = new GradientButton()
+            var btnBack = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Back",
@@ -190,7 +190,7 @@ namespace referenceguide
 
             this.Title = "Nav4";
 
-            var btnBack = new GradientButton()
+            var btnBack = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Back",
@@ -201,7 +201,7 @@ namespace referenceguide
                 })
             };
 
-            var btnRelease = new GradientButton()
+            var btnRelease = new CoreButton()
             {
                 Style = AppStyles.LightOrange,
                 Text = "Release Resources",

@@ -17,13 +17,13 @@ namespace referenceguide
                 AutomationId="Load"
             });
 
-            var lstView = new ListControl(ListViewCachingStrategy.RecycleElement)
+            var lstView = new CoreListView(ListViewCachingStrategy.RecycleElement)
             {
                 HasUnevenRows = true,
                 ItemTemplate = new DataTemplate(typeof(RandomUserCell)),
                 AutomationId="lstView"
             };
-            lstView.SetBinding(ListControl.ItemsSourceProperty, "RandomUsers");
+            lstView.SetBinding(CoreListView.ItemsSourceProperty, "RandomUsers");
 
 
             Content = new StackLayout()

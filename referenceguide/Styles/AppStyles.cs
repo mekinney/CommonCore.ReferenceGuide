@@ -16,17 +16,17 @@ namespace referenceguide
             get
             {
                 return lightOrange ?? (
-                    lightOrange = new Style(typeof(GradientButton))
+                    lightOrange = new Style(typeof(CoreButton))
                     {
                         Setters ={
-                            new Setter(){Property=GradientButton.StartColorProperty ,Value=Color.FromHex("#DF8049")},
-                            new Setter(){Property=GradientButton.EndColorProperty ,Value=Color.FromHex("#E8A47D")},
-                            new Setter(){Property=GradientButton.ShadowColorProperty ,Value=Color.Gray},
-                            new Setter(){Property=GradientButton.TextColorProperty ,Value=Color.White},
-                            new Setter(){Property=GradientButton.ShadowOffsetProperty ,Value=1},
-                            new Setter(){Property=GradientButton.ShadowOpacityProperty ,Value=1},
-                            new Setter(){Property=GradientButton.ShadowRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
-                            new Setter(){Property=GradientButton.CornerRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
+                            new Setter(){Property=CoreButton.StartColorProperty ,Value=Color.FromHex("#DF8049")},
+                            new Setter(){Property=CoreButton.EndColorProperty ,Value=Color.FromHex("#E8A47D")},
+                            new Setter(){Property=CoreButton.ShadowColorProperty ,Value=Color.Gray},
+                            new Setter(){Property=CoreButton.TextColorProperty ,Value=Color.White},
+                            new Setter(){Property=CoreButton.ShadowOffsetProperty ,Value=1},
+                            new Setter(){Property=CoreButton.ShadowOpacityProperty ,Value=1},
+                            new Setter(){Property=CoreButton.ShadowRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
+                            new Setter(){Property=CoreButton.CornerRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
                         }
                     });
             }

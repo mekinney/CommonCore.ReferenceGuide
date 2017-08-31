@@ -10,7 +10,7 @@ namespace referenceguide
         {
             this.Title = "Services";
 
-            var http = new GradientButton()
+            var http = new CoreButton()
             {
                 Text = "Http Services",
                 Style = AppStyles.LightOrange,
@@ -21,23 +21,23 @@ namespace referenceguide
                 })
             };
 
-			var httpPost = new GradientButton()
+			var httpPost = new CoreButton()
 			{
 				Text = "Http Post",
 				Style = AppStyles.LightOrange,
 				AutomationId = "httpPost",
 			};
-            httpPost.SetBinding(GradientButton.CommandProperty,"HttpPost");
+            httpPost.SetBinding(CoreButton.CommandProperty,"HttpPost");
 
-			var httpDownload = new GradientButton()
+			var httpDownload = new CoreButton()
 			{
 				Text = "Http Download",
 				Style = AppStyles.LightOrange,
 				AutomationId = "httpDownload",
 			};
-			httpDownload.SetBinding(GradientButton.CommandProperty, "LongDownload");
+			httpDownload.SetBinding(CoreButton.CommandProperty, "LongDownload");
 
-            var sqlite = new GradientButton()
+            var sqlite = new CoreButton()
             {
                 Text = "Sqlite",
                 Style = AppStyles.LightOrange,
@@ -48,7 +48,7 @@ namespace referenceguide
                 })
             };
 
-            var encrypt = new GradientButton()
+            var encrypt = new CoreButton()
             {
                 Text = "Encryption",
                 Style = AppStyles.LightOrange,
@@ -59,7 +59,7 @@ namespace referenceguide
                 })
             };
 
-			var analytics = new GradientButton()
+			var analytics = new CoreButton()
 			{
 				Text = "Analytics",
 				Style = AppStyles.LightOrange,
@@ -70,7 +70,7 @@ namespace referenceguide
 				})
 			};
 
-			var errors = new GradientButton()
+			var errors = new CoreButton()
 			{
 				Text = "Errors",
 				Style = AppStyles.LightOrange,
@@ -81,14 +81,14 @@ namespace referenceguide
 				})
 			};
 
-			var timerSrv = new GradientButton()
+			var timerSrv = new CoreButton()
 			{
 				Text = "Background Timer",
 				Style = AppStyles.LightOrange,
 				AutomationId = "timerSrv",
 			};
-            timerSrv.SetBinding(GradientButton.TextProperty,"BackgroundButtonTitle");
-            timerSrv.SetBinding(GradientButton.CommandProperty,"StartBackgrounding");
+            timerSrv.SetBinding(CoreButton.TextProperty,"BackgroundButtonTitle");
+            timerSrv.SetBinding(CoreButton.CommandProperty,"StartBackgrounding");
 
             var stack = new StackLayout()
             {
