@@ -122,7 +122,7 @@ namespace referenceguide
 			var lblBindingEvent = new Label()
 			{
 				TextColor = Color.Gray,
-				Text = "Event To Command Binding",
+                Text = "Event To Command Binding - (numbers only)",
 				FontSize = 14,
 				Margin = new Thickness(5, 5, 5, 1)
 			};
@@ -133,6 +133,7 @@ namespace referenceguide
                 EntryColor = Color.DarkGray
 			};
             bindingEntry.Behaviors.Add(txtChangedBehavior);
+            bindingEntry.SetBinding(CoreUnderlineEntry.TextProperty,"BindingTextValue");
 
             var customLabel = new Label() { Margin = 5, AutomationId = "customLabel" };
             customLabel.Behaviors.Add(propBehavior);

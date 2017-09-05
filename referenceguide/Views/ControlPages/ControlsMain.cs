@@ -21,7 +21,6 @@ namespace referenceguide
     {
         public StateView()
         {
-            //this.AnimateOpen = false;
             var lbl = new Label() { Text = "Select A State", Margin = 10 };
             var top = new StackLayout()
             {
@@ -169,11 +168,12 @@ namespace referenceguide
 
 
 
-            var x = Font.Default.WithSize(10);
 
             var radioGroup = new CoreRadioGroup()
             {
                 Spacing=15,
+                ImageColor = Color.FromHex("#DF8049"),
+                TextColor = Color.FromHex("#E8A47D"),
                 SelectedImage = "checked.png",
                 UnSelectedImage = "unchecked.png",
                 CheckedCommand = new RelayCommand((obj) => {

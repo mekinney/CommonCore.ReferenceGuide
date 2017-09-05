@@ -1,8 +1,8 @@
-﻿using System.Collections.ObjectModel;
+﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
-using System.Collections.Generic;
 using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
@@ -44,6 +44,7 @@ namespace referenceguide
         public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
         public int SelectedRadioIndex { get; set; } = -1;
 		public string PushButtonLabel{ get; set; }
+        public string BindingTextValue { get; set; }
 
 		public ICommand DialogClick { get; set; }
 		public ICommand NotificationClick { get; set; }
@@ -247,7 +248,16 @@ namespace referenceguide
 			});
             BindingTextChanged = new RelayCommand((obj) =>
             {
-                //here is where the event now lands.
+                if(!string.IsNullOrEmpty(BindingTextValue) && BindingTextValue.Length>2){
+                    int num;
+                    var valid = int.TryParse(BindingTextValue, out num);
+                    if(!valid){
+                        DialogPrompt.ShowMessage(new Prompt(){
+                            Title="Error",
+                            Message="Can't you even follow directions?"
+                        });
+                    }
+                }
             });
 		}
 

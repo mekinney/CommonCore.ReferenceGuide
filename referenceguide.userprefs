@@ -19,11 +19,12 @@
       <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" line="312" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="179" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="105" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Controls/CoreRadioButton.cs" line="7" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N424" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>
