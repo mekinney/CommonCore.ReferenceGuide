@@ -60,6 +60,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoggingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Animations\AnimationsMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AnimationsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BindingViews\BindingViewMain.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />
@@ -73,5 +74,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\CarouselPage\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\NavigationPages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Animations\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\BindingViews\" />
   </ItemGroup>
 </Project>

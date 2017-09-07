@@ -85,6 +85,13 @@ namespace referenceguide
 				IconSource = "index24.png",
 				TargetType = typeof(AuthenticationMain)
 			});
+            lst.Add(new SlidingPageItem
+            {
+                Title = "Multiple ViewModels",
+                IconSource = "index24.png",
+                TargetType = typeof(BindingViewMain)
+            });
+
 			MasterPageItems = lst.ToObservable();
 		}
 
