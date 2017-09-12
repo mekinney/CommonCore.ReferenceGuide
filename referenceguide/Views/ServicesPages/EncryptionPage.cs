@@ -18,12 +18,12 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1)
             };
 
-            var clearEntry = new Entry()
+            var clearEntry = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
                 AutomationId = "clearEntry"
             };
-            clearEntry.SetBinding(Entry.TextProperty, "ClearText");
+            clearEntry.SetBinding(CoreUnderlineEntry.TextProperty, "ClearText");
 
             var encryptedLabel = new Label()
             {
@@ -51,12 +51,12 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1),
                 AutomationId = "md5Label1"
             };
-            var clearHash1 = new Entry()
+            var clearHash1 = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
                 AutomationId = "clearHash1"
             };
-            clearHash1.SetBinding(Entry.TextProperty, "ClearHash1");
+            clearHash1.SetBinding(CoreUnderlineEntry.TextProperty, "ClearHash1");
 
             var md5Label2 = new Label()
             {
@@ -66,12 +66,12 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1),
                 AutomationId = "md5Label2"
             };
-            var clearHash2 = new Entry()
+            var clearHash2 = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
                 AutomationId = "clearHash2"
             };
-            clearHash2.SetBinding(Entry.TextProperty, "ClearHash2");
+            clearHash2.SetBinding(CoreUnderlineEntry.TextProperty, "ClearHash2");
 
             var btnHash = new CoreButton()
             {

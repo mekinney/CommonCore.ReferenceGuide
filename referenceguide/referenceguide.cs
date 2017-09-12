@@ -10,9 +10,7 @@ namespace referenceguide
 	{
 		public App()
 		{
-		
 			AppSettings.NotificationTags.Add("referenceguide");
-			
 			MainPage = new MainPage();
 		}
 
