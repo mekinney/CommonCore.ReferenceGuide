@@ -61,6 +61,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Animations\AnimationsMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AnimationsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BindingViews\BindingViewMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsCollectionView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FontsCollectionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsMainPage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />
@@ -75,5 +78,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\NavigationPages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\BindingViews\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Fonts\" />
   </ItemGroup>
 </Project>

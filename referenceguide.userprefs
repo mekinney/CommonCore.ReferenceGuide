@@ -2,22 +2,15 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ServicesPages/EncryptionPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Fonts/EntypoPlus.cs">
     <Files>
-      <File FileName="referenceguide/Views/MainPage.cs" Line="7" Column="39" />
-      <File FileName="referenceguide/Views/LandingPage.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/SlidingPage.cs" Line="47" Column="26" />
-      <File FileName="referenceguide/Views/BindingViews/BindingViewMain.cs" Line="55" Column="15" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/BoundMasterDetailPage.cs" Line="38" Column="14" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="56" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/BoundContenView.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="148" Column="13" />
-      <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="77" Column="52" />
-      <File FileName="referenceguide/Styles/AppStyles.cs" Line="29" Column="82" />
-      <File FileName="referenceguide/referenceguide.cs" Line="13" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="24" Column="70" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Settings/CoreSettings.cs" Line="103" Column="1" />
-      <File FileName="referenceguide/Views/ServicesPages/EncryptionPage.cs" Line="73" Column="15" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/FontAwesome.cs" Line="13" Column="68" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/EntypoPlus.cs" Line="19" Column="57" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Ionicons.cs" Line="8" Column="35" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Material.cs" Line="8" Column="35" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Meteocons.cs" Line="8" Column="35" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/SimpleLineIcons.cs" Line="8" Column="35" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Typicons.cs" Line="8" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -40,7 +33,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N424" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

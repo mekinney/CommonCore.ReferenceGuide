@@ -1,6 +1,7 @@
 ﻿using FFImageLoading.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
+using System.Linq;
 
 namespace referenceguide
 {
@@ -38,12 +39,19 @@ namespace referenceguide
 			var lbl = new Label() { FormattedText = fs, Margin = 10 };
 
 
+
+
             var pnl = new StackLayout()
             {
-                Children = { topImage, 
+                Children = 
+                { 
+                    topImage, 
                     customFont,
-                    lbl }
+                    lbl 
+                }
             };
+
+
 
 			Content = new ScrollView()
 			{

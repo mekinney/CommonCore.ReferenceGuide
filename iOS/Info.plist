@@ -72,6 +72,16 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Fonts/BoxiseFont.otf</string>
+		<string>Fonts/fontawesome.ttf</string>
+		<string>Fonts/entypoplus.ttf</string>
+		<string>Fonts/ionicons.ttf</string>
+		<string>Fonts/material.ttf</string>
+		<string>Fonts/meteocons.ttf</string>
+		<string>Fonts/simplelineicons.ttf</string>
+		<string>Fonts/typicons.ttf</string>
+		<string>Fonts/weathericons.ttf</string>
 	</array>
+	<key>Custom Property</key>
+	<array/>
 </dict>
 </plist>

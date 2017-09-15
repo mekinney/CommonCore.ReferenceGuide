@@ -11,6 +11,7 @@ namespace referenceguide
         private static Style addressCell;
         private static Style fontLabel;
 
+
         public static Style LightOrange
         {
             get
@@ -49,6 +50,8 @@ namespace referenceguide
 
         }
 
+
+
 		public static Style FontLabel
 		{
 			get
@@ -61,7 +64,7 @@ namespace referenceguide
                             new Setter(){Property=Label.FontSizeProperty ,Value=24},
                             new Setter(){Property=Label.MarginProperty ,Value=10},
                             new Setter(){Property=Label.HorizontalOptionsProperty ,Value=LayoutOptions.Center},
-                            new Setter(){Property=Label.HorizontalTextAlignmentProperty ,Value=LayoutOptions.Center},
+                            new Setter(){Property=Label.HorizontalTextAlignmentProperty ,Value=TextAlignment.Center},
                             new Setter(){Property=Label.FontFamilyProperty ,Value=OS=="IOS"?"Boxise":"BoxiseFont.otf#Boxise"}
                         }
                     });

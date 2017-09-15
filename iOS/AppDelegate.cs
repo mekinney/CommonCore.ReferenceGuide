@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Threading.Tasks;
 using CarouselView.FormsPlugin.iOS;
 using FFImageLoading.Forms.Touch;
 using Foundation;
 using Microsoft.Identity.Client;
 using PushNotification.Plugin;
 using UIKit;
-using UserNotifications;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 

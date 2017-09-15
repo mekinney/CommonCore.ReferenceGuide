@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>referenceguide.Droid</RootNamespace>
     <AssemblyName>referenceguide.Droid</AssemblyName>
-    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -197,24 +197,6 @@
     <Reference Include="PropertyChanged">
       <HintPath>..\packages\PropertyChanged.Fody.2.1.4\lib\netstandard1.0\PropertyChanged.dll</HintPath>
     </Reference>
-    <Reference Include="ExoPlayer.Core">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.5.1.2\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.Hls">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.1.2\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.SmoothStreaming">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.5.1.2\lib\MonoAndroid\ExoPlayer.SmoothStreaming.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.UI">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.UI.2.5.1.2\lib\MonoAndroid\ExoPlayer.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.Dash">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Dash.2.5.1.2\lib\MonoAndroid\ExoPlayer.Dash.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.2.5.1.2\lib\MonoAndroid\ExoPlayer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Graph.Core">
       <HintPath>..\packages\Microsoft.Graph.Core.1.6.1\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
     </Reference>
@@ -326,6 +308,24 @@
     <Reference Include="FFImageLoading.Forms.Droid">
       <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.11\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
+    <Reference Include="ExoPlayer.Core">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.5.2\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.Hls">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.2\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.SmoothStreaming">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.5.2\lib\MonoAndroid\ExoPlayer.SmoothStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.UI">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.UI.2.5.2\lib\MonoAndroid\ExoPlayer.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.Dash">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Dash.2.5.2\lib\MonoAndroid\ExoPlayer.Dash.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.2.5.2\lib\MonoAndroid\ExoPlayer.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -340,7 +340,6 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
-    <None Include="monoconfig.txt" />
     <None Include="FodyWeavers.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -366,8 +365,15 @@
     <AndroidResource Include="Resources\drawable\beach.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\hailchief.mp3" />
     <AndroidAsset Include="Assets\BoxiseFont.otf" />
+    <AndroidAsset Include="Assets\fontawesome.ttf" />
+    <AndroidAsset Include="Assets\entypoplus.ttf" />
+    <AndroidAsset Include="Assets\ionicons.ttf" />
+    <AndroidAsset Include="Assets\material.ttf" />
+    <AndroidAsset Include="Assets\meteocons.ttf" />
+    <AndroidAsset Include="Assets\simplelineicons.ttf" />
+    <AndroidAsset Include="Assets\typicons.ttf" />
+    <AndroidAsset Include="Assets\weathericons.ttf" />
   </ItemGroup>
   <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />

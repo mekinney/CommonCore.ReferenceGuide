@@ -91,6 +91,12 @@ namespace referenceguide
                 IconSource = "index24.png",
                 TargetType = typeof(BindingViewMain)
             });
+            lst.Add(new SlidingPageItem
+            {
+                Title = "Fonts",
+                IconSource = "index24.png",
+                TargetType = typeof(FontsMainPage)
+            });
 
 			MasterPageItems = lst.ToObservable();
 		}

@@ -13,7 +13,6 @@ using Xamarin.Forms.CommonCore;
 namespace referenceguide.Droid
 {
 
-    //You can specify additional application information in this attribute
     [Application]
     public class MainApplication : Application, Application.IActivityLifecycleCallbacks
     {
@@ -41,7 +40,30 @@ namespace referenceguide.Droid
 
             InitGlobalLibraries();
 
+            //AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
+            //TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+
         }
+
+  
+
+        private static void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
+        {
+            //var newExc = new Exception("TaskSchedulerOnUnobservedTaskException", unobservedTaskExceptionEventArgs.Exception);
+            //newExc.ToLogUnhandledException();
+
+            Console.WriteLine(unobservedTaskExceptionEventArgs.Exception.Message);
+        }
+
+
+        private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
+        {
+            //var newExc = new Exception("CurrentDomainOnUnhandledException", unhandledExceptionEventArgs.ExceptionObject as Exception);
+            //newExc.ToLogUnhandledException();
+            var ex = unhandledExceptionEventArgs.ExceptionObject as Exception;
+            Console.WriteLine(ex.Message);
+        }
+
 
 
 

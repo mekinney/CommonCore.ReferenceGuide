@@ -317,6 +317,14 @@
     <BundleResource Include="Resources\checked%402x.png" />
     <BundleResource Include="Resources\unchecked.png" />
     <BundleResource Include="Resources\unchecked%402x.png" />
+    <BundleResource Include="Resources\Fonts\fontawesome.ttf" />
+    <BundleResource Include="Resources\Fonts\ionicons.ttf" />
+    <BundleResource Include="Resources\Fonts\material.ttf" />
+    <BundleResource Include="Resources\Fonts\meteocons.ttf" />
+    <BundleResource Include="Resources\Fonts\simplelineicons.ttf" />
+    <BundleResource Include="Resources\Fonts\typicons.ttf" />
+    <BundleResource Include="Resources\Fonts\weathericons.ttf" />
+    <BundleResource Include="Resources\Fonts\entypoplus.ttf" />
   </ItemGroup>
   <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
