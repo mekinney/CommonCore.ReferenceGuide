@@ -28,11 +28,9 @@
     "TableNames": [
       {
         "Name": "referenceguide.Appointment",
-        "EncryptedProperties": [ "Title" ]
       },
       {
         "Name": "referenceguide.PostItem",
-        "EncryptedProperties": [ "Password" ]
       }
     ]
   },

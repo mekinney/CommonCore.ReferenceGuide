@@ -1,9 +1,9 @@
 ﻿{
-  "AnalyticsEnabled": false,
-  "AESEncryptionKey": "123",
+  "AnalyticsEnabled": true,
+  "AESEncryptionKey": "8675309",
   "AzureSettings": {
-    "AzureHubName": "hubname",
-    "AzureListenConnection": ""
+    "AzureHubName": "referenceguide",
+    "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
   },
   "HttpSettings": {
     "DisplayRawJson": false,
@@ -14,38 +14,41 @@
   },
   "SocialMedia": {
     "GoogleSettings": {
-      "GoogleAppId": "",
-      "OAuthClientID_iOS": "",
-      "OAuthClientID_Android": "",
+      "GoogleAppId": "638673396107",
+      "OAuthClientID_iOS": "6tl1p3k7sgbhg5arl0v1i24p83ilvc7d",
+      "OAuthClientID_Android": "ls57h8813oiob1fl1frcifni9p1pd7pf",
       "OAuthClientID_UWP": ""
     },
-    "FaceBookAppId": "",
-    "MicrosoftAppId": ""
+    "FaceBookAppId": "1483295131691906",
+    "MicrosoftAppId": "2cc5b21e-3ac2-482c-8027-47265e2b4b11"
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "app.db3",
+    "SQLiteDatabase": "referenceguide.db3",
     "EncryptionEnabled": true,
     "TableNames": [
       {
-        "Name": "namespace.tableName",
+        "Name": "referenceguide.Appointment",
+        "EncryptedProperties": [ "Title" ]
       },
       {
-        "Name": "namespace.tableName2",
-        "EncryptedProperties": [ "PropertyName" ]
+        "Name": "referenceguide.PostItem",
+        "EncryptedProperties": [ "Password" ]
       }
     ]
   },
   "MobileCenter_HockeyApp": {
-    "IOSAppId": "",
-    "AndroidAppId": "",
-    "UWPAppId": ""
+    "IOSAppId": "ef8a82a8-2a28-403b-943e-15465f85916b",
+    "AndroidAppId": "18a8936c-d627-4b55-b794-e48fa7172d3e",
+    "UWPAppId": "IOSAppId"
   },
   "WebApi": {
-    "customName": "https://someurl.com",
-    "customName2": "https://someurl2.com"
+    "randomuser": "https://randomuser.me/api/?results=200",
+    "randomuserpaginated": "https://randomuser.me/api/?page={0}&results=30",
+    "referencewebtestpost": "http://homedev:8080/api/SimplePost/TestPersonPost",
+    "largefile": "http://www.azdevelop.net/california.json"
   },
   "CustomSettings": {
-    "CustomName": "somevalue",
-    "customName2": "somevalue2"
+    "googleClienId": "638673396107-p4kma7k79bhs1c06aev7g4tvj48kjsbb.apps.googleusercontent.com",
+    "googleClientSecret": "BliQR6sE2bNn7E5TL5o1_8e-"
   }
 }

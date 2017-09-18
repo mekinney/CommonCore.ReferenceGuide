@@ -2,21 +2,19 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Fonts/EntypoPlus.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Models/Appointment.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/FontAwesome.cs" Line="13" Column="68" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/EntypoPlus.cs" Line="19" Column="57" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Ionicons.cs" Line="8" Column="35" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Material.cs" Line="8" Column="35" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Meteocons.cs" Line="8" Column="35" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/SimpleLineIcons.cs" Line="8" Column="35" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Fonts/Typicons.cs" Line="8" Column="35" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="451" Column="66" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/FileStore.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="40" Column="111" />
+      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="97" Column="54" />
+      <File FileName="referenceguide/Models/Appointment.cs" Line="13" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="referenceguide" expanded="True">
-            <Node name="referenceguide.iOS" selected="True" />
+            <Node name="referenceguide.Droid" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -33,7 +31,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

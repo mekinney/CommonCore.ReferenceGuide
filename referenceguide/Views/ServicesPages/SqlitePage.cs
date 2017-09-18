@@ -36,6 +36,7 @@ namespace referenceguide
             {
                 Margin = new Thickness(5, 5, 5, -5),
             };
+          
 
             lblFullDisplay = new Label()
             {

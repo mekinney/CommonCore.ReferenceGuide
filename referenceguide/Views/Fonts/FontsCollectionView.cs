@@ -15,7 +15,7 @@ namespace referenceguide
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
             };
-            imgLabel.SetBinding(Label.TextProperty,"Character");
+            imgLabel.SetBinding(Label.TextProperty,"Unicode");
             imgLabel.SetBinding(Label.FontFamilyProperty, "FontFamily");
 
 
@@ -25,7 +25,7 @@ namespace referenceguide
                 VerticalOptions = LayoutOptions.Center,
                 FontSize = 10,
             };
-            descript.SetBinding(Label.TextProperty, "Key");
+            descript.SetBinding(Label.TextProperty, "FriendlyName");
 
             Content = new StackLayout()
             {
@@ -74,7 +74,7 @@ namespace referenceguide
     {
         public FontsCollectionView()
         {
-            this.Title = VM.FontName.ToString();
+            this.Title = VM.FontType.ToString();
             var list = new CoreListView()
             {
                 ItemTemplate = new DataTemplate(typeof(FontsCollectionViewCell)),

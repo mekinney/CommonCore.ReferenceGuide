@@ -96,6 +96,8 @@
     <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'QA|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\QA</OutputPath>
     <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;QA;ENABLE_TEST_CLOUD;</DefineConstants>

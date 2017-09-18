@@ -9,6 +9,7 @@ namespace referenceguide
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
 
+        [EncryptedProperty]
         public string Password { get; set; }
 
 		public int Age { get; set; }

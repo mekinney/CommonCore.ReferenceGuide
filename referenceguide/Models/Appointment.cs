@@ -10,6 +10,7 @@ namespace referenceguide
         
 		public string ID { get; set; }
 
+        [EncryptedProperty]
         public string Title { get; set; }
         public string Description { get; set; }
 		public string Location{ get; set; }

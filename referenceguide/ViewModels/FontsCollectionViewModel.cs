@@ -6,13 +6,6 @@ using System.Linq;
 
 namespace referenceguide
 {
-    public class FontItem
-    {
-        public string Key { get; set; }
-        public string Character { get; set; }
-        public string FontFamily { get; set; }
-    }
-
     public class FontItemRow
     {
         public int Row { get; set; }
@@ -20,47 +13,37 @@ namespace referenceguide
         public FontItem Item2 { get; set; }
         public FontItem Item3 { get; set; }
     }
-    public enum FontFamilyEnum
-    {
-        FontAwesome,
-        EntypoPlus,
-        Ionicons,
-        Material,
-        Meteocons,
-        SimpleLineIcons,
-        Typicons,
-        WeatherIcons
-    }
+
     public class FontsCollectionViewModel : ObservableViewModel
     {
-        public FontFamilyEnum FontName { get; set; }
+        public FontType FontType { get; set; }
         public ObservableCollection<FontItemRow> Items { get; set; } = new ObservableCollection<FontItemRow>();
 
         public void BuildResourceList()
         {
-            switch(FontName){
-                case FontFamilyEnum.FontAwesome:
+            switch(FontType){
+                case FontType.FontAwesome:
                     Items = CreateObservable(FontAwesome.Icons, FontAwesome.FontFamily);
                     break;
-                case FontFamilyEnum.EntypoPlus:
+                case FontType.EntypoPlus:
                     Items = CreateObservable(EntypoPlus.Icons, EntypoPlus.FontFamily);
                     break;
-                case FontFamilyEnum.Ionicons:
+                case FontType.Ionicons:
                     Items = CreateObservable(Ionicons.Icons, Ionicons.FontFamily);
                     break;
-                case FontFamilyEnum.Material:
+                case FontType.Material:
                     Items = CreateObservable(Material.Icons, Material.FontFamily);
                     break;
-                case FontFamilyEnum.Meteocons:
+                case FontType.Meteocons:
                     Items = CreateObservable(Meteocons.Icons, Meteocons.FontFamily);
                     break;
-                case FontFamilyEnum.SimpleLineIcons:
+                case FontType.SimpleLineIcons:
                     Items = CreateObservable(SimpleLineIcons.Icons, SimpleLineIcons.FontFamily);
                     break;
-                case FontFamilyEnum.Typicons:
+                case FontType.Typicons:
                     Items = CreateObservable(Typicons.Icons, Typicons.FontFamily);
                     break;
-                case FontFamilyEnum.WeatherIcons:
+                case FontType.WeatherIcons:
                     Items = CreateObservable(WeatherIcons.Icons, WeatherIcons.FontFamily);
                     break;
             }
@@ -94,9 +77,9 @@ namespace referenceguide
 
                 var item = new FontItem()
                 {
-                    Key = key,
+                    FriendlyName = key,
                     FontFamily = fontFamily,
-                    Character = dict[key].ToString()
+                    Unicode = dict[key].ToString()
                 };
 
                 switch (col)

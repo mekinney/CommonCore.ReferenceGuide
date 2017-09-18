@@ -28,6 +28,7 @@ namespace referenceguide
 				Transformations = new System.Collections.Generic.List<ITransformation>() {
 					new CircleTransformation()
 				},
+             
 			};
 			img.Effects.Add(new ViewShadowEffect());
 

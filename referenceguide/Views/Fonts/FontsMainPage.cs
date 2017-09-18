@@ -16,7 +16,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.FontAwesome;
+                    VM.FontType = FontType.FontAwesome;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -28,7 +28,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.EntypoPlus;
+                    VM.FontType = FontType.EntypoPlus;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -40,7 +40,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.Ionicons;
+                    VM.FontType = FontType.Ionicons;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -52,7 +52,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.Material;
+                    VM.FontType = FontType.Material;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -64,7 +64,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.Meteocons;
+                    VM.FontType = FontType.Meteocons;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -76,7 +76,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.SimpleLineIcons;
+                    VM.FontType = FontType.SimpleLineIcons;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -88,7 +88,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.Typicons;
+                    VM.FontType = FontType.Typicons;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })
@@ -100,7 +100,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command(async (obj) =>
                 {
-                    VM.FontName = FontFamilyEnum.WeatherIcons;
+                    VM.FontType = FontType.WeatherIcons;
                     VM.BuildResourceList();
                     await AppSettings.AppNav.PushAsync(new FontsCollectionView());
                 })

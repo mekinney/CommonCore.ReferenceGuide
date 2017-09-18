@@ -37,7 +37,7 @@ namespace referenceguide
                 Margin = new Thickness(5, 1, 5, 1),
                 //AutomationId = "evtNameEntry"
             };
-            evtNameEntry.SetBinding(Entry.TextProperty, new Binding("Appt.Title", BindingMode.TwoWay));
+            evtNameEntry.SetBinding(Entry.TextProperty, new Binding(path:"Appt.Title", mode:BindingMode.TwoWay));
 
             var evtDescription = new Label()
             {
