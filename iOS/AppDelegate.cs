@@ -92,7 +92,6 @@ namespace referenceguide.iOS
 
         private void InitGlobalLibraries()
         {
-            AppSettings.NavStyle = NavType.MasterDetail;
 			CachedImageRenderer.Init();
 			CarouselViewRenderer.Init();
 

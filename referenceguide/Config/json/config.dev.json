@@ -1,6 +1,7 @@
 ﻿{
+  "NavStyle": "MasterDetail",
   "AnalyticsEnabled": true,
-  "AESEncryptionKey": "8675309",
+  "AESEncryptionKey": "P@ssw0rd",
   "AzureSettings": {
     "AzureHubName": "referenceguide",
     "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
@@ -23,16 +24,7 @@
     "MicrosoftAppId": "2cc5b21e-3ac2-482c-8027-47265e2b4b11"
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "referenceguide.db3",
-    "EncryptionEnabled": true,
-    "TableNames": [
-      {
-        "Name": "referenceguide.Appointment",
-      },
-      {
-        "Name": "referenceguide.PostItem",
-      }
-    ]
+    "SQLiteDatabase": "referenceguide.db3"
   },
   "MobileCenter_HockeyApp": {
     "IOSAppId": "ef8a82a8-2a28-403b-943e-15465f85916b",

@@ -1,20 +1,19 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Models/Appointment.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="451" Column="66" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/FileStore.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="40" Column="111" />
-      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="97" Column="54" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="1207" Column="14" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="286" Column="1" />
       <File FileName="referenceguide/Models/Appointment.cs" Line="13" Column="9" />
+      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="55" Column="38" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="referenceguide" expanded="True">
-            <Node name="referenceguide.Droid" selected="True" />
+            <Node name="referenceguide.iOS" selected="True" />
           </Node>
         </State>
       </Pad>
@@ -22,16 +21,11 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" line="312" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="179" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/Views/NavigationPages/NavigationPages.cs" relfile="referenceguide/Views/NavigationPages/NavigationPages.cs" line="105" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Controls/CoreRadioButton.cs" line="7" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

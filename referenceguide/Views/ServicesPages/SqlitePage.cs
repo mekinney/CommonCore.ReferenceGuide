@@ -52,15 +52,7 @@ namespace referenceguide
             embeddedMenu = new MenuItem()
             {
                 Text = "Embedded",
-                IsDestructive = false,
-                Command = new Command((obj) =>
-                {
-                    DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
-                    {
-                        Title = "Row Selected",
-                        Message = $"You chose {((RandomUser)obj).FullName}"
-                    });
-                })
+                IsDestructive = false
             };
             embeddedMenu.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
             ContextActions.Add(embeddedMenu);

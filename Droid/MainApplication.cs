@@ -133,7 +133,6 @@ namespace referenceguide.Droid
 
         private void InitGlobalLibraries()
         {
-            AppSettings.NavStyle = NavType.MasterDetail;
             AppSettings.AppIcon = Resource.Drawable.icon;
             AppContext = this.ApplicationContext;
             LocalNotify.MainType = typeof(MainActivity);

@@ -178,22 +178,8 @@ namespace referenceguide
 
 			PushRegister = new RelayCommand((obj) =>
 			{
-				var di = DeviceInfo.GetDeviceInformation();
-
-				if (Device.RuntimePlatform.ToUpper() == "IOS" &&
-				   di.DeviceType == DeviceState.Simulator)
-				{
-					DialogPrompt.ShowMessage(new Prompt()
-					{
-						Title = "Simulator",
-						Message = "Push Notifications Unavailable"
-					});
-				}
-				else
-				{
-					AzureNotificationHub.RegisterNotificationHub();
-					PushButtonLabel = "** Notifications Registered **";
-				}
+                AzureNotificationHub.RegisterNotificationHub();
+                PushButtonLabel = "** Notifications Registered **";
 
 			});
 
