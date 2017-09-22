@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class PaginagedListControl: BoundPage<PaginatedViewModel>
+    public class PaginagedListControl: BoundPage<DataExampleViewModel>
     {
         public PaginagedListControl()
         {
@@ -15,14 +15,20 @@ namespace referenceguide
 				ItemTemplate = new DataTemplate(typeof(RandomUserCell)),
 				AutomationId = "lstView"
 			};
-			lstView.SetBinding(CoreListView.ItemsSourceProperty, "RandomUsers");
-            lstView.SetBinding(CoreListView.LoadMoreCommandProperty, "LoadMore");
-            lstView.SetBinding(CoreListView.SelectedItemProperty, "SelectedUser");
+			lstView.SetBinding(CoreListView.ItemsSourceProperty, "PaginatedRandomUsers");
+            lstView.SetBinding(CoreListView.LoadMoreCommandProperty, "LoadMorePaginatedUsers");
+            lstView.SetBinding(CoreListView.SelectedItemProperty, "SelectedPagingatedUser");
 
 			Content = new StackLayout()
 			{
 				Children = { lstView }
 			};
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            VM.GetPaginatedRandomUsers().ContinueOn();
         }
     }
 }

@@ -22,7 +22,7 @@ namespace referenceguide
         }
     }
 
-    public class AnalyticsPage :BoundPage<LoggingViewModel>
+    public class AnalyticsPage :BoundPage<DataExampleViewModel>
     {
      
         public AnalyticsPage()

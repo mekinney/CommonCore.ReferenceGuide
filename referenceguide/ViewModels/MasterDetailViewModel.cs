@@ -19,28 +19,30 @@ namespace referenceguide
 		public MasterDetailViewModel()
 		{
 			SetNavigation();
-			NavClicked = new RelayCommand((obj) =>
-			{
-				var item = (SlidingPageItem)obj;
-				var page = (MasterDetailPage)Application.Current.MainPage;
-
-				if (!navPages.ContainsKey(item.TargetType.Name))
-				{
-					var np = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
-					{
-						BarBackgroundColor = Color.FromHex("#b85921"),
-						BarTextColor = Color.White
-					};
-                    AppSettings.AppNav = np.Navigation;
-					navPages.Add(item.TargetType.Name, np);
-				}
-				page.Detail = navPages[item.TargetType.Name];
-
-				page.IsPresented = false;
-			});
+            NavClicked = new RelayCommand((obj) => { NavClickedMethod(obj); });
 		}
 
-		private void SetNavigation()
+        private void NavClickedMethod(object obj)
+        {
+            var item = (SlidingPageItem)obj;
+            var page = (MasterDetailPage)Application.Current.MainPage;
+
+            if (!navPages.ContainsKey(item.TargetType.Name))
+            {
+                var np = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
+                {
+                    BarBackgroundColor = Color.FromHex("#b85921"),
+                    BarTextColor = Color.White
+                };
+                AppSettings.AppNav = np.Navigation;
+                navPages.Add(item.TargetType.Name, np);
+            }
+            page.Detail = navPages[item.TargetType.Name];
+
+            page.IsPresented = false;
+        }
+
+        private void SetNavigation()
 		{
 			var lst = new List<SlidingPageItem>();
 			lst.Add(new SlidingPageItem

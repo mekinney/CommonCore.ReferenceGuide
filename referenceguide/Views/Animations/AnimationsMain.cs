@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class AnimationsMain : BoundPage<AnimationsViewModel>
+    public class AnimationsMain : BoundPage<SimpleViewModel>
     {
         public AnimationsMain()
         {

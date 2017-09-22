@@ -1,7 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
@@ -18,16 +21,15 @@ namespace referenceguide
         public string Value { get; set; }
         public string Text { get; set; }
     }
-	public class SimpleViewModel : ObservableViewModel
-	{
+    public class SimpleViewModel : ObservableViewModel
+    {
         private int selectedRank;
-        private IAudioPlayer audioplayer;
         private AudioState playingState;
 
         public int SelectedRank
         {
-			get { return selectedRank; }
-			set 
+            get { return selectedRank; }
+            set
             {
 
                 selectedRank = value;
@@ -37,239 +39,348 @@ namespace referenceguide
             }
         }
 
-        public string SelectedRankText{ get; set; }
-        public long PhoneNumber{ get; set; }
-		public string FirstName{ get; set; }
-        public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
-        public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
+        public string CommunicationEmail { get; set; }
+        public string CommunicationNumber { get; set; }
+        public string CommunicationMessage { get; set; }
+        public string SelectedRankText { get; set; }
+        public long PhoneNumber { get; set; }
+        public string FirstName { get; set; }
         public int SelectedRadioIndex { get; set; } = -1;
-		public string PushButtonLabel{ get; set; }
+        public string PushButtonLabel { get; set; }
         public string BindingTextValue { get; set; }
+        public int ClickCount { get; set; }
 
-		public ICommand DialogClick { get; set; }
-		public ICommand NotificationClick { get; set; }
-		public ICommand OverlayClick { get; set; }
-		public ICommand Blur { get; set; }
-		public ICommand CreateCalendar { get; set; }
-		public ICommand PushRegister { get; set; }
+		public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
+		public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
+		public ObservableCollection<CarouselBindingObject> ItemSource { get; set; }
+
+        public ICommand ClickEvent { get; set; }
+        public ICommand DialogClick { get; set; }
+        public ICommand NotificationClick { get; set; }
+        public ICommand OverlayClick { get; set; }
+        public ICommand Blur { get; set; }
+        public ICommand CreateCalendar { get; set; }
+        public ICommand PushRegister { get; set; }
         public ICommand ShowSnack { get; set; }
         public ICommand PlaySound { get; set; }
         public ICommand CommTest { get; set; }
         public ICommand ContextMenu { get; set; }
         public ICommand BindingTextChanged { get; set; }
+        public ICommand FABClicked { get; set; }
+        public ICommand SendSMS { get; set; }
+        public ICommand SendEmail { get; set; }
+        public ICommand MakeCall { get; set; }
+        public ICommand MakeCallEvent { get; set; }
 
-		public SimpleViewModel()
-		{
-			PushButtonLabel = "Register Push Notification";
 
-            var lst = new List<State>(new State[] {
-                    new State { Value = "AL", Text = "Alabama" },
-                    new State { Value = "AK", Text = "Alaska" },
-                    new State { Value = "AZ", Text = "Arizona" },
-                    new State { Value = "AR", Text = "Arkansas" },
-                    new State { Value = "CA", Text = "California" },
-                    new State { Value = "CO", Text = "Colorado" },
-                    new State { Value = "CT", Text = "Connecticut" },
-                    new State { Value = "DE", Text = "Delaware" },
-                    new State { Value = "FL", Text = "Florida" },
-                    new State { Value = "GA", Text = "Georgia" },
-                    new State { Value = "HI", Text = "Hawaii" },
-                    new State { Value = "ID", Text = "Idaho" },
-                    new State { Value = "IL", Text = "Illinois" },
-                    new State { Value = "IN", Text = "Indiana" },
-                    new State { Value = "IA", Text = "Iowa" },
-                    new State { Value = "KS", Text = "Kansas" },
-                    new State { Value = "KY", Text = "Kentucky" },
-                    new State { Value = "LA", Text = "Louisiana" },
-                    new State { Value = "ME", Text = "Maine" },
-                    new State { Value = "MD", Text = "Maryland" },
-                    new State { Value = "MA", Text = "Massachusetts" },
-                    new State { Value = "MI", Text = "Michigan" },
-                    new State { Value = "MN", Text = "Minnesota" },
-                    new State { Value = "MS", Text = "Mississippi" },
-                    new State { Value = "MO", Text = "Missouri" },
-                    new State { Value = "MT", Text = "Montana" },
-                    new State { Value = "NC", Text = "North Carolina" },
-                    new State { Value = "ND", Text = "North Dakota" },
-                    new State { Value = "NE", Text = "Nebraska" },
-                    new State { Value = "NV", Text = "Nevada" },
-                    new State { Value = "NH", Text = "New Hampshire" },
-                    new State { Value = "NJ", Text = "New Jersey" },
-                    new State { Value = "NM", Text = "New Mexico" },
-                    new State { Value = "NY", Text = "New York" },
-                    new State { Value = "OH", Text = "Ohio" },
-                    new State { Value = "OK", Text = "Oklahoma" },
-                    new State { Value = "OR", Text = "Oregon" },
-                    new State { Value = "PA", Text = "Pennsylvania" },
-                    new State { Value = "RI", Text = "Rhode Island" },
-                    new State { Value = "SC", Text = "South Carolina" },
-                    new State { Value = "SD", Text = "South Dakota" },
-                    new State { Value = "TN", Text = "Tennessee" },
-                    new State { Value = "TX", Text = "Texas" },
-                    new State { Value = "UT", Text = "Utah" },
-                    new State { Value = "VT", Text = "Vermont" },
-                    new State { Value = "VA", Text = "Virginia" },
-                    new State { Value = "WA", Text = "Washington" },
-                    new State { Value = "WV", Text = "West Virginia" },
-                    new State { Value = "WI", Text = "Wisconsin" },
-                    new State { Value = "WY", Text = "Wyoming" }
-            });
+        public SimpleViewModel()
+        {
+            PushButtonLabel = "Register Push Notification";
 
             var radioOptions = new List<string>(
                 new string[] { "Blue", "Red", "Green" }
             );
             RadioOptions = radioOptions.ToObservable<string>();
 
-            States = lst.ToObservable();
-			
-			DialogClick = new RelayCommand((obj) =>
-			{
-				DialogPrompt.ShowMessage(new Prompt()
-				{
-					Title = "Test",
-					Message = "This is just a message"
-				});
-			});
+            var stateResults = DataBLL.GetAllStates();
+            if (stateResults.Error == null)
+                States = stateResults.Response.ToObservable();
 
-			NotificationClick = new RelayCommand((obj) =>
-			{
-				this.ShowNotification(new LocalNotification()
-				{
-					Id = 1,
-					Title = "Test",
-					Message = "This is just a message"
-				});
+            DialogClick = new RelayCommand((obj) => { DialogClickMethod(); });
+            NotificationClick = new RelayCommand((obj) => { NotificationClickMethod(); });
+            OverlayClick = new RelayCommand(async (obj) => { await OverlayClickMethod(); });
+            Blur = new RelayCommand((obj) => { BlurNewMethod(); });
+            CreateCalendar = new RelayCommand(async (obj) => { await CreateCalendarMethod(); });
+            PushRegister = new RelayCommand((obj) => { PushRegisterMethod(); });
+            ShowSnack = new RelayCommand((obj) => { ShowSnackMethod(); });
+            PlaySound = new RelayCommand((obj) => { PlaySoundMethod(); });
+            CommTest = new RelayCommand(async (obj) => { await CommTestMethod(); });
+            ContextMenu = new RelayCommand(async (obj) => { await ContextMenuMethod(); });
+            BindingTextChanged = new RelayCommand((obj) => { BindingTextChangedMethod(); });
+            SendSMS = new RelayCommand((obj) => { SendSMSMethod(); });
+            SendEmail = new RelayCommand((obj) => { SendEmailMethod(); });
+            MakeCall = new RelayCommand(async (obj) => { await MakeCallMethod(); });
+            MakeCallEvent = new RelayCommand(async (obj) => { await MakeCallEventMethod(); });
+            FABClicked = new RelayCommand((obj) => { FABClickedMethod(); });
+            ClickEvent = new RelayCommand((obj) => { ClickCount++; });
+        }
 
-
-			});
-
-			OverlayClick = new RelayCommand(async (obj) =>
-			{
-				LoadingMessageOverlay = "Loading Overlay Data...";
-				IsLoadingOverlay = true;
-				await Task.Delay(2000);
-				IsLoadingOverlay = false;
-			});
-
-			Blur = new RelayCommand((obj) =>
-			{
-				BlurOverlay.Show();
-
-				Device.BeginInvokeOnMainThread(() =>
-				{
-					DialogPrompt.ShowMessage(new Prompt()
-					{
-						Title = "Blurred Background",
-						Message = "Click okay to close",
-						Callback = (result) =>
-						{
-							BlurOverlay.Hide();
-						}
-					});
-
-				});
-
-			});
-
-			CreateCalendar = new RelayCommand(async (obj) =>
-			{
-				await this.Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
-			});
-
-			PushRegister = new RelayCommand((obj) =>
-			{
-                AzureNotificationHub.RegisterNotificationHub();
-                PushButtonLabel = "** Notifications Registered **";
-
-			});
-
-            ShowSnack = new RelayCommand((obj) => {
-
-                SnackBar.Show(new Snack()
-                {
-                    Duration = 10000,
-                    Background = Color.FromHex("#DF8049"),
-                    TextColor=Color.White,
-                    ActionTextColor=Color.White,
-                    Text = "Excellent Work!!",
-                    ActionText = "Ok",
-                    Action = (aobj) => {
-                        SnackBar.Close();
-                    }
-                });
-            });
-
-            PlaySound = new RelayCommand((obj) => {
-                if(AudioPlayer.OnFinishedPlaying==null)
-					AudioPlayer.OnFinishedPlaying = () =>
-					{
-                        playingState = AudioState.Stopped;
-					};
-
-                switch (playingState)
-                {
-                    case AudioState.Stopped:
-                        playingState = AudioState.Playing;
-                        AudioPlayer.Play("hailchief.mp3");
-                        break;
-                    case AudioState.Paused:
-                        playingState = AudioState.Playing;
-                        AudioPlayer.Play();
-                        break;
-                    default:
-                        playingState = AudioState.Paused;
-                        AudioPlayer.Pause();
-                        break;
-
-                }
-
-            });
-
-            CommTest = new RelayCommand(async(obj) => {
-                await this.Navigation.PushAsync(new CommunicationPage());
-            });
-			ContextMenu = new RelayCommand(async (obj) =>
-			{
-				await this.Navigation.PushAsync(new ContextMenuPage());
-			});
-            BindingTextChanged = new RelayCommand((obj) =>
+        private void FABClickedMethod()
+        {
+            DialogPrompt.ShowMessage(new Prompt()
             {
-                if(!string.IsNullOrEmpty(BindingTextValue) && BindingTextValue.Length>2){
-                    int num;
-                    var valid = int.TryParse(BindingTextValue, out num);
-                    if(!valid){
-                        DialogPrompt.ShowMessage(new Prompt(){
-                            Title="Error",
-                            Message="Can't you even follow directions?"
+                Title = "FAB Button",
+                Message = "The button was clicked"
+            });
+        }
+
+        private async Task MakeCallEventMethod()
+        {
+            try
+            {
+                var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+                if (status != PermissionStatus.Granted)
+                {
+                    if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                    {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Permission",
+                            Message = "The application needs access to the phone."
                         });
                     }
+
+                    var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+                    status = results[Permission.Location];
                 }
-            });
-		}
 
-		public void DisplayNotification(LocalNotification note)
-		{
-			Device.BeginInvokeOnMainThread(() =>
-			{
-				this.ShowNotification(note);
-			});
-		}
+                if (status == PermissionStatus.Granted)
+                {
+                    Communication.PlaceCallWithCallBack(CommunicationNumber.ToString(), "PhoneCallBack");
+                }
+                else if (status != PermissionStatus.Unknown)
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Issue",
+                        Message = "There was a problem accessing the phone."
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
 
-        public override void OnViewMessageReceived(string key, object obj)
-        {
-            if(key=="PhoneCallBack"){
-				Device.BeginInvokeOnMainThread(() =>
-				{
-					DialogPrompt.ShowMessage(new Prompt()
-					{
-						Title = "Completed",
-						Message = "Phone call action has been complete and action logged"
-					});
-				});
+                DialogPrompt.ShowMessage(new Prompt()
+                {
+                    Title = "Error",
+                    Message = "The application experience an error accessing the phone."
+                });
             }
         }
 
-	}
+        private async Task MakeCallMethod()
+        {
+            try
+            {
+                var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+                if (status != PermissionStatus.Granted)
+                {
+                    if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                    {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Permission",
+                            Message = "The application needs access to the phone."
+                        });
+                    }
+
+                    var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+                    status = results[Permission.Location];
+                }
+
+                if (status == PermissionStatus.Granted)
+                {
+                    Communication.PlaceCall(CommunicationNumber.ToString());
+                }
+                else if (status != PermissionStatus.Unknown)
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Issue",
+                        Message = "There was a problem accessing the phone."
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                DialogPrompt.ShowMessage(new Prompt()
+                {
+                    Title = "Error",
+                    Message = "The application experience an error accessing the phone."
+                });
+            }
+        }
+
+        private void SendEmailMethod()
+        {
+            if (!string.IsNullOrEmpty(CommunicationEmail) &&
+                !string.IsNullOrEmpty(CommunicationMessage))
+                Communication.SendEmail(new EmailMessage()
+                {
+                    EmailAddress = CommunicationEmail,
+                    Message = CommunicationMessage,
+                    Subject = "Email Test",
+                    Title = "Mobile Email"
+                });
+        }
+
+        private void SendSMSMethod()
+        {
+            if (!string.IsNullOrEmpty(CommunicationNumber) &&
+               !string.IsNullOrEmpty(CommunicationMessage))
+                Communication.SendSMS(CommunicationNumber, CommunicationMessage);
+        }
+
+        private void BindingTextChangedMethod()
+        {
+            if (!string.IsNullOrEmpty(BindingTextValue) && BindingTextValue.Length > 2)
+            {
+                int num;
+                var valid = int.TryParse(BindingTextValue, out num);
+                if (!valid)
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = "Can't you even follow directions?"
+                    });
+                }
+            }
+        }
+
+        private async Task ContextMenuMethod()
+        {
+            await this.Navigation.PushAsync(new ContextMenuPage());
+        }
+
+        private async Task CommTestMethod()
+        {
+            await this.Navigation.PushAsync(new CommunicationPage());
+        }
+
+        private void PlaySoundMethod()
+        {
+            if (AudioPlayer.OnFinishedPlaying == null)
+                AudioPlayer.OnFinishedPlaying = () =>
+                {
+                    playingState = AudioState.Stopped;
+                };
+
+            switch (playingState)
+            {
+                case AudioState.Stopped:
+                    playingState = AudioState.Playing;
+                    AudioPlayer.Play("hailchief.mp3");
+                    break;
+                case AudioState.Paused:
+                    playingState = AudioState.Playing;
+                    AudioPlayer.Play();
+                    break;
+                default:
+                    playingState = AudioState.Paused;
+                    AudioPlayer.Pause();
+                    break;
+
+            }
+        }
+
+        private void ShowSnackMethod()
+        {
+            SnackBar.Show(new Snack()
+            {
+                Duration = 10000,
+                Background = Color.FromHex("#DF8049"),
+                TextColor = Color.White,
+                ActionTextColor = Color.White,
+                Text = "Excellent Work!!",
+                ActionText = "Ok",
+                Action = (aobj) =>
+                {
+                    SnackBar.Close();
+                }
+            });
+        }
+
+        private void PushRegisterMethod()
+        {
+            AzureNotificationHub.RegisterNotificationHub();
+            PushButtonLabel = "** Notifications Registered **";
+        }
+
+        private async Task CreateCalendarMethod()
+        {
+            await this.Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
+        }
+
+        private void BlurNewMethod()
+        {
+            BlurOverlay.Show();
+
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                DialogPrompt.ShowMessage(new Prompt()
+                {
+                    Title = "Blurred Background",
+                    Message = "Click okay to close",
+                    Callback = (result) =>
+                    {
+                        BlurOverlay.Hide();
+                    }
+                });
+
+            });
+        }
+
+        private async Task OverlayClickMethod()
+        {
+            LoadingMessageOverlay = "Loading Overlay Data...";
+            IsLoadingOverlay = true;
+            await Task.Delay(2000);
+            IsLoadingOverlay = false;
+        }
+
+        private void NotificationClickMethod()
+        {
+            this.ShowNotification(new LocalNotification()
+            {
+                Id = 1,
+                Title = "Test",
+                Message = "This is just a message"
+            });
+        }
+
+        private void DialogClickMethod()
+        {
+            DialogPrompt.ShowMessage(new Prompt()
+            {
+                Title = "Test",
+                Message = "This is just a message"
+            });
+        }
+
+        public override void LoadResources(string parameter = null)
+        {
+
+            var result = DataBLL.GetCarouselData();
+            if (result.Error == null)
+                ItemSource = result.Response.ToObservable<CarouselBindingObject>();
+        }
+
+        public void DisplayNotification(LocalNotification note)
+        {
+            Device.BeginInvokeOnMainThread(() =>
+            {
+                this.ShowNotification(note);
+            });
+        }
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            if (key == "PhoneCallBack")
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Completed",
+                        Message = "Phone call action has been complete and action logged"
+                    });
+                });
+            }
+        }
+
+    }
 }
 
 

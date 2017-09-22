@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class CarouselMain:BoundPage<CarouselViewModel>
+    public class CarouselMain:BoundPage<SimpleViewModel>
     {
         public CarouselMain()
         {

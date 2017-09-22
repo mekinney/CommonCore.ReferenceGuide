@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore.MaterialDesign;
 
 namespace referenceguide
 {
-	public class MaterialDesignPage : AbsoluteLayoutPage<ControlsViewModel>
+	public class MaterialDesignPage : AbsoluteLayoutPage<SimpleViewModel>
 	{
 
 		public MaterialDesignPage()

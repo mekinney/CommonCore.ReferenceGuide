@@ -70,7 +70,7 @@ namespace referenceguide
         }
     }
 
-    public class FontsCollectionView:BoundPage<FontsCollectionViewModel>
+    public class FontsCollectionView:BoundPage<DataExampleViewModel>
     {
         public FontsCollectionView()
         {

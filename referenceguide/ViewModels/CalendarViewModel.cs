@@ -8,37 +8,35 @@ namespace referenceguide
 {
 	public class CalendarViewModel : ObservableViewModel
 	{
-		private Appointment appt;
-		private TimeSpan startTime;
-		private TimeSpan endTime;
-
 		public TimeSpan StartTime{ get; set; }
 		public TimeSpan EndTime{ get; set; }
 		public Appointment Appt{ get; set; }
 		public bool DevicePersistOnly { get; set; }
 
-		public ICommand CreateEvent { get; set; }
+        public ICommand CreateEvent { get; set; } 
 
 		public CalendarViewModel()
 		{
 			Appt = new Appointment();
-			CreateEvent = new RelayCommand(async (obj) =>
-			{
-				Appt.StartDate = new DateTime(Appt.StartDate.Year, Appt.StartDate.Month, Appt.StartDate.Day).Add(StartTime);
-
-				Appt.EndDate = new DateTime(Appt.EndDate.Year, Appt.EndDate.Month, Appt.EndDate.Day).Add(EndTime);
-
-				if (DevicePersistOnly)
-				{
-					SaveToPhone();
-				}
-				else
-				{
-					await SaveToDatabase();
-				}
-
-			});
+            CreateEvent = new RelayCommand(async (obj) => { await CreateEventMethod(); });
 		}
+
+        private async Task CreateEventMethod()
+        {
+			Appt.StartDate = new DateTime(Appt.StartDate.Year, Appt.StartDate.Month, Appt.StartDate.Day).Add(StartTime);
+
+			Appt.EndDate = new DateTime(Appt.EndDate.Year, Appt.EndDate.Month, Appt.EndDate.Day).Add(EndTime);
+
+			if (DevicePersistOnly)
+			{
+				SaveToPhone();
+			}
+			else
+			{
+				await SaveToDatabase();
+			}
+        }
+
 
 		private void SaveToPhone()
 		{
@@ -58,8 +56,8 @@ namespace referenceguide
 		}
 		private async Task SaveToDatabase()
 		{
-			var result = await SqliteDb.AddOrUpdate<Appointment>(this.Appt);
-			if (result.Success)
+            var result = await DataBLL.SaveAppointment(this.Appt);
+			if (result.Error==null)
 			{
 				SendViewMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, this.Appt);
 				Appt = new Appointment();

@@ -20,9 +20,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Styles\AppStyles.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AuthenticationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CalendarViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ControlsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DataExampleViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaginatedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SimpleViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\MasterDetailViewModel.cs" />
@@ -47,23 +45,27 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\ServicesMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\SqlitePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\CommunicationPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CommunicationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CarouselPage\CarouselMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CarouselPage\PictureView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CarouselViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\CarouselPage\PictureTemplateSelector.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PostItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\NavigationPages\NavigationPages.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\ContextMenuPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\AnalyticsPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\ErrorsPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LoggingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Animations\AnimationsMain.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AnimationsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\BindingViews\BindingViewMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsCollectionView.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\FontsCollectionViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsMainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\DataBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialConfigurationModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialObservableViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\OAuthBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CarouselBindingObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\CryptoBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BLL\WebBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\FontItemRow.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />
@@ -79,5 +81,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\BindingViews\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Fonts\" />
+    <Folder Include="$(MSBuildThisFileDirectory)BLL\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
   </ItemGroup>
 </Project>

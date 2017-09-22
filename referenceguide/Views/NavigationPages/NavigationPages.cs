@@ -169,14 +169,18 @@ namespace referenceguide
         {
             Task.Run(async () =>
             {
-                var d = await FileStore.GetAsync<Animal>("test");
-                AnimalDescription = d?.Response?.Description;
+                var result = await DataBLL.GetFileData<Animal>("animal");
+                if(result.Error==null)  
+                    AnimalDescription = result.Response?.Description;
             });
         }
 
         public override void ReleaseResources(string parameter = null)
         {
-            FileStore.SaveAsync<Animal>("test", new Animal() { Description = "Dog" }).ContinueOn();
+            Task.Run(async()=>{
+                await DataBLL.SaveFileData<Animal>("animal", new Animal() { Description = "Dog" });
+            });
+
         }
     }
     public class Nav4 : BoundPage<Nav4ViewModel>

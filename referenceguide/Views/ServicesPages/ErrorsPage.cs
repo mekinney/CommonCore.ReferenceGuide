@@ -21,7 +21,7 @@ namespace referenceguide
 		}
     }
 
-    public class ErrorsPage : BoundPage<LoggingViewModel>
+    public class ErrorsPage : BoundPage<DataExampleViewModel>
     {
         public ErrorsPage()
         {

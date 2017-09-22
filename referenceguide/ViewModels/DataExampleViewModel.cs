@@ -9,18 +9,41 @@ namespace referenceguide
 {
     public class DataExampleViewModel : ObservableViewModel
     {
-        private WebDownloadClient downloadClient;
+
+        private RandomUser selectedPagingatedUser;
+        private int pageIndex = 0;
 
         public ObservableCollection<Appointment> Appointments { get; set; } = new ObservableCollection<Appointment>();
         public ObservableCollection<RandomUser> RandomUsers { get; set; } = new ObservableCollection<RandomUser>();
-        public string HashMatchMessage{ get; set; }
-        public string ClearHash1{ get; set; }
-        public string ClearHash2{ get; set; }
-        public string ClearText{ get; set; }
-        public string EncryptedText{ get; set; }
-        public string BackgroundButtonTitle{ get; set; }
+        public ObservableCollection<ErrorLog> ErrorLogs { get; set; } = new ObservableCollection<ErrorLog>();
+        public ObservableCollection<AnalyticLog> AnalyticLogs { get; set; } = new ObservableCollection<AnalyticLog>();
+        public ObservableCollection<FontItemRow> Items { get; set; } = new ObservableCollection<FontItemRow>();
+        public OptimizedObservableCollection<RandomUser> PaginatedRandomUsers { get; set; } = new OptimizedObservableCollection<RandomUser>();
 
+        public string HashMatchMessage { get; set; }
+        public string ClearHash1 { get; set; }
+        public string ClearHash2 { get; set; }
+        public string ClearText { get; set; }
+        public string EncryptedText { get; set; }
+        public string BackgroundButtonTitle { get; set; }
+        public FontType FontType { get; set; }
+        public RandomUser SelectedPagingatedUser
+        {
+            get { return selectedPagingatedUser; }
+            set
+            {
+                if (value != null && selectedPagingatedUser != value)
+                {
+                    selectedPagingatedUser = value;
+                    OnPropertyChanged("SelectedPagingatedUser");
+                    PageTitle = selectedPagingatedUser?.FullName;
+                }
+            }
+        }
 
+        public ICommand CreateErrorEntry { get; set; }
+        public ICommand ClearErrorEntries { get; set; }
+        public ICommand ClearAnalyticEntries { get; set; }
         public ICommand EncryptText { get; set; }
         public ICommand HashText { get; set; }
         public ICommand HttpDownloadStart { get; set; }
@@ -29,111 +52,192 @@ namespace referenceguide
         public ICommand StartBackgrounding { get; set; }
         public ICommand HttpPost { get; set; }
         public ICommand LongDownload { get; set; }
+        public ICommand LoadMorePaginatedUsers { get; set; }
+
 
         public DataExampleViewModel()
         {
             BackgroundButtonTitle = "Background Timer";
 
-            HashText = new RelayCommand((obj) =>
+            CreateErrorEntry = new RelayCommand(async (obj) => { await CreateErrorEntryMethod(); });
+            ClearErrorEntries = new RelayCommand(async (obj) => { await ClearErrorEntriesMethod(); });
+            ClearAnalyticEntries = new RelayCommand(async (obj) => { await ClearAnalyticEntriesMethod(); });
+            LoadMorePaginatedUsers = new RelayCommand(async (obj) => { await GetPaginatedRandomUsers(); });
+            HashText = new RelayCommand((obj) => { HashTextMethod(); });
+            EncryptText = new RelayCommand((obj) => { EncryptTextMethod(); });
+            HttpDownloadStart = new RelayCommand(async (obj) => { await GetRandomUsers(); });
+            SqliteLoadStart = new RelayCommand(async (obj) => { await GetDbAppointments(); });
+            StartBackgrounding = new RelayCommand((obj) => { StartBackgroundingMethod(); });
+            HttpPost = new RelayCommand(async (obj) => { await HttpPostMethod(); });
+            LongDownload = new RelayCommand(async (obj) => { await LongDownloadMethod(); });
+
+        }
+
+        private async Task LongDownloadMethod()
+        {
+            await WebBll.GetLongDownload((percent) =>
             {
-                if (!string.IsNullOrEmpty(ClearHash1) && !string.IsNullOrEmpty(ClearHash2))
+                Device.BeginInvokeOnMainThread(() =>
                 {
-                    var h1 = this.EncryptionService.GetHashString(ClearHash1);
-                    var h2 = this.EncryptionService.GetHashString(ClearHash2);
-                    var isMatch = h1.Equals(h2);
-                    if (isMatch)
-                        HashMatchMessage = string.Empty;
-                    else
-                        HashMatchMessage = "The entries do not match";
-                }
+                    ProgressIndicator.ShowProgress("Downloading...", percent);
+                });
+            }, (data) =>
+            {
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    ProgressIndicator.Dismiss();
+                });
+                var fileData = data;
 
             });
-            EncryptText = new RelayCommand((obj) =>
+        }
+
+        private async Task HttpPostMethod()
+        {
+            var result = await WebBll.PostDataExample();
+            if (result.Error == null)
             {
-                if (string.IsNullOrEmpty(EncryptedText))
+                var pp = result.Response;
+                DialogPrompt.ShowMessage(new Prompt()
                 {
-                    if (!string.IsNullOrEmpty(ClearText))
+                    Title = "Success",
+                    Message = $"The person's new id for {pp.FirstName} {pp.LastName}  is {pp.Id}"
+                });
+            }
+            else
+            {
+                DialogPrompt.ShowMessage(new Prompt()
+                {
+                    Title = "Error",
+                    Message = result.Error.Message
+                });
+            }
+        }
+
+        private void StartBackgroundingMethod()
+        {
+            if (BackgroundButtonTitle.StartsWith("Stop", System.StringComparison.OrdinalIgnoreCase))
+            {
+                DataBLL.TimerService.Stop();
+                BackgroundButtonTitle = "Background Timer";
+            }
+            else
+            {
+                var timerService = InjectionManager.GetService<IIntervalCallback, TimerCallbackService>(true);
+                DataBLL.TimerService.Start(1, timerService);
+                BackgroundButtonTitle = $"Stop {BackgroundButtonTitle}";
+            }
+        }
+
+        private void EncryptTextMethod()
+        {
+            if (string.IsNullOrEmpty(EncryptedText))
+            {
+                if (!string.IsNullOrEmpty(ClearText))
+                {
+                    var result = CryptoBLL.EncryptText(ClearText);
+                    if (result.Error == null)
                     {
-                        EncryptedText = this.EncryptionService.AesEncrypt(ClearText, this.AESEncryptionKey);
+                        EncryptedText = result.Response;
                         ClearText = string.Empty;
                     }
-                }
-                else
-                {
-                    ClearText = this.EncryptionService.AesDecrypt(EncryptedText, this.AESEncryptionKey);
-                    EncryptedText = string.Empty;
-                }
-            });
-
-            HttpDownloadStart = new RelayCommand(async (obj) =>
-            {
-                await GetRandomUsers();
-            });
-
-            SqliteLoadStart = new RelayCommand(async (obj) =>
-            {
-                await GetDbAppointments();
-            });
-
-            StartBackgrounding = new RelayCommand((obj) =>
-            {
-                if (BackgroundButtonTitle.StartsWith("Stop", System.StringComparison.OrdinalIgnoreCase))
-                {
-                    this.BackgroundTimer.Stop();
-                    BackgroundButtonTitle = "Background Timer";
-                }
-                else
-                {
-                    var timerService = InjectionManager.GetService<IIntervalCallback, TimerCallbackService>(true);
-                    this.BackgroundTimer.Start(1, timerService);
-                    BackgroundButtonTitle = $"Stop {BackgroundButtonTitle}";
-                }
-            });
-
-            HttpPost = new RelayCommand(async (obj) =>
-            {
-
-                var url = this.WebApis["referencewebtestpost"];
-
-                var p = new PostItem() { FirstName = "Jack", LastName = "Sparrow", Age = 21 };
-                var response = await HttpService.Post<PostItem>(url, p);
-                if (response.Success)
-                {
-                    var pp = response.Response;
-                    DialogPrompt.ShowMessage(new Prompt()
+                    else
                     {
-                        Title = "Success",
-                        Message = $"The person's new id for {pp.FirstName} {pp.LastName}  is {pp.Id}"
-                    });
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
+                    }
+
+                }
+            }
+            else
+            {
+
+                var result = CryptoBLL.DecryptText(EncryptedText);
+                if (result.Error == null)
+                {
+                    ClearText = result.Response;
+                    EncryptedText = string.Empty;
                 }
                 else
                 {
                     DialogPrompt.ShowMessage(new Prompt()
                     {
                         Title = "Error",
-                        Message = response.Error.Message
+                        Message = result.Error.Message
                     });
                 }
+            }
+        }
 
-            });
-            LongDownload = new RelayCommand(async(obj) => {
-                downloadClient = HttpService.GetWebDownloadClient();
-                downloadClient.DownloadUrl = this.WebApis["largefile"];
-                downloadClient.PercentageChanged += (percent) => {
-                    Device.BeginInvokeOnMainThread(()=>{
-                        ProgressIndicator.ShowProgress("Downloading...", percent);
-                    });
-                };
-                downloadClient.FinishedEvent += (data) => {
-                    Device.BeginInvokeOnMainThread(() =>
-                    {
-                        ProgressIndicator.Dismiss();
-                    });
-                    var fileData = data;
-                };
-                await downloadClient.StartDownload();
+        private void HashTextMethod()
+        {
+            if (!string.IsNullOrEmpty(ClearHash1) && !string.IsNullOrEmpty(ClearHash2))
+            {
+                var isMatch = CryptoBLL.HashValueMatch(ClearHash1, ClearHash2);
+                if (isMatch.Success)
+                    HashMatchMessage = string.Empty;
+                else
+                    HashMatchMessage = "The entries do not match";
+            }
+        }
 
+        private async Task ClearAnalyticEntriesMethod()
+        {
+            var result = await DataBLL.ClearLogFiles(LogType.Analytic);
+            if (result.Success)
+                AnalyticLogs = new ObservableCollection<AnalyticLog>();
+        }
+
+        private async Task ClearErrorEntriesMethod()
+        {
+            var result = await DataBLL.ClearLogFiles(LogType.Error);
+            if (result.Success)
+                ErrorLogs = new ObservableCollection<ErrorLog>();
+        }
+
+        private async Task CreateErrorEntryMethod()
+        {
+            DataBLL.CreateFictiousError();
+            var result = await DataBLL.GetLogFiles<ErrorLog>();
+            if (result.Error == null)
+                ErrorLogs = result.Response.ToObservable<ErrorLog>();
+        }
+
+        public override void LoadResources(string parameter = null)
+        {
+            Task.Run(async () =>
+            {
+                var errorLogs = await DataBLL.GetLogFiles<ErrorLog>();
+                if (errorLogs.Error == null)
+                    ErrorLogs = errorLogs.Response.ToObservable<ErrorLog>();
+
+                var analyticLogs = await DataBLL.GetLogFiles<AnalyticLog>();
+                if (analyticLogs.Error == null)
+                    AnalyticLogs = analyticLogs.Response.ToObservable<AnalyticLog>();
             });
+
+
+        }
+
+        public async Task GetPaginatedRandomUsers()
+        {
+            this.LoadingMessageHUD = "Performing download...";
+            this.IsLoadingHUD = true;
+
+            var result = await WebBll.GetPaginatedRandomUsers(pageIndex);
+            pageIndex++;
+
+            this.IsLoadingHUD = false;
+            if (result.Error == null)
+            {
+                using (var updated = PaginatedRandomUsers.BeginMassUpdate())
+                {
+                    PaginatedRandomUsers.AddRange(result.Response);
+                }
+            }
 
         }
 
@@ -142,11 +246,9 @@ namespace referenceguide
             this.LoadingMessageHUD = "Sqlite loading...";
             this.IsLoadingHUD = true;
 
-            var result = await this.SqliteDb.GetByQuery<Appointment>((x) => x.MarkedForDelete == false);
-            Log.LogResponse(result);
-
+            var result = await DataBLL.GetAllAppointments();
             this.IsLoadingHUD = false;
-            if (result.Success)
+            if (result.Error == null)
             {
                 Appointments = result.Response.ToObservable();
             }
@@ -158,17 +260,44 @@ namespace referenceguide
             this.LoadingMessageHUD = "Performing download...";
             this.IsLoadingHUD = true;
 
-            var url = this.WebApis["randomuser"];
-
-            //var isAvailable = await this.HttpService.PingDomain(url);
-
-            var result = await this.HttpService.Get<RootObject>(url);
-			Log.LogResponse(result);
+            var result = await WebBll.GetRandomUsers();
 
             this.IsLoadingHUD = false;
-            if (result.Success)
+            if (result.Error == null)
             {
-                RandomUsers = result.Response.results.ToRandomUserObservableCollection();
+                RandomUsers = result.Response.ToObservable();
+            }
+
+        }
+
+        public void BuildResourceList()
+        {
+            switch (FontType)
+            {
+                case FontType.FontAwesome:
+                    Items = DataBLL.GetFontList(FontAwesome.Icons, FontAwesome.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.EntypoPlus:
+                    Items = DataBLL.GetFontList(EntypoPlus.Icons, EntypoPlus.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.Ionicons:
+                    Items = DataBLL.GetFontList(Ionicons.Icons, Ionicons.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.Material:
+                    Items = DataBLL.GetFontList(Material.Icons, Material.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.Meteocons:
+                    Items = DataBLL.GetFontList(Meteocons.Icons, Meteocons.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.SimpleLineIcons:
+                    Items = DataBLL.GetFontList(SimpleLineIcons.Icons, SimpleLineIcons.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.Typicons:
+                    Items = DataBLL.GetFontList(Typicons.Icons, Typicons.FontFamily).ToObservable<FontItemRow>();
+                    break;
+                case FontType.WeatherIcons:
+                    Items = DataBLL.GetFontList(WeatherIcons.Icons, WeatherIcons.FontFamily).ToObservable<FontItemRow>();
+                    break;
             }
 
         }
@@ -181,14 +310,14 @@ namespace referenceguide
             }
         }
 
-		public override void SaveState()
-		{
-			this.SaveState<DataExampleViewModel>();
+        public override void SaveState()
+        {
+            this.SaveState<DataExampleViewModel>();
 
-		}
-		public override void LoadState()
-		{
-			this.LoadState<DataExampleViewModel>();
-		}
+        }
+        public override void LoadState()
+        {
+            this.LoadState<DataExampleViewModel>();
+        }
     }
 }

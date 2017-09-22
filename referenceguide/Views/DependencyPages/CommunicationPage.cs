@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class CommunicationPage : TelephonyBoundPage<CommunicationViewModel>
+    public class CommunicationPage : TelephonyBoundPage<SimpleViewModel>
     {
 		//defining class variables allows the the execution of the extension method SetAutomationIds
 		private Entry phoneNum;
