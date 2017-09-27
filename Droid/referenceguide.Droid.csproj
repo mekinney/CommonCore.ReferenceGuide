@@ -191,12 +191,6 @@
     <Reference Include="PropertyChanged">
       <HintPath>..\packages\PropertyChanged.Fody.2.1.4\lib\netstandard1.0\PropertyChanged.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Graph.Core">
-      <HintPath>..\packages\Microsoft.Graph.Core.1.6.1\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Graph">
-      <HintPath>..\packages\Microsoft.Graph.1.5.1\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.25.4.0.2\lib\MonoAndroid70\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
@@ -254,24 +248,6 @@
     <Reference Include="CarouselView.FormsPlugin.Android">
       <HintPath>..\packages\CarouselView.FormsPlugin.4.4.3\lib\MonoAndroid\CarouselView.FormsPlugin.Android.dll</HintPath>
     </Reference>
-    <Reference Include="ExoPlayer.Core">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.5.2\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.Hls">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.2\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.SmoothStreaming">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.5.2\lib\MonoAndroid\ExoPlayer.SmoothStreaming.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.UI">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.UI.2.5.2\lib\MonoAndroid\ExoPlayer.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer.Dash">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Dash.2.5.2\lib\MonoAndroid\ExoPlayer.Dash.dll</HintPath>
-    </Reference>
-    <Reference Include="ExoPlayer">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.2.5.2\lib\MonoAndroid\ExoPlayer.dll</HintPath>
-    </Reference>
     <Reference Include="CommonServiceLocator">
       <HintPath>..\packages\CommonServiceLocator.1.4.0\lib\netstandard2.0\CommonServiceLocator.dll</HintPath>
     </Reference>
@@ -308,20 +284,44 @@
     <Reference Include="Microsoft.Azure.Mobile.Crashes">
       <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.15.1\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Graph.Core">
+      <HintPath>..\packages\Microsoft.Graph.Core.1.6.2\lib\netstandard1.1\Microsoft.Graph.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Graph">
+      <HintPath>..\packages\Microsoft.Graph.1.6.0\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.Core">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.5.3\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.Hls">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.3\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.SmoothStreaming">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.5.3\lib\MonoAndroid\ExoPlayer.SmoothStreaming.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.UI">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.UI.2.5.3\lib\MonoAndroid\ExoPlayer.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer.Dash">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Dash.2.5.3\lib\MonoAndroid\ExoPlayer.Dash.dll</HintPath>
+    </Reference>
+    <Reference Include="ExoPlayer">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.2.5.3\lib\MonoAndroid\ExoPlayer.dll</HintPath>
+    </Reference>
     <Reference Include="FFImageLoading">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.15\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.16\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.15\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.16\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Transformations">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.15\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.16\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Forms">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.15\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.16\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
     </Reference>
     <Reference Include="FFImageLoading.Forms.Droid">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.15\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.16\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -372,7 +372,7 @@
     <AndroidAsset Include="Assets\typicons.ttf" />
     <AndroidAsset Include="Assets\weathericons.ttf" />
   </ItemGroup>
-  <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
+  <Import Project="..\..\..\..\..\Volumes\Personal240\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\..\..\Volumes\Personal240\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.GooglePlayServices.Basement.42.1021.1\build\MonoAndroid70\Xamarin.GooglePlayServices.Basement.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Basement.42.1021.1\build\MonoAndroid70\Xamarin.GooglePlayServices.Basement.targets')" />

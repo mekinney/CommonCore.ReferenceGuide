@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BBA4B17E-0B06-45D2-92D2-D2CA70C071CC">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Config/json/config.dev.json">
     <Files>
       <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="300" Column="27" />
       <File FileName="referenceguide/Views/ControlPages/PaginagedListControl.cs" Line="30" Column="32" />
@@ -15,14 +15,12 @@
       <File FileName="referenceguide/BLL/DataBusinessLayer.cs" Line="138" Column="1" />
       <File FileName="referenceguide/BLL/OAuthBusinessLayer.cs" Line="1" Column="1" />
       <File FileName="referenceguide/BLL/WebBusinessLayer.cs" Line="11" Column="9" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="19" Column="28" />
+      <File FileName="referenceguide/Config/json/config.dev.json" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="referenceguide" expanded="True">
-            <Node name="referenceguide.iOS" selected="True" />
-          </Node>
+          <Node name="referenceguide" expanded="True" />
         </State>
       </Pad>
     </Pads>
@@ -33,7 +31,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.988820375530335359" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>

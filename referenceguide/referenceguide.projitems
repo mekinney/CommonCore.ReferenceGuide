@@ -68,9 +68,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\FontItemRow.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Config\.DS_Store" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.prod.json" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.qa.json" />

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.referenceguide">
+  <!--suppress UsesMinSdkAttributes-->
+  <uses-sdk android:minSdkVersion="15" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.SEND_SMS" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <application android:label="referenceguide" android:icon="@drawable/icon" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainApplication" android:allowBackup="true" android:debuggable="true">
+    <activity android:name="md546a182019d6511bfce654d61824a1f9f.BrowserTabActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:scheme="msal2cc5b21e-3ac2-482c-8027-47265e2b4b11" android:host="auth" />
+      </intent-filter>
+    </activity>
+    <receiver android:name="md5ee71e424d7f7acd12651d6358f939e24.AppUpdateReceiver">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver>
+    <service android:exported="false" android:name="pushnotification.plugin.PushNotificationGcmListener">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.companyname.referenceguide" />
+      </intent-filter>
+    </service>
+    <service android:exported="false" android:name="md5ee71e424d7f7acd12651d6358f939e24.PushNotificationInstanceIDListenerService">
+      <intent-filter>
+        <action android:name="com.google.android.gms.iid.InstanceID" />
+      </intent-filter>
+    </service>
+    <service android:exported="false" android:name="md5ee71e424d7f7acd12651d6358f939e24.PushNotificationRegistrationIntentService" />
+    <service android:name="md5ee71e424d7f7acd12651d6358f939e24.PushNotificationService" />
+    <receiver android:exported="true" android:permission="com.google.android.c2dm.permission.SEND" android:name="md5ee71e424d7f7acd12651d6358f939e24.PushNotificationsReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <category android:name="com.companyname.referenceguide" />
+      </intent-filter>
+    </receiver>
+    <service android:name="md52cbbb386ce1d336d1e7fd8910a8d96d8.TimerBackgroundService">
+      <intent-filter>
+        <action android:name="Xamarin.Forms.CommonCore.TimerBackgroundService" />
+      </intent-filter>
+    </service>
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="referenceguide.Droid" android:theme="@style/MyTheme" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="CommonCore" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.SplashScreenActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="ActivityCustomUrlSchemeInterceptor" android:launchMode="singleTop" android:noHistory="true" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.ActivityCustomUrlSchemeInterceptor">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+        <data android:path="/oauth2redirect" />
+        <data android:scheme="com.googleusercontent.apps.638673396107-ls57h8813oiob1fl1frcifni9p1pd7pf" />
+        <data android:scheme="fb1483295131691906://localhost/path" />
+      </intent-filter>
+    </activity>
+    <activity android:name="microsoft.identity.client.AuthenticationActivity" />
+    <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md5a7903531ac28e2eb4c8576cdf2655bda.ConnectivityChangeBroadcastReceiver" />
+    <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
+    <activity android:label="Web Authenticator" android:name="md53c585be971e02235139fd1aef11fc0c1.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md53c585be971e02235139fd1aef11fc0c1.WebAuthenticatorActivity" />
+    <activity android:label="@string/title_activity_webview" android:theme="@android:style/Theme.DeviceDefault" android:name="md53c585be971e02235139fd1aef11fc0c1.WebViewActivity" />
+    <activity android:label="Web Authenticator Native Broswer" android:launchMode="singleTop" android:noHistory="true" android:name="md53c585be971e02235139fd1aef11fc0c1.WebAuthenticatorNativeBrowserActivity" />
+    <receiver android:name="md53c585be971e02235139fd1aef11fc0c1.CustomTabsActionsBroadcastReceiver" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.companyname.referenceguide.mono.MonoRuntimeProvider.__mono_init__" />
+    <!--suppress ExportedReceiver-->
+    <receiver android:name="mono.android.Seppuku">
+      <intent-filter>
+        <action android:name="mono.android.intent.action.SEPPUKU" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.companyname.referenceguide" />
+      </intent-filter>
+    </receiver>
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <meta-data android:name="android.support.VERSION" android:value="25.4.0" />
+    <activity android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:exported="false" />
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
+  </application>
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+</manifest>
