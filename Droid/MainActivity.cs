@@ -21,6 +21,7 @@ namespace referenceguide.Droid
 
 			base.OnCreate(bundle);
 
+            global::Xamarin.Forms.Forms.SetFlags(AppSettings.FastRenderers);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());

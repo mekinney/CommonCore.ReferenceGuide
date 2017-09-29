@@ -50,9 +50,9 @@ namespace referenceguide
         public string BindingTextValue { get; set; }
         public int ClickCount { get; set; }
 
-		public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
-		public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
-		public ObservableCollection<CarouselBindingObject> ItemSource { get; set; }
+        public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
+        public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
+        public ObservableCollection<CarouselBindingObject> ItemSource { get; set; }
 
         public ICommand ClickEvent { get; set; }
         public ICommand DialogClick { get; set; }
@@ -90,12 +90,12 @@ namespace referenceguide
             NotificationClick = new RelayCommand((obj) => { NotificationClickMethod(); });
             OverlayClick = new RelayCommand(async (obj) => { await OverlayClickMethod(); });
             Blur = new RelayCommand((obj) => { BlurNewMethod(); });
-            CreateCalendar = new RelayCommand(async (obj) => { await CreateCalendarMethod(); });
+            CreateCalendar = new RelayCommand((obj) => { CreateCalendarMethod(); });
             PushRegister = new RelayCommand((obj) => { PushRegisterMethod(); });
             ShowSnack = new RelayCommand((obj) => { ShowSnackMethod(); });
             PlaySound = new RelayCommand((obj) => { PlaySoundMethod(); });
-            CommTest = new RelayCommand(async (obj) => { await CommTestMethod(); });
-            ContextMenu = new RelayCommand(async (obj) => { await ContextMenuMethod(); });
+            CommTest = new RelayCommand((obj) => { CommTestMethod(); });
+            ContextMenu = new RelayCommand((obj) => { ContextMenuMethod(); });
             BindingTextChanged = new RelayCommand((obj) => { BindingTextChangedMethod(); });
             SendSMS = new RelayCommand((obj) => { SendSMSMethod(); });
             SendEmail = new RelayCommand((obj) => { SendEmailMethod(); });
@@ -239,14 +239,14 @@ namespace referenceguide
             }
         }
 
-        private async Task ContextMenuMethod()
+        private void ContextMenuMethod()
         {
-            await this.Navigation.PushAsync(new ContextMenuPage());
+            NavigateTo<ContextMenuPage>();
         }
 
-        private async Task CommTestMethod()
+        private void CommTestMethod()
         {
-            await this.Navigation.PushAsync(new CommunicationPage());
+            NavigateTo<CommunicationPage>();
         }
 
         private void PlaySoundMethod()
@@ -298,9 +298,9 @@ namespace referenceguide
             PushButtonLabel = "** Notifications Registered **";
         }
 
-        private async Task CreateCalendarMethod()
+        private void CreateCalendarMethod()
         {
-            await this.Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
+            NavigateTo(new CalendarEventPage() { DevicePersistOnly = true });
         }
 
         private void BlurNewMethod()

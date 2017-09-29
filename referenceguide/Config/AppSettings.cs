@@ -7,6 +7,7 @@ namespace referenceguide
 {
     public class AppSettings: CoreSettings
 	{
+        public const string FastRenderers = "FastRenderers_Experimental";
 		public const string RefreshAppoints = "RefreshAppoints";
 
 		public static readonly long DefaultUTCTicks = new DateTime(2000, 1, 1).Ticks;

@@ -8,7 +8,8 @@ namespace referenceguide
     {
         public PaginagedListControl()
         {
-            
+            this.Title = "Paginated";
+
 			var lstView = new CoreListView(ListViewCachingStrategy.RecycleElement)
 			{
 				HasUnevenRows = true,

@@ -77,9 +77,9 @@ namespace referenceguide
             {
                 Text = "Material Design",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
-                    await AppSettings.AppNav.PushAsync(new MaterialDesignPage());
+                    NavigateTo<MaterialDesignPage>();
                 })
             };
 
@@ -87,9 +87,9 @@ namespace referenceguide
             {
                 Text = "List Control",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
-                    await AppSettings.AppNav.PushAsync(new PaginagedListControl());
+                    NavigateTo<PaginagedListControl>();
                 })
             };
 
@@ -98,10 +98,10 @@ namespace referenceguide
             {
                 Text = "Search Page",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-               {
-                   await AppSettings.AppNav.PushAsync(new SearchContentPage());
-               })
+                Command = new Command((obj) =>
+                {
+                    NavigateTo<SearchContentPage>();
+                })
             };
 
             var popup = new CoreButton()
@@ -118,9 +118,9 @@ namespace referenceguide
 			{
 				Text = "Carousel Page",
 				Style = AppStyles.LightOrange,
-				Command = new Command(async (obj) =>
+				Command = new Command( (obj) =>
 			   {
-				   await AppSettings.AppNav.PushAsync(new CarouselMain());
+                    NavigateTo<CarouselMain>();
 			   })
 			};
 
@@ -128,9 +128,9 @@ namespace referenceguide
 			{
 				Text = "Background Image",
 				Style = AppStyles.LightOrange,
-				Command = new Command(async(obj) =>
+				Command = new Command((obj) =>
 			   {
-				   await AppSettings.AppNav.PushAsync(new BackgroundImagePage());
+                    NavigateTo<BackgroundImagePage>();
 			   })
 			};
 
@@ -165,9 +165,6 @@ namespace referenceguide
                 HorizontalOptions = LayoutOptions.Center
             };
             starLbl.SetBinding(Label.TextProperty, "SelectedRankText");
-
-
-
 
             var radioGroup = new CoreRadioGroup()
             {

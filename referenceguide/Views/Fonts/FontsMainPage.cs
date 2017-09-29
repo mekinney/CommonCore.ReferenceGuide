@@ -14,11 +14,11 @@ namespace referenceguide
             {
                 Text = "FontAwesome",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.FontAwesome;
                     VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
+                    NavigateTo<FontsCollectionView>();
                 })
             };
 
@@ -26,11 +26,11 @@ namespace referenceguide
             {
                 Text = "EntypoPlus",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.EntypoPlus;
                     VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
+                    NavigateTo<FontsCollectionView>();
                 })
             };
 
@@ -38,11 +38,11 @@ namespace referenceguide
             {
                 Text = "Ionicons",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.Ionicons;
                     VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
+                    NavigateTo<FontsCollectionView>();
                 })
             };
 
@@ -50,60 +50,60 @@ namespace referenceguide
             {
                 Text = "Material",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-                {
-                    VM.FontType = FontType.Material;
-                    VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
-                })
+                Command = new Command((obj) =>
+               {
+                   VM.FontType = FontType.Material;
+                   VM.BuildResourceList();
+                   NavigateTo<FontsCollectionView>();
+               })
             };
 
             var meteocons = new CoreButton()
             {
                 Text = "Meteocons",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-                {
-                    VM.FontType = FontType.Meteocons;
-                    VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
-                })
+                Command = new Command((obj) =>
+               {
+                   VM.FontType = FontType.Meteocons;
+                   VM.BuildResourceList();
+                   NavigateTo<FontsCollectionView>();
+               })
             };
 
             var simpleLineIcons = new CoreButton()
             {
                 Text = "SimpleLineIcons",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-                {
-                    VM.FontType = FontType.SimpleLineIcons;
-                    VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
-                })
+                Command = new Command((obj) =>
+               {
+                   VM.FontType = FontType.SimpleLineIcons;
+                   VM.BuildResourceList();
+                   NavigateTo<FontsCollectionView>();
+               })
             };
 
             var typicons = new CoreButton()
             {
                 Text = "Typicons",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-                {
-                    VM.FontType = FontType.Typicons;
-                    VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
-                })
+                Command = new Command((obj) =>
+               {
+                   VM.FontType = FontType.Typicons;
+                   VM.BuildResourceList();
+                   NavigateTo<FontsCollectionView>();
+               })
             };
 
             var weatherIcons = new CoreButton()
             {
                 Text = "WeatherIcons",
                 Style = AppStyles.LightOrange,
-                Command = new Command(async (obj) =>
-                {
-                    VM.FontType = FontType.WeatherIcons;
-                    VM.BuildResourceList();
-                    await AppSettings.AppNav.PushAsync(new FontsCollectionView());
-                })
+                Command = new Command((obj) =>
+               {
+                   VM.FontType = FontType.WeatherIcons;
+                   VM.BuildResourceList();
+                   NavigateTo<FontsCollectionView>();
+               })
             };
 
             Content = new StackLayout()

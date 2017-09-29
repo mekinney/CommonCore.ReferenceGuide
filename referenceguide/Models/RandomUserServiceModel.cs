@@ -98,12 +98,17 @@ namespace referenceguide
 			get
 			{
 				var fs = new FormattedString();
-				var addr = new Span() { Text = $"{Address} \n" };
-				var cityStateZip = new Span() { Text = $"{City}, {State}   {Zip} \n" };
-				var ph = new Span() { Text = $"{Phone}" };
-				fs.Spans.Add(addr);
-				fs.Spans.Add(cityStateZip);
-				fs.Spans.Add(ph);
+                fs.AddTextSpan($"{Address} \n");
+                fs.AddTextSpan($"{City}, {State}   {Zip} \n");
+                fs.AddTextSpan($"{Phone}");
+
+				//var addr = new Span() { Text = $"{Address} \n" };
+				//var cityStateZip = new Span() { Text = $"{City}, {State}   {Zip} \n" };
+				//var ph = new Span() { Text = $"{Phone}" };
+				//fs.Spans.Add(addr);
+				//fs.Spans.Add(cityStateZip);
+				//fs.Spans.Add(ph);
+
 				return fs;
 			}
 		}

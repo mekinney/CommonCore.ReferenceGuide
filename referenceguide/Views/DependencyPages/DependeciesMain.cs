@@ -100,9 +100,9 @@ namespace referenceguide
                 Text = "Navigation Example",
                 Style = AppStyles.LightOrange,
                 AutomationId = "btnNav",
-                Command = new Command(async (obj) =>
+                Command = new Command((obj) =>
                 {
-                    await AppSettings.AppNav.PushAsync(new Nav1());
+                    NavigateTo<Nav1>();
                 })
             };
 

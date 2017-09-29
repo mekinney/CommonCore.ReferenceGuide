@@ -21,11 +21,10 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
-                Command = new Command(async (obj) =>
-                {
-                    await Navigation.PushAsync(new Nav2());
-
-                })
+                Command = new Command((obj) =>
+               {
+                   NavigateTo<Nav2>();
+               })
             };
 
             Content = new StackLayout()
@@ -62,10 +61,10 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
-                Command = new Command(async (obj) =>
-                {
-                    await Navigation.PushAsync(new Nav3());
-                })
+                Command = new Command((obj) =>
+               {
+                   NavigateTo<Nav3>();
+               })
             };
 
             var btnBack = new CoreButton()
@@ -73,10 +72,10 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Text = "Back",
                 AutomationId = "btnBack",
-                Command = new Command(async (obj) =>
-                {
-                    await Navigation.PopAsync(true);
-                })
+                Command = new Command((obj) =>
+               {
+                   NavigateBack();
+               })
             };
 
             Content = new StackLayout()
@@ -120,10 +119,10 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
-                Command = new Command(async (obj) =>
-                {
-                    await Navigation.PushAsync(new Nav4());
-                })
+                Command = new Command((obj) =>
+               {
+                   NavigateTo<Nav4>();
+               })
             };
 
             var btnBack = new CoreButton()
@@ -131,10 +130,10 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Text = "Back",
                 AutomationId = "btnBack",
-                Command = new Command(async (obj) =>
-                {
-                    await Navigation.PopTo<Nav1>(true);
-                })
+                Command = new Command((obj) =>
+               {
+                   NavigateTo<Nav1>();
+               })
             };
 
             Content = new StackLayout()
@@ -145,10 +144,10 @@ namespace referenceguide
             };
         }
     }
-	public class Animal
-	{
-		public string Description { get; set; }
-	}
+    public class Animal
+    {
+        public string Description { get; set; }
+    }
     public class Nav4ViewModel : ObservableViewModel
     {
 
@@ -170,14 +169,15 @@ namespace referenceguide
             Task.Run(async () =>
             {
                 var result = await DataBLL.GetFileData<Animal>("animal");
-                if(result.Error==null)  
+                if (result.Error == null)
                     AnimalDescription = result.Response?.Description;
             });
         }
 
         public override void ReleaseResources(string parameter = null)
         {
-            Task.Run(async()=>{
+            Task.Run(async () =>
+            {
                 await DataBLL.SaveFileData<Animal>("animal", new Animal() { Description = "Dog" });
             });
 
@@ -218,7 +218,7 @@ namespace referenceguide
 
             var lbl = new Label()
             {
-                Margin=5
+                Margin = 5
             };
             lbl.SetBinding(Label.TextProperty, "AnimalDescription");
 
@@ -226,7 +226,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { btnBack, btnRelease,lbl }
+                Children = { btnBack, btnRelease, lbl }
             };
         }
 

@@ -15,9 +15,9 @@ namespace referenceguide
                 Text = "Remove Empty Cell",
                 Style = AppStyles.LightOrange,
                 AutomationId = "removeEmptyRowsEffect",
-                Command = new Command(async (obj) =>
+                Command = new Command( (obj) =>
                 {
-                    await Navigation.PushAsync(new ListViewEffect());
+                    NavigateTo(new ListViewEffect());
                 })
             };
 
@@ -26,9 +26,9 @@ namespace referenceguide
 				Text = "Hide List Separator",
 				Style = AppStyles.LightOrange,
 				AutomationId = "hideListSeparatorEffect",
-				Command = new Command(async (obj) =>
+				Command = new Command((obj) =>
 				{
-					await Navigation.PushAsync(new ListViewEffect(true));
+                    NavigateTo(new ListViewEffect(true));
 				})
 			};
 
@@ -37,9 +37,9 @@ namespace referenceguide
 				Text = "WebView Scroll Disable",
 				Style = AppStyles.LightOrange,
 				AutomationId = "disableWebViewScrollEffect",
-				Command = new Command(async (obj) =>
+				Command = new Command((obj) =>
 				{
-					await Navigation.PushAsync(new WebViewEffect());
+                    NavigateTo<WebViewEffect>();
 				})
 			};
 

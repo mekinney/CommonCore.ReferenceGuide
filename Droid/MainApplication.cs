@@ -40,32 +40,30 @@ namespace referenceguide.Droid
 
             InitGlobalLibraries();
 
-            //AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
-            //TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
+            AppDomain.CurrentDomain.UnhandledException += CurrentDomainOnUnhandledException;
+            TaskScheduler.UnobservedTaskException += TaskSchedulerOnUnobservedTaskException;
 
         }
-
-  
 
         private static void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
         {
-            //var newExc = new Exception("TaskSchedulerOnUnobservedTaskException", unobservedTaskExceptionEventArgs.Exception);
-            //newExc.ToLogUnhandledException();
+            InjectionManager.GetService<ILogService, LogService>().LogException(
+                unobservedTaskExceptionEventArgs.Exception,
+                "MainApplication -TaskSchedulerOnUnobservedTaskException");
 
-            Console.WriteLine(unobservedTaskExceptionEventArgs.Exception.Message);
+            unobservedTaskExceptionEventArgs.Exception.ConsoleWrite();
         }
-
 
         private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
         {
-            //var newExc = new Exception("CurrentDomainOnUnhandledException", unhandledExceptionEventArgs.ExceptionObject as Exception);
-            //newExc.ToLogUnhandledException();
             var ex = unhandledExceptionEventArgs.ExceptionObject as Exception;
-            Console.WriteLine(ex.Message);
+            InjectionManager.GetService<ILogService, LogService>().LogException(
+                ex,
+                "MainApplication -CurrentDomainOnUnhandledException");
+
+            ex.ConsoleWrite();
+
         }
-
-
-
 
         public override void OnTerminate()
         {
