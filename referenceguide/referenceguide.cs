@@ -25,6 +25,7 @@ namespace referenceguide
 
 		protected override void OnStart()
 		{
+            AppSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
             MainPage.SizeChanged += AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
 		}

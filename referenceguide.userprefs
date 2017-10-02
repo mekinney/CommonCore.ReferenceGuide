@@ -2,13 +2,20 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BBA4B17E-0B06-45D2-92D2-D2CA70C071CC">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs">
+    <Files>
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.IOS.cs" Line="47" Column="17" />
+      <File FileName="referenceguide/referenceguide.cs" Line="28" Column="30" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/_init/ReadMe.txt" Line="93" Column="41" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="123" Column="14" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
 </Properties>
