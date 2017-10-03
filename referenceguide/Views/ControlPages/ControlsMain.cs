@@ -79,7 +79,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
-                    NavigateTo<MaterialDesignPage>();
+                    Navigation.PushNonAwaited<MaterialDesignPage>();
                 })
             };
 
@@ -89,7 +89,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
-                    NavigateTo<PaginagedListControl>();
+                    Navigation.PushNonAwaited<PaginagedListControl>();
                 })
             };
 
@@ -100,7 +100,7 @@ namespace referenceguide
                 Style = AppStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
-                    NavigateTo<SearchContentPage>();
+                    Navigation.PushNonAwaited<SearchContentPage>();
                 })
             };
 
@@ -120,7 +120,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command( (obj) =>
 			   {
-                    NavigateTo<CarouselMain>();
+                    Navigation.PushNonAwaited<CarouselMain>();
 			   })
 			};
 
@@ -130,7 +130,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command((obj) =>
 			   {
-                    NavigateTo<BackgroundImagePage>();
+                    Navigation.PushNonAwaited<BackgroundImagePage>();
 			   })
 			};
 

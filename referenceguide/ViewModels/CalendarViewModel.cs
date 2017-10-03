@@ -61,7 +61,7 @@ namespace referenceguide
 			{
 				SendViewMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, this.Appt);
 				Appt = new Appointment();
-                NavigateBack();
+                Navigation.PopNonAwaited();
 			}
 		}
 	}

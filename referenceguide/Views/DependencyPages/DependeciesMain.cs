@@ -102,7 +102,7 @@ namespace referenceguide
                 AutomationId = "btnNav",
                 Command = new Command((obj) =>
                 {
-                    NavigateTo<Nav1>();
+                    Navigation.PushNonAwaited<Nav1>();
                 })
             };
 

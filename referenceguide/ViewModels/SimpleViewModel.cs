@@ -241,12 +241,12 @@ namespace referenceguide
 
         private void ContextMenuMethod()
         {
-            NavigateTo<ContextMenuPage>();
+            Navigation.PushNonAwaited<ContextMenuPage>();
         }
 
         private void CommTestMethod()
         {
-            NavigateTo<CommunicationPage>();
+            Navigation.PushNonAwaited<CommunicationPage>();
         }
 
         private void PlaySoundMethod()
@@ -300,7 +300,7 @@ namespace referenceguide
 
         private void CreateCalendarMethod()
         {
-            NavigateTo(new CalendarEventPage() { DevicePersistOnly = true });
+            Navigation.PushNonAwaited(new CalendarEventPage() { DevicePersistOnly = true });
         }
 
         private void BlurNewMethod()

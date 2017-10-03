@@ -17,7 +17,7 @@ namespace referenceguide
                 AutomationId = "removeEmptyRowsEffect",
                 Command = new Command( (obj) =>
                 {
-                    NavigateTo(new ListViewEffect());
+                    Navigation.PushNonAwaited(new ListViewEffect());
                 })
             };
 
@@ -28,7 +28,7 @@ namespace referenceguide
 				AutomationId = "hideListSeparatorEffect",
 				Command = new Command((obj) =>
 				{
-                    NavigateTo(new ListViewEffect(true));
+                    Navigation.PushNonAwaited(new ListViewEffect(true));
 				})
 			};
 
@@ -39,7 +39,7 @@ namespace referenceguide
 				AutomationId = "disableWebViewScrollEffect",
 				Command = new Command((obj) =>
 				{
-                    NavigateTo<WebViewEffect>();
+                    Navigation.PushNonAwaited<WebViewEffect>();
 				})
 			};
 

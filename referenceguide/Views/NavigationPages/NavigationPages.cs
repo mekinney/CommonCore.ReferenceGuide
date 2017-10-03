@@ -23,7 +23,7 @@ namespace referenceguide
                 AutomationId = "btn",
                 Command = new Command((obj) =>
                {
-                   NavigateTo<Nav2>();
+                    Navigation.PushNonAwaited<Nav2>();
                })
             };
 
@@ -63,7 +63,7 @@ namespace referenceguide
                 AutomationId = "btn",
                 Command = new Command((obj) =>
                {
-                   NavigateTo<Nav3>();
+                    Navigation.PushNonAwaited<Nav3>();
                })
             };
 
@@ -74,7 +74,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command((obj) =>
                {
-                   NavigateBack();
+                   Navigation.PopNonAwaited();
                })
             };
 
@@ -121,7 +121,7 @@ namespace referenceguide
                 AutomationId = "btn",
                 Command = new Command((obj) =>
                {
-                   NavigateTo<Nav4>();
+                    Navigation.PushNonAwaited<Nav4>();
                })
             };
 
@@ -132,7 +132,7 @@ namespace referenceguide
                 AutomationId = "btnBack",
                 Command = new Command((obj) =>
                {
-                   NavigateTo<Nav1>();
+                    Navigation.PushNonAwaited<Nav1>();
                })
             };
 

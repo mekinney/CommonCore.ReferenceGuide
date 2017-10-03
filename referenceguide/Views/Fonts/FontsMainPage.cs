@@ -18,7 +18,7 @@ namespace referenceguide
                 {
                     VM.FontType = FontType.FontAwesome;
                     VM.BuildResourceList();
-                    NavigateTo<FontsCollectionView>();
+                    Navigation.PushNonAwaited<FontsCollectionView>();
                 })
             };
 
@@ -30,7 +30,7 @@ namespace referenceguide
                 {
                     VM.FontType = FontType.EntypoPlus;
                     VM.BuildResourceList();
-                    NavigateTo<FontsCollectionView>();
+                    Navigation.PushNonAwaited<FontsCollectionView>();
                 })
             };
 
@@ -42,7 +42,7 @@ namespace referenceguide
                 {
                     VM.FontType = FontType.Ionicons;
                     VM.BuildResourceList();
-                    NavigateTo<FontsCollectionView>();
+                    Navigation.PushNonAwaited<FontsCollectionView>();
                 })
             };
 
@@ -54,7 +54,7 @@ namespace referenceguide
                {
                    VM.FontType = FontType.Material;
                    VM.BuildResourceList();
-                   NavigateTo<FontsCollectionView>();
+                   Navigation.PushNonAwaited<FontsCollectionView>();
                })
             };
 
@@ -66,7 +66,7 @@ namespace referenceguide
                {
                    VM.FontType = FontType.Meteocons;
                    VM.BuildResourceList();
-                   NavigateTo<FontsCollectionView>();
+                   Navigation.PushNonAwaited<FontsCollectionView>();
                })
             };
 
@@ -78,7 +78,7 @@ namespace referenceguide
                {
                    VM.FontType = FontType.SimpleLineIcons;
                    VM.BuildResourceList();
-                   NavigateTo<FontsCollectionView>();
+                   Navigation.PushNonAwaited<FontsCollectionView>();
                })
             };
 
@@ -90,7 +90,7 @@ namespace referenceguide
                {
                    VM.FontType = FontType.Typicons;
                    VM.BuildResourceList();
-                   NavigateTo<FontsCollectionView>();
+                   Navigation.PushNonAwaited<FontsCollectionView>();
                })
             };
 
@@ -102,7 +102,7 @@ namespace referenceguide
                {
                    VM.FontType = FontType.WeatherIcons;
                    VM.BuildResourceList();
-                   NavigateTo<FontsCollectionView>();
+                   Navigation.PushNonAwaited<FontsCollectionView>();
                })
             };
 

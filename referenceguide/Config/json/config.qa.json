@@ -1,5 +1,4 @@
 ﻿{
-  "NavStyle": "MasterDetail",
   "AnalyticsEnabled": false,
   "AESEncryptionKey": "P@ssw0rd",
   "AzureSettings": {
