@@ -11,7 +11,6 @@ namespace referenceguide
         private static Style addressCell;
         private static Style fontLabel;
 
-
         public static Style LightOrange
         {
             get
@@ -26,8 +25,8 @@ namespace referenceguide
                             new Setter(){Property=CoreButton.TextColorProperty ,Value=Color.White},
                             new Setter(){Property=CoreButton.ShadowOffsetProperty ,Value=1},
                             new Setter(){Property=CoreButton.ShadowOpacityProperty ,Value=1},
-                            new Setter(){Property=CoreButton.ShadowRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
-                            new Setter(){Property=CoreButton.CornerRadiusProperty ,Value=Device.OnPlatform(6f,10f,6f)},
+                            new Setter(){Property=CoreButton.ShadowRadiusProperty ,Value=Device.RuntimePlatform.PlatformValue<float>(6f,10f,6f)},
+                            new Setter(){Property=CoreButton.CornerRadiusProperty ,Value=Device.RuntimePlatform.PlatformValue<float>(6f,10f,6f)},
                         }
                     });
             }
@@ -52,10 +51,10 @@ namespace referenceguide
 
 
 
-		public static Style FontLabel
-		{
-			get
-			{
+        public static Style FontLabel
+        {
+            get
+            {
                 return fontLabel ?? (
                     fontLabel = new Style(typeof(Label))
                     {
@@ -65,16 +64,12 @@ namespace referenceguide
                             new Setter(){Property=Label.MarginProperty ,Value=10},
                             new Setter(){Property=Label.HorizontalOptionsProperty ,Value=LayoutOptions.Center},
                             new Setter(){Property=Label.HorizontalTextAlignmentProperty ,Value=TextAlignment.Center},
-                            new Setter(){Property=Label.FontFamilyProperty ,Value=OS=="IOS"?"Boxise":"BoxiseFont.otf#Boxise"}
+                            new Setter(){Property=Label.FontFamilyProperty ,Value=Device.RuntimePlatform.PlatformValue<string>("Boxise","BoxiseFont.otf#Boxise")}
                         }
                     });
-			}
+            }
 
-		}
-
-        public static string OS
-        {
-            get { return Device.RuntimePlatform.ToUpper(); }
         }
+
     }
 }

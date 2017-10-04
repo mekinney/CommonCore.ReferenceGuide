@@ -21,6 +21,7 @@ namespace referenceguide
         public string Value { get; set; }
         public string Text { get; set; }
     }
+
     public class SimpleViewModel : ObservableViewModel
     {
         private int selectedRank;
@@ -71,6 +72,7 @@ namespace referenceguide
         public ICommand SendEmail { get; set; }
         public ICommand MakeCall { get; set; }
         public ICommand MakeCallEvent { get; set; }
+        public ICommand CanExecute { get; set; }
 
 
         public SimpleViewModel()
@@ -103,8 +105,16 @@ namespace referenceguide
             MakeCallEvent = new RelayCommand(async (obj) => { await MakeCallEventMethod(); });
             FABClicked = new RelayCommand((obj) => { FABClickedMethod(); });
             ClickEvent = new RelayCommand((obj) => { ClickCount++; });
+
+            CanExecute = new RelayCommand((obj) => { CanExecuteMethod(); }, 
+                                          () => this.ValidateTextFields(this.FirstName), 
+                                          this);
         }
 
+        private void CanExecuteMethod()
+        {
+            
+        }
         private void FABClickedMethod()
         {
             DialogPrompt.ShowMessage(new Prompt()

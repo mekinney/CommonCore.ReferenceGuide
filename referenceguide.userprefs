@@ -2,15 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BBA4B17E-0B06-45D2-92D2-D2CA70C071CC">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="54" Column="9" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="311" Column="49" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="872" Column="10" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="67" Column="3" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="303" Column="38" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="105" Column="46" />
-      <File FileName="referenceguide/Views/NavigationPages/NavigationPages.cs" Line="30" Column="40" />
+      <File FileName="referenceguide/Styles/AppStyles.cs" Line="28" Column="118" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="51" Column="51" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Utilities/SynchronizationContextRemover.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

@@ -57,13 +57,13 @@ namespace referenceguide
             };
         }
         private void Add(){
-            var x = 10;
+      
         }
         private void Edit(){
-			var x = 10;
+			
         }
         private void Delete(){
-			var x = 10;
+		
         }
         protected override void OnBindingContextChanged()
         {

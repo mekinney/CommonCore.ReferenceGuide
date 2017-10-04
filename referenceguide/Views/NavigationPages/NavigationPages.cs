@@ -44,7 +44,7 @@ namespace referenceguide
 
         public override void ReleaseResources(string parameter = null)
         {
-            var x = 10;
+
         }
     }
     public class Nav2 : BoundPage<Nav2ViewModel>
@@ -101,7 +101,6 @@ namespace referenceguide
 
         public override void ReleaseResources(string parameter = null)
         {
-            var x = 10;
 
         }
     }

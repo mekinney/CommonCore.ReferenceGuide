@@ -138,10 +138,18 @@ namespace referenceguide
             var customLabel = new Label() { Margin = 5, AutomationId = "customLabel" };
             customLabel.Behaviors.Add(propBehavior);
 
+            var btnCanExecute = new CoreButton()
+            {
+                Margin = new Thickness(5, 5, 5, 1) ,
+                Text="Can Execute",
+                Style = AppStyles.LightOrange
+            };
+            btnCanExecute.SetBinding(CoreButton.CommandProperty,"CanExecute");
+
             Content = new StackLayout()
             {
                 Padding = 15,
-                Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel, lblBindingEvent, bindingEntry }
+                Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel, lblBindingEvent, bindingEntry, btnCanExecute }
             };
         }
     }
