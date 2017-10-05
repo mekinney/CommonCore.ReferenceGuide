@@ -1,12 +1,21 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.BBA4B17E-0B06-45D2-92D2-D2CA70C071CC">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
     <Files>
-      <File FileName="referenceguide/Styles/AppStyles.cs" Line="28" Column="118" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="51" Column="51" />
+      <File FileName="referenceguide/Styles/AppStyles.cs" Line="11" Column="9" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="52" Column="49" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Utilities/SynchronizationContextRemover.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Partials/PartialObservableViewModel.cs" Line="8" Column="1" />
+      <File FileName="referenceguide/Models/Appointment.cs" Line="8" Column="32" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqlDataModel.cs" Line="15" Column="39" />
+      <File FileName="referenceguide/BLL/WebBusinessLayer.cs" Line="12" Column="1" />
+      <File FileName="referenceguide/Config/json/config.dev.json" Line="34" Column="5" />
+      <File FileName="referenceguide/Views/Common/RandomUserCell.cs" Line="42" Column="26" />
+      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/HttpServicesPage.cs" Line="26" Column="17" />
+      <File FileName="iOS/AppDelegate.cs" Line="30" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -15,6 +24,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
 </Properties>
