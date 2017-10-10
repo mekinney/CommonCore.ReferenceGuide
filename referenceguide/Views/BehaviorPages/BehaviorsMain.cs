@@ -6,55 +6,10 @@ namespace referenceguide
 {
     public class BehaviorsMain : BoundPage<SimpleViewModel>
     {
-        private RegExBehavior nameRequiredValidator;
-        private RegExBehavior phoneRequiredValidator;
-        private PhoneMaskBehavior phoneMask;
-        private PropertyChangedBehavior propBehavior;
-        private EventToCommandBehavior txtChangedBehavior;
-
-
+        
         public BehaviorsMain()
         {
             this.Title = "Behaviors";
-
-
-            nameRequiredValidator = new RegExBehavior()
-            {
-                ErrorMessage = "Requred Field",
-                RegexExp = @"^[\s\t\r\n]*\S+"
-            };
-            phoneRequiredValidator = new RegExBehavior()
-            {
-                ErrorMessage = "Requred Field",
-                RegexExp = @"^[\s\t\r\n]*\S+"
-            };
-
-            txtChangedBehavior = new EventToCommandBehavior()
-            {
-                EventName = "TextChanged"
-            };
-            txtChangedBehavior.SetBinding(EventToCommandBehavior.CommandProperty, "BindingTextChanged");
-
-
-            phoneMask = new PhoneMaskBehavior();
-
-            propBehavior = new PropertyChangedBehavior(VM, (prop, ctrl) =>
-            {
-                if (prop == "FirstName")
-                {
-                    if (VM.FirstName == "Jack Sparrow")
-                    {
-                        var ctrlLabel = (Label)ctrl;
-                        ctrlLabel.IsVisible = true;
-                        ctrlLabel.TextColor = Color.Green;
-                        ctrlLabel.Text = "You like a pirate that has a bird for a friend!";
-                    }
-                    else
-                    {
-                        ctrl.IsVisible = false;
-                    }
-                }
-            });
 
             var explanation = new Label()
             {
@@ -78,7 +33,11 @@ namespace referenceguide
                 EntryColor = Color.DarkGray
             };
             fNameEntry.SetBinding(Entry.TextProperty, "FirstName");
-            fNameEntry.Behaviors.Add(nameRequiredValidator);
+            fNameEntry.Behaviors.Add(new RegExBehavior()
+            {
+                ErrorMessage = "Requred Field",
+                RegexExp = @"^[\s\t\r\n]*\S+"
+            });
 
             var errorLabel = new Label()
             {
@@ -87,8 +46,9 @@ namespace referenceguide
                 Margin = new Thickness(5, 1, 5, 1),
                 AutomationId = "errorLabel"
             };
-            errorLabel.SetBinding(Label.TextProperty, new Binding(source: nameRequiredValidator, path: "ErrorMessage", mode: BindingMode.OneWay));
-            errorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: nameRequiredValidator, path: "HasError", mode: BindingMode.OneWay));
+
+            errorLabel.SetBinding(Label.TextProperty, new Binding(source: fNameEntry.Behaviors[0], path: "ErrorMessage", mode: BindingMode.OneWay));
+            errorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: fNameEntry.Behaviors[0], path: "HasError", mode: BindingMode.OneWay));
 
 
             var lblPhone = new Label()
@@ -105,8 +65,12 @@ namespace referenceguide
                 AutomationId = "phoneEntry",
                 EntryColor = Color.DarkGray
             };
-            phoneEntry.Behaviors.Add(phoneMask);
-            phoneEntry.Behaviors.Add(phoneRequiredValidator);
+            phoneEntry.Behaviors.Add(new PhoneMaskBehavior());
+            phoneEntry.Behaviors.Add(new RegExBehavior()
+            {
+                ErrorMessage = "Requred Field",
+                RegexExp = @"^[\s\t\r\n]*\S+"
+            });
 
             var phoneErrorLabel = new Label()
             {
@@ -115,8 +79,8 @@ namespace referenceguide
                 Margin = new Thickness(5, 1, 5, 1),
                 AutomationId = "phoneErrorLabel"
             };
-            phoneErrorLabel.SetBinding(Label.TextProperty, new Binding(source: phoneRequiredValidator, path: "ErrorMessage", mode: BindingMode.OneWay));
-            phoneErrorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: phoneRequiredValidator, path: "HasError", mode: BindingMode.OneWay));
+            phoneErrorLabel.SetBinding(Label.TextProperty, new Binding(source: phoneEntry.Behaviors[1], path: "ErrorMessage", mode: BindingMode.OneWay));
+            phoneErrorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: phoneEntry.Behaviors[1], path: "HasError", mode: BindingMode.OneWay));
 
 
 			var lblBindingEvent = new Label()
@@ -132,11 +96,32 @@ namespace referenceguide
 				AutomationId = "bindingEntry",
                 EntryColor = Color.DarkGray
 			};
-            bindingEntry.Behaviors.Add(txtChangedBehavior);
+
+            bindingEntry.Behaviors.Add(new EventToCommandBehavior()
+            {
+                EventName = "TextChanged"
+            });
+            bindingEntry.Behaviors[0].SetBinding(EventToCommandBehavior.CommandProperty, "BindingTextChanged");
             bindingEntry.SetBinding(CoreUnderlineEntry.TextProperty,"BindingTextValue");
 
             var customLabel = new Label() { Margin = 5, AutomationId = "customLabel" };
-            customLabel.Behaviors.Add(propBehavior);
+            customLabel.Behaviors.Add(new PropertyChangedBehavior(VM, (prop, ctrl) =>
+            {
+                if (prop == "FirstName")
+                {
+                    if (VM.FirstName == "Jack Sparrow")
+                    {
+                        var ctrlLabel = (Label)ctrl;
+                        ctrlLabel.IsVisible = true;
+                        ctrlLabel.TextColor = Color.Green;
+                        ctrlLabel.Text = "You like a pirate that has a bird for a friend!";
+                    }
+                    else
+                    {
+                        ctrl.IsVisible = false;
+                    }
+                }
+            }));
 
             var btnCanExecute = new CoreButton()
             {

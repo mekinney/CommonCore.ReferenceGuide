@@ -106,8 +106,12 @@ namespace referenceguide
             FABClicked = new RelayCommand((obj) => { FABClickedMethod(); });
             ClickEvent = new RelayCommand((obj) => { ClickCount++; });
 
-            CanExecute = new RelayCommand((obj) => { CanExecuteMethod(); }, 
-                                          () => this.ValidateTextFields(this.FirstName), 
+            /*
+                This is an example of command validators. ValidateTextFields is part of the CommonCore
+                extensions and validators can be chained with more complex rules for numbers and dates 
+            */
+            CanExecute = new RelayCommand((obj) => { CanExecuteMethod(); },
+                                          () => { return this.ValidateTextFields(this.FirstName); }, 
                                           this);
         }
 
