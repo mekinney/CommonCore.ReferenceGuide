@@ -88,38 +88,38 @@ namespace referenceguide
             if (stateResults.Error == null)
                 States = stateResults.Response.ToObservable();
 
-            DialogClick = new RelayCommand((obj) => { DialogClickMethod(); });
-            NotificationClick = new RelayCommand((obj) => { NotificationClickMethod(); });
-            OverlayClick = new RelayCommand(async (obj) => { await OverlayClickMethod(); });
-            Blur = new RelayCommand((obj) => { BlurNewMethod(); });
-            CreateCalendar = new RelayCommand((obj) => { CreateCalendarMethod(); });
-            PushRegister = new RelayCommand((obj) => { PushRegisterMethod(); });
-            ShowSnack = new RelayCommand((obj) => { ShowSnackMethod(); });
-            PlaySound = new RelayCommand((obj) => { PlaySoundMethod(); });
-            CommTest = new RelayCommand((obj) => { CommTestMethod(); });
-            ContextMenu = new RelayCommand((obj) => { ContextMenuMethod(); });
-            BindingTextChanged = new RelayCommand((obj) => { BindingTextChangedMethod(); });
-            SendSMS = new RelayCommand((obj) => { SendSMSMethod(); });
-            SendEmail = new RelayCommand((obj) => { SendEmailMethod(); });
-            MakeCall = new RelayCommand(async (obj) => { await MakeCallMethod(); });
-            MakeCallEvent = new RelayCommand(async (obj) => { await MakeCallEventMethod(); });
-            FABClicked = new RelayCommand((obj) => { FABClickedMethod(); });
+            DialogClick = new RelayCommand(DialogClickMethod);
+            NotificationClick = new RelayCommand(NotificationClickMethod);
+            OverlayClick = new RelayCommand(OverlayClickMethod);
+            Blur = new RelayCommand(BlurNewMethod);
+            CreateCalendar = new RelayCommand(CreateCalendarMethod);
+            PushRegister = new RelayCommand(PushRegisterMethod);
+            ShowSnack = new RelayCommand(ShowSnackMethod);
+            PlaySound = new RelayCommand(PlaySoundMethod);
+            CommTest = new RelayCommand(CommTestMethod);
+            ContextMenu = new RelayCommand(ContextMenuMethod);
+            BindingTextChanged = new RelayCommand(BindingTextChangedMethod);
+            SendSMS = new RelayCommand(SendSMSMethod);
+            SendEmail = new RelayCommand(SendEmailMethod);
+            MakeCall = new RelayCommand(MakeCallMethod);
+            MakeCallEvent = new RelayCommand(MakeCallEventMethod);
+            FABClicked = new RelayCommand(FABClickedMethod);
             ClickEvent = new RelayCommand((obj) => { ClickCount++; });
 
             /*
                 This is an example of command validators. ValidateTextFields is part of the CommonCore
                 extensions and validators can be chained with more complex rules for numbers and dates 
             */
-            CanExecute = new RelayCommand((obj) => { CanExecuteMethod(); },
-                                          () => { return this.ValidateTextFields(this.FirstName); }, 
+            CanExecute = new RelayCommand(CanExecuteMethod,
+                                          () => { return this.ValidateTextFields(this.FirstName); },
                                           this);
         }
 
-        private void CanExecuteMethod()
+        private void CanExecuteMethod(object obj)
         {
-            
+
         }
-        private void FABClickedMethod()
+        private void FABClickedMethod(object obj)
         {
             DialogPrompt.ShowMessage(new Prompt()
             {
@@ -128,95 +128,103 @@ namespace referenceguide
             });
         }
 
-        private async Task MakeCallEventMethod()
+        private void MakeCallEventMethod(object obj)
         {
-            try
+            Task.Run(async () =>
             {
-                var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
-                if (status != PermissionStatus.Granted)
+                try
                 {
-                    if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                    var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+                    if (status != PermissionStatus.Granted)
+                    {
+                        if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                        {
+                            DialogPrompt.ShowMessage(new Prompt()
+                            {
+                                Title = "Permission",
+                                Message = "The application needs access to the phone."
+                            });
+                        }
+
+                        var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+                        status = results[Permission.Location];
+                    }
+
+                    if (status == PermissionStatus.Granted)
+                    {
+                        Communication.PlaceCallWithCallBack(CommunicationNumber.ToString(), "PhoneCallBack");
+                    }
+                    else if (status != PermissionStatus.Unknown)
                     {
                         DialogPrompt.ShowMessage(new Prompt()
                         {
-                            Title = "Permission",
-                            Message = "The application needs access to the phone."
+                            Title = "Issue",
+                            Message = "There was a problem accessing the phone."
                         });
                     }
-
-                    var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
-                    status = results[Permission.Location];
                 }
+                catch (Exception ex)
+                {
 
-                if (status == PermissionStatus.Granted)
-                {
-                    Communication.PlaceCallWithCallBack(CommunicationNumber.ToString(), "PhoneCallBack");
-                }
-                else if (status != PermissionStatus.Unknown)
-                {
                     DialogPrompt.ShowMessage(new Prompt()
                     {
-                        Title = "Issue",
-                        Message = "There was a problem accessing the phone."
+                        Title = "Error",
+                        Message = "The application experience an error accessing the phone."
                     });
                 }
-            }
-            catch (Exception ex)
-            {
+            });
 
-                DialogPrompt.ShowMessage(new Prompt()
-                {
-                    Title = "Error",
-                    Message = "The application experience an error accessing the phone."
-                });
-            }
         }
 
-        private async Task MakeCallMethod()
+        private void MakeCallMethod(object obj)
         {
-            try
+            Task.Run(async () =>
             {
-                var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
-                if (status != PermissionStatus.Granted)
+                try
                 {
-                    if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                    var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+                    if (status != PermissionStatus.Granted)
+                    {
+                        if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+                        {
+                            DialogPrompt.ShowMessage(new Prompt()
+                            {
+                                Title = "Permission",
+                                Message = "The application needs access to the phone."
+                            });
+                        }
+
+                        var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+                        status = results[Permission.Location];
+                    }
+
+                    if (status == PermissionStatus.Granted)
+                    {
+                        Communication.PlaceCall(CommunicationNumber.ToString());
+                    }
+                    else if (status != PermissionStatus.Unknown)
                     {
                         DialogPrompt.ShowMessage(new Prompt()
                         {
-                            Title = "Permission",
-                            Message = "The application needs access to the phone."
+                            Title = "Issue",
+                            Message = "There was a problem accessing the phone."
                         });
                     }
-
-                    var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
-                    status = results[Permission.Location];
                 }
+                catch (Exception ex)
+                {
 
-                if (status == PermissionStatus.Granted)
-                {
-                    Communication.PlaceCall(CommunicationNumber.ToString());
-                }
-                else if (status != PermissionStatus.Unknown)
-                {
                     DialogPrompt.ShowMessage(new Prompt()
                     {
-                        Title = "Issue",
-                        Message = "There was a problem accessing the phone."
+                        Title = "Error",
+                        Message = "The application experience an error accessing the phone."
                     });
                 }
-            }
-            catch (Exception ex)
-            {
+            });
 
-                DialogPrompt.ShowMessage(new Prompt()
-                {
-                    Title = "Error",
-                    Message = "The application experience an error accessing the phone."
-                });
-            }
         }
 
-        private void SendEmailMethod()
+        private void SendEmailMethod(object obj)
         {
             if (!string.IsNullOrEmpty(CommunicationEmail) &&
                 !string.IsNullOrEmpty(CommunicationMessage))
@@ -229,14 +237,14 @@ namespace referenceguide
                 });
         }
 
-        private void SendSMSMethod()
+        private void SendSMSMethod(object obj)
         {
             if (!string.IsNullOrEmpty(CommunicationNumber) &&
                !string.IsNullOrEmpty(CommunicationMessage))
                 Communication.SendSMS(CommunicationNumber, CommunicationMessage);
         }
 
-        private void BindingTextChangedMethod()
+        private void BindingTextChangedMethod(object obj)
         {
             if (!string.IsNullOrEmpty(BindingTextValue) && BindingTextValue.Length > 2)
             {
@@ -253,17 +261,17 @@ namespace referenceguide
             }
         }
 
-        private void ContextMenuMethod()
+        private void ContextMenuMethod(object obj)
         {
             Navigation.PushNonAwaited<ContextMenuPage>();
         }
 
-        private void CommTestMethod()
+        private void CommTestMethod(object obj)
         {
             Navigation.PushNonAwaited<CommunicationPage>();
         }
 
-        private void PlaySoundMethod()
+        private void PlaySoundMethod(object obj)
         {
             if (AudioPlayer.OnFinishedPlaying == null)
                 AudioPlayer.OnFinishedPlaying = () =>
@@ -289,7 +297,7 @@ namespace referenceguide
             }
         }
 
-        private void ShowSnackMethod()
+        private void ShowSnackMethod(object obj)
         {
             SnackBar.Show(new Snack()
             {
@@ -306,18 +314,18 @@ namespace referenceguide
             });
         }
 
-        private void PushRegisterMethod()
+        private void PushRegisterMethod(object obj)
         {
             AzureNotificationHub.RegisterNotificationHub();
             PushButtonLabel = "** Notifications Registered **";
         }
 
-        private void CreateCalendarMethod()
+        private void CreateCalendarMethod(object obj)
         {
             Navigation.PushNonAwaited(new CalendarEventPage() { DevicePersistOnly = true });
         }
 
-        private void BlurNewMethod()
+        private void BlurNewMethod(object obj)
         {
             BlurOverlay.Show();
 
@@ -336,15 +344,19 @@ namespace referenceguide
             });
         }
 
-        private async Task OverlayClickMethod()
+        private void OverlayClickMethod(object obj)
         {
-            LoadingMessageOverlay = "Loading Overlay Data...";
-            IsLoadingOverlay = true;
-            await Task.Delay(2000);
-            IsLoadingOverlay = false;
+            Task.Run(async () =>
+            {
+                LoadingMessageOverlay = "Loading Overlay Data...";
+                IsLoadingOverlay = true;
+                await Task.Delay(2000);
+                IsLoadingOverlay = false;
+            });
+
         }
 
-        private void NotificationClickMethod()
+        private void NotificationClickMethod(object obj)
         {
             this.ShowNotification(new LocalNotification()
             {
@@ -354,7 +366,7 @@ namespace referenceguide
             });
         }
 
-        private void DialogClickMethod()
+        private void DialogClickMethod(object obj)
         {
             DialogPrompt.ShowMessage(new Prompt()
             {

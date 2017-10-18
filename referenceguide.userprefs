@@ -1,16 +1,28 @@
-﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.219C58B0-A263-47C2-AE09-283CDAC6032B">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/AppDelegate.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/SimpleViewModel.cs">
     <Files>
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Behaviors/RegExBehavior.cs" Line="7" Column="28" />
       <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="7" Column="48" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="240" Column="10" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="384" Column="10" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.Droid.cs" Line="24" Column="16" />
       <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.IOS.cs" Line="1" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="95" Column="31" />
+      <File FileName="iOS/AppDelegate.cs" Line="36" Column="57" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.Droid.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Styles/AppStyles.cs" Line="11" Column="1" />
+      <File FileName="referenceguide/ViewModels/AuthenticationViewModel.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="246" Column="1" />
+      <File FileName="referenceguide/ViewModels/MasterDetailViewModel.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/BLL/CryptoBusinessLayer.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/BLL/DataBusinessLayer.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/BLL/OAuthBusinessLayer.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="96" Column="6" />
+      <File FileName="referenceguide/Views/ControlPages/PaginagedListControl.cs" Line="32" Column="29" />
+      <File FileName="referenceguide/ViewModels/SearchViewModel.cs" Line="17" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -19,6 +31,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.SelectDevice" />
   <MultiItemStartupConfigurations />
 </Properties>

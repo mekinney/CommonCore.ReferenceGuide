@@ -98,7 +98,7 @@ namespace referenceguide
         {
             this.Title = "Sqlite Events";
 
-            VM.GetDbAppointments().ContinueWith((t) => { });
+            VM.GetDbAppointments(null);
 
             this.ToolbarItems.Add(new ToolbarItem("Create", null, async () =>
             {

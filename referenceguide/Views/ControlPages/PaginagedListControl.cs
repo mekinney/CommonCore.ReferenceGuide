@@ -29,7 +29,7 @@ namespace referenceguide
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            VM.GetPaginatedRandomUsers().ContinueOn();
+            VM.GetPaginatedRandomUsers(null);
         }
     }
 }

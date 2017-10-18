@@ -41,7 +41,7 @@ namespace referenceguide
             }
         }
 
-        public ICommand CreateErrorEntry { get; set; }
+        public ICommand CreateErrorEntry { get; set; } 
         public ICommand ClearErrorEntries { get; set; }
         public ICommand ClearAnalyticEntries { get; set; }
         public ICommand EncryptText { get; set; }
@@ -59,23 +59,23 @@ namespace referenceguide
         {
             BackgroundButtonTitle = "Background Timer";
 
-            CreateErrorEntry = new RelayCommand(async (obj) => { await CreateErrorEntryMethod(); });
-            ClearErrorEntries = new RelayCommand(async (obj) => { await ClearErrorEntriesMethod(); });
-            ClearAnalyticEntries = new RelayCommand(async (obj) => { await ClearAnalyticEntriesMethod(); });
-            LoadMorePaginatedUsers = new RelayCommand(async (obj) => { await GetPaginatedRandomUsers(); });
-            HashText = new RelayCommand((obj) => { HashTextMethod(); });
-            EncryptText = new RelayCommand((obj) => { EncryptTextMethod(); });
-            HttpDownloadStart = new RelayCommand(async (obj) => { await GetRandomUsers(); });
-            SqliteLoadStart = new RelayCommand(async (obj) => { await GetDbAppointments(); });
-            StartBackgrounding = new RelayCommand((obj) => { StartBackgroundingMethod(); });
-            HttpPost = new RelayCommand(async (obj) => { await HttpPostMethod(); });
-            LongDownload = new RelayCommand(async (obj) => { await LongDownloadMethod(); });
+            CreateErrorEntry = new RelayCommand(CreateErrorEntryMethod);
+            ClearErrorEntries = new RelayCommand(ClearErrorEntriesMethod);
+            ClearAnalyticEntries = new RelayCommand(ClearAnalyticEntriesMethod);
+            LoadMorePaginatedUsers = new RelayCommand(GetPaginatedRandomUsers);
+            HashText = new RelayCommand(HashTextMethod);
+            EncryptText = new RelayCommand(EncryptTextMethod);
+            HttpDownloadStart = new RelayCommand(GetRandomUsers);
+            SqliteLoadStart = new RelayCommand(GetDbAppointments);
+            StartBackgrounding = new RelayCommand(StartBackgroundingMethod);
+            HttpPost = new RelayCommand(HttpPostMethod);
+            LongDownload = new RelayCommand(LongDownloadMethod);
 
         }
 
-        private async Task LongDownloadMethod()
+        private void LongDownloadMethod(object obj)
         {
-            await WebBll.GetLongDownload((percent) =>
+            WebBll.GetLongDownload((percent) =>
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
@@ -89,32 +89,35 @@ namespace referenceguide
                 });
                 var fileData = data;
 
+            }).ContinueOn();
+        }
+
+        private void HttpPostMethod(object obj)
+        {
+            Task.Run(async()=>{
+                var result = await WebBll.PostDataExample();
+                if (result.Error == null)
+                {
+                    var pp = result.Response;
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Success",
+                        Message = $"The person's new id for {pp.FirstName} {pp.LastName}  is {pp.Id}"
+                    });
+                }
+                else
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = result.Error.Message
+                    });
+                }
+
             });
         }
 
-        private async Task HttpPostMethod()
-        {
-            var result = await WebBll.PostDataExample();
-            if (result.Error == null)
-            {
-                var pp = result.Response;
-                DialogPrompt.ShowMessage(new Prompt()
-                {
-                    Title = "Success",
-                    Message = $"The person's new id for {pp.FirstName} {pp.LastName}  is {pp.Id}"
-                });
-            }
-            else
-            {
-                DialogPrompt.ShowMessage(new Prompt()
-                {
-                    Title = "Error",
-                    Message = result.Error.Message
-                });
-            }
-        }
-
-        private void StartBackgroundingMethod()
+        private void StartBackgroundingMethod(object obj)
         {
             if (BackgroundButtonTitle.StartsWith("Stop", System.StringComparison.OrdinalIgnoreCase))
             {
@@ -129,7 +132,7 @@ namespace referenceguide
             }
         }
 
-        private void EncryptTextMethod()
+        private void EncryptTextMethod(object obj)
         {
             if (string.IsNullOrEmpty(EncryptedText))
             {
@@ -172,7 +175,7 @@ namespace referenceguide
             }
         }
 
-        private void HashTextMethod()
+        private void HashTextMethod(object obj)
         {
             if (!string.IsNullOrEmpty(ClearHash1) && !string.IsNullOrEmpty(ClearHash2))
             {
@@ -184,26 +187,36 @@ namespace referenceguide
             }
         }
 
-        private async Task ClearAnalyticEntriesMethod()
+        private void ClearAnalyticEntriesMethod(object obj)
         {
-            var result = await DataBLL.ClearLogFiles(LogType.Analytic);
-            if (result.Success)
-                AnalyticLogs = new ObservableCollection<AnalyticLog>();
+            Task.Run(async () => {
+                var result = await DataBLL.ClearLogFiles(LogType.Analytic);
+                if (result.Success)
+                    AnalyticLogs = new ObservableCollection<AnalyticLog>();
+
+            });
+
         }
 
-        private async Task ClearErrorEntriesMethod()
+        private void ClearErrorEntriesMethod(object obj)
         {
-            var result = await DataBLL.ClearLogFiles(LogType.Error);
-            if (result.Success)
-                ErrorLogs = new ObservableCollection<ErrorLog>();
+            Task.Run(async () => {
+                var result = await DataBLL.ClearLogFiles(LogType.Error);
+                if (result.Success)
+                    ErrorLogs = new ObservableCollection<ErrorLog>();
+            });
+
         }
 
-        private async Task CreateErrorEntryMethod()
+        private void CreateErrorEntryMethod(object obj)
         {
-            DataBLL.CreateFictiousError();
-            var result = await DataBLL.GetLogFiles<ErrorLog>();
-            if (result.Error == null)
-                ErrorLogs = result.Response.ToObservable<ErrorLog>();
+            Task.Run(async () => {
+                DataBLL.CreateFictiousError();
+                var result = await DataBLL.GetLogFiles<ErrorLog>();
+                if (result.Error == null)
+                    ErrorLogs = result.Response.ToObservable<ErrorLog>();
+            });
+
         }
 
         public override void LoadResources(string parameter = null)
@@ -222,51 +235,82 @@ namespace referenceguide
 
         }
 
-        public async Task GetPaginatedRandomUsers()
+        public void GetPaginatedRandomUsers(object obj)
         {
-            this.LoadingMessageHUD = "Performing download...";
-            this.IsLoadingHUD = true;
-
-            var result = await WebBll.GetPaginatedRandomUsers(pageIndex);
-            pageIndex++;
-
-            this.IsLoadingHUD = false;
-            if (result.Error == null)
+            Task.Run(async () =>
             {
-                using (var updated = PaginatedRandomUsers.BeginMassUpdate())
+                this.LoadingMessageHUD = "Performing download...";
+                this.IsLoadingHUD = true;
+
+                var result = await WebBll.GetPaginatedRandomUsers(pageIndex);
+                pageIndex++;
+
+                this.IsLoadingHUD = false;
+                if (result.Error == null)
                 {
-                    PaginatedRandomUsers.AddRange(result.Response);
+                    using (var updated = PaginatedRandomUsers.BeginMassUpdate())
+                    {
+                        PaginatedRandomUsers.AddRange(result.Response);
+                    }
                 }
-            }
+                else
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = result.Error.Message
+                    });
+                }
+
+            });
 
         }
 
-        public async Task GetDbAppointments()
+        public void GetDbAppointments(object obj)
         {
-            this.LoadingMessageHUD = "Sqlite loading...";
-            this.IsLoadingHUD = true;
+            Task.Run(async () => {
+                this.LoadingMessageHUD = "Sqlite loading...";
+                this.IsLoadingHUD = true;
 
-            var result = await DataBLL.GetAllAppointments();
-            this.IsLoadingHUD = false;
-            if (result.Error == null)
-            {
-                Appointments = result.Response.ToObservable();
-            }
-
+                var result = await DataBLL.GetAllAppointments();
+                this.IsLoadingHUD = false;
+                if (result.Error == null)
+                {
+                    Appointments = result.Response.ToObservable();
+                }
+                else
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = result.Error.Message
+                    });
+                }
+            });
         }
 
-        private async Task GetRandomUsers()
+        private void GetRandomUsers(object obj)
         {
-            this.LoadingMessageHUD = "Performing download...";
-            this.IsLoadingHUD = true;
+            Task.Run(async () => {
+                this.LoadingMessageHUD = "Performing download...";
+                this.IsLoadingHUD = true;
 
-            var result = await WebBll.GetRandomUsers();
+                var result = await WebBll.GetRandomUsers();
 
-            this.IsLoadingHUD = false;
-            if (result.Error == null)
-            {
-                RandomUsers = result.Response.ToObservable();
-            }
+                this.IsLoadingHUD = false;
+                if (result.Error == null)
+                {
+                    RandomUsers = result.Response.ToObservable();
+                }
+                else
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = result.Error.Message
+                    });
+                }
+            });
 
         }
 
@@ -306,7 +350,7 @@ namespace referenceguide
         {
             if (key == AppSettings.RefreshAppoints)
             {
-                GetDbAppointments().ContinueWith((t) => { });
+                GetDbAppointments(null);
             }
         }
 

@@ -17,7 +17,7 @@ namespace referenceguide
 
         public SearchViewModel()
         {
-            SearchCommand = new RelayCommand((obj) => { SearchCommandMethod(obj); });
+            SearchCommand = new RelayCommand(SearchCommandMethod);
         }
 
         private void SearchCommandMethod(object obj)
