@@ -64,15 +64,14 @@ namespace referenceguide
                 if (response.result)
                 {
 
-                    var obj =await CalendarEvent.GetCalendarEvent(response.model.Id);
-                    if(obj!=null){
-                        obj.StartTime = new DateTime(2017, 10, 31, 14, 0, 0);
-                        obj.EndTime = new DateTime(2017, 10, 31, 15, 0, 0);
-                        var objResult = await CalendarEvent.UpdateCalendarEvent(obj);
-                        if(objResult.result){
-                            var x = 10;
-                        }
-                    }
+                    //Example of updating an existing event
+                    //var obj =await CalendarEvent.GetCalendarEvent(response.model.Id);
+                    //if(obj!=null){
+                    //    obj.StartTime = new DateTime(2017, 10, 31, 14, 0, 0);
+                    //    obj.EndTime = new DateTime(2017, 10, 31, 15, 0, 0);
+                    //    obj.ReminderMinutes = 30;
+                    //    var objResult = await CalendarEvent.UpdateCalendarEvent(obj);
+                    //}
 
                     Appt = new Appointment();
                 }
