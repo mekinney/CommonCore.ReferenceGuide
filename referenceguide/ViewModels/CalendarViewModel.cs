@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -12,46 +14,78 @@ namespace referenceguide
 		public TimeSpan EndTime{ get; set; }
 		public Appointment Appt{ get; set; }
 		public bool DevicePersistOnly { get; set; }
+        public ObservableCollection<CalendarAccount> DeviceCalendars { get; set; }
+        public CalendarAccount SelectedDeviceCalendar { get; set; }
 
         public ICommand CreateEvent { get; set; } 
 
 		public CalendarViewModel()
 		{
 			Appt = new Appointment();
-            CreateEvent = new RelayCommand(async (obj) => { await CreateEventMethod(); });
+            CreateEvent = new RelayCommand(CreateEventMethod);
 		}
 
-        private async Task CreateEventMethod()
+        public override void LoadResources(string parameter = null)
         {
-			Appt.StartDate = new DateTime(Appt.StartDate.Year, Appt.StartDate.Month, Appt.StartDate.Day).Add(StartTime);
+            Task.Run(async()=>{
+                var result = await CalendarEvent.GetCalendars();
+                DeviceCalendars = result?.ToObservable<CalendarAccount>();
+            });
 
-			Appt.EndDate = new DateTime(Appt.EndDate.Year, Appt.EndDate.Month, Appt.EndDate.Day).Add(EndTime);
+        }
 
-			if (DevicePersistOnly)
-			{
-				SaveToPhone();
-			}
-			else
-			{
-				await SaveToDatabase();
-			}
+        private void CreateEventMethod(object obj)
+        {
+            Task.Run(async () =>
+            {
+                
+                Appt.StartDate = new DateTime(Appt.StartDate.Year, Appt.StartDate.Month, Appt.StartDate.Day).Add(StartTime);
+                Appt.EndDate = new DateTime(Appt.EndDate.Year, Appt.EndDate.Month, Appt.EndDate.Day).Add(EndTime);
+
+                if (DevicePersistOnly)
+                {
+                    await SaveToPhone();
+                }
+                else
+                {
+                    await SaveToDatabase();
+                }
+            });
         }
 
 
-		private void SaveToPhone()
+		private async Task SaveToPhone()
 		{
-			var evt = Appt.ToCalendarEvent();
+            if (SelectedDeviceCalendar != null)
+            {
+                var evt = Appt.ToCalendarEvent();
+                evt.DeviceCalendar = SelectedDeviceCalendar;
+                var response = await CalendarEvent.CreateCalendarEvent(evt);
+                if (response.result)
+                {
 
-			CalendarEvent.CreateCalendarEvent(evt, (obj) =>
-			{
-				Appt = new Appointment();
-				DialogPrompt.ShowMessage(new Prompt()
-				{
-					Title = "Device Calendar",
-					Message = $"The save event result was {obj}"
-				});
+                    var obj =await CalendarEvent.GetCalendarEvent(response.model.Id);
+                    if(obj!=null){
+                        obj.StartTime = new DateTime(2017, 10, 31, 14, 0, 0);
+                        obj.EndTime = new DateTime(2017, 10, 31, 15, 0, 0);
+                        var objResult = await CalendarEvent.UpdateCalendarEvent(obj);
+                        if(objResult.result){
+                            var x = 10;
+                        }
+                    }
 
-			});
+                    Appt = new Appointment();
+                }
+                else
+                {
+                    DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Calendar Event Failed",
+                        Message = "There was an issues saving the calendar event"
+                    });
+                }
+            }
+
 
 		}
 		private async Task SaveToDatabase()

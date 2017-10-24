@@ -83,5 +83,7 @@
 	</array>
 	<key>Custom Property</key>
 	<array/>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Application needs access to the calendar</string>
 </dict>
 </plist>

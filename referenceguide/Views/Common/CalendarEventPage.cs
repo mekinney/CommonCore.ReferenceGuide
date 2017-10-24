@@ -32,10 +32,10 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1)
             };
 
-            evtNameEntry = new Entry()
+            evtNameEntry = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
-                //AutomationId = "evtNameEntry"
+                EntryColor = Color.DarkGray, 
             };
             evtNameEntry.SetBinding(Entry.TextProperty, new Binding(path:"Appt.Title", mode:BindingMode.TwoWay));
 
@@ -48,13 +48,15 @@ namespace referenceguide
                 AutomationId = "evtDescription"
             };
 
-            var evtDescriptionEntry = new Entry()
+            var evtDescriptionEntry = new CoreUnderlineEntry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
+                EntryColor = Color.DarkGray,
                 AutomationId = "evtDescriptionEntry"
             };
             evtDescriptionEntry.SetBinding(Entry.TextProperty, "Appt.Description");
 
+            var calendarSelect = CreateCalendarSelectionPanel();
             var startTime = CreateStartDateTimePanel();
             var endTime = CreateEndDateTimePanel();
 
@@ -84,7 +86,20 @@ namespace referenceguide
             Content = new StackLayout()
             {
                 Padding = 15,
-                Children = { lblExplain, evtName, evtNameEntry, evtDescription, evtDescriptionEntry, startTime, endTime, evtHasReminder, swReminder, btnCreate }
+                Children = 
+                { 
+                    lblExplain, 
+                    evtName, 
+                    evtNameEntry, 
+                    evtDescription, 
+                    evtDescriptionEntry, 
+                    calendarSelect, 
+                    startTime, 
+                    endTime, 
+                    evtHasReminder, 
+                    swReminder, 
+                    btnCreate 
+                }
             };
 
             this.SetAutomationIds();
@@ -95,6 +110,32 @@ namespace referenceguide
             var body = (MemberExpression)expr.Body;
 
             return body.Member.Name;
+        }
+
+        private StackLayout CreateCalendarSelectionPanel()
+        {
+            var calendarSelect = new Label()
+            {
+                TextColor = Color.Gray,
+                Text = "Select Calendar",
+                FontSize = 14,
+                Margin = new Thickness(5, 5, 5, 1)
+            };
+
+            var calendarPicker = new CorePicker()
+            {
+                Margin = new Thickness(5, 1, 5, 1),
+                AutomationId = "calendarPicker",
+                BindingPath="DisplayName", 
+                EntryColor = Color.DarkGray 
+            };
+            calendarPicker.SetBinding(CorePicker.ItemsSourceProperty, "DeviceCalendars");
+            calendarPicker.SetBinding(CorePicker.SelectedItemProperty,"SelectedDeviceCalendar");
+
+            return new StackLayout()
+            {
+                Children = { calendarSelect, calendarPicker }
+            };
         }
 
         private StackLayout CreateStartDateTimePanel()
@@ -110,7 +151,8 @@ namespace referenceguide
             var evtStartDateEntry = new DatePicker()
             {
                 Margin = new Thickness(5, 1, 5, 1),
-                AutomationId = "evtStartDateEntry"
+                AutomationId = "evtStartDateEntry",
+
             };
             evtStartDateEntry.SetBinding(DatePicker.DateProperty, "Appt.StartDate");
 
