@@ -94,7 +94,11 @@ namespace referenceguide
 			{
 				SendViewMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, this.Appt);
 				Appt = new Appointment();
-                Navigation.PopNonAwaited();
+
+                Device.BeginInvokeOnMainThread(async()=>{
+                    await AppSettings.AppNav.PopAsync();
+                });
+
 			}
 		}
 	}

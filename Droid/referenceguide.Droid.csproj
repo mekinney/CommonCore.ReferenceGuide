@@ -17,7 +17,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -139,18 +139,6 @@
     <Reference Include="Xamarin.Auth.XamarinForms">
       <HintPath>..\packages\Xamarin.Auth.XamarinForms.1.5.0.3\lib\MonoAndroid10\Xamarin.Auth.XamarinForms.dll</HintPath>
     </Reference>
-    <Reference Include="PInvoke.Windows.Core">
-      <HintPath>..\packages\PInvoke.Windows.Core.0.5.97\lib\portable-net45+win8+wpa81\PInvoke.Windows.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="PInvoke.Kernel32">
-      <HintPath>..\packages\PInvoke.Kernel32.0.5.97\lib\portable-net45+win8+wpa81\PInvoke.Kernel32.dll</HintPath>
-    </Reference>
-    <Reference Include="PInvoke.BCrypt">
-      <HintPath>..\packages\PInvoke.BCrypt.0.5.97\lib\portable-net45+win8+wpa81\PInvoke.BCrypt.dll</HintPath>
-    </Reference>
-    <Reference Include="PInvoke.NCrypt">
-      <HintPath>..\packages\PInvoke.NCrypt.0.5.97\lib\portable-net45+win8+wpa81\PInvoke.NCrypt.dll</HintPath>
-    </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
     </Reference>
@@ -178,9 +166,6 @@
     <Reference Include="ExoPlayer.Core">
       <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.5.3\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
     </Reference>
-    <Reference Include="ExoPlayer.Hls">
-      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.3\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
-    </Reference>
     <Reference Include="ExoPlayer.SmoothStreaming">
       <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.SmoothStreaming.2.5.3\lib\MonoAndroid\ExoPlayer.SmoothStreaming.dll</HintPath>
     </Reference>
@@ -199,21 +184,6 @@
     <Reference Include="Plugin.Connectivity">
       <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
     </Reference>
-    <Reference Include="FFImageLoading">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.20\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.20\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Transformations">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.20\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Forms">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.20\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Forms.Droid">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.20\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Azure.Mobile.Android.Bindings">
       <HintPath>..\packages\Microsoft.Azure.Mobile.0.16.0\lib\MonoAndroid403\Microsoft.Azure.Mobile.Android.Bindings.dll</HintPath>
     </Reference>
@@ -228,9 +198,6 @@
     </Reference>
     <Reference Include="Microsoft.Azure.Mobile.Crashes.Android.Bindings">
       <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.16.0\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Azure.Mobile.Crashes">
-      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.16.0\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
     </Reference>
     <Reference Include="CommonServiceLocator">
       <HintPath>..\packages\CommonServiceLocator.2.0.1\lib\netstandard2.0\CommonServiceLocator.dll</HintPath>
@@ -325,8 +292,41 @@
     <Reference Include="CarouselView.FormsPlugin.Abstractions">
       <HintPath>..\packages\CarouselView.FormsPlugin.4.4.6\lib\MonoAndroid\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="ExoPlayer.Hls">
+      <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Hls.2.5.3\lib\MonoAndroid\ExoPlayer.Hls.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.Mobile.Crashes">
+      <HintPath>..\packages\Microsoft.Azure.Mobile.Crashes.0.16.0\lib\MonoAndroid403\Microsoft.Azure.Mobile.Crashes.dll</HintPath>
+    </Reference>
     <Reference Include="CarouselView.FormsPlugin.Android">
       <HintPath>..\packages\CarouselView.FormsPlugin.4.4.6\lib\MonoAndroid\CarouselView.FormsPlugin.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Windows.Core">
+      <HintPath>..\packages\PInvoke.Windows.Core.0.5.111\lib\portable-net45+win8+wpa81\PInvoke.Windows.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.Kernel32">
+      <HintPath>..\packages\PInvoke.Kernel32.0.5.111\lib\portable-net45+win8+wpa81\PInvoke.Kernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.BCrypt">
+      <HintPath>..\packages\PInvoke.BCrypt.0.5.111\lib\portable-net45+win8+wpa81\PInvoke.BCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="PInvoke.NCrypt">
+      <HintPath>..\packages\PInvoke.NCrypt.0.5.111\lib\portable-net45+win8+wpa81\PInvoke.NCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.22\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.2.22\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.2.22\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.22\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Droid">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.2.22\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
