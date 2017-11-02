@@ -42,7 +42,7 @@ namespace referenceguide
 			}
 		}
 
-        public async Task<(PostItem Response, Exception Error)> PostDataExample()
+        public async Task<(PostItem Response, bool Success, Exception Error)> PostDataExample()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace referenceguide
             catch (Exception ex)
             {
                 ex?.LogException("WebBusinessLayer - PostDataExample");
-                return (null, ex);
+                return (null, false, ex);
             }
         }
 

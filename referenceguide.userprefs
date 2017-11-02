@@ -2,11 +2,15 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.219C58B0-A263-47C2-AE09-283CDAC6032B">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/CalendarViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Services/HttpService.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="195" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="191" Column="5" />
       <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="9" Column="54" />
       <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="101" Column="1" />
+      <File FileName="referenceguide/BLL/WebBusinessLayer.cs" Line="46" Column="10" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/ISqliteDb.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/IHttpService.cs" Line="17" Column="50" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/HttpService.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
