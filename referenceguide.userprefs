@@ -1,25 +1,13 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.219C58B0-A263-47C2-AE09-283CDAC6032B">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreMaskedEntry.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" Line="191" Column="5" />
-      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="9" Column="54" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="101" Column="1" />
-      <File FileName="referenceguide/BLL/WebBusinessLayer.cs" Line="46" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/ISqliteDb.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/IHttpService.cs" Line="17" Column="50" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/HttpService.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Config/AppSettings.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Config/json/config.dev.json" Line="1" Column="1" />
-      <File FileName="Droid/MainApplication.cs" Line="41" Column="1" />
-      <File FileName="referenceguide/Views/MainPage.cs" Line="15" Column="36" />
-      <File FileName="referenceguide/Views/SlidingPage.cs" Line="64" Column="6" />
-      <File FileName="referenceguide/referenceguide.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Styles/AppStyles.cs" Line="38" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreUnderlineEntry.cs" Line="22" Column="43" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreMaskedEntry.cs" Line="66" Column="26" />
+      <File FileName="referenceguide/referenceguide.cs" Line="16" Column="2" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainApplication.cs" Line="20" Column="34" />
+      <File FileName="iOS/AppDelegate.cs" Line="2" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

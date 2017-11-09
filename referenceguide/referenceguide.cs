@@ -4,12 +4,21 @@ using Plugin.Connectivity.Abstractions;
 using Xamarin.Forms.CommonCore;
 using System;
 
+#if __ANDROID__
+using FFImageLoading.Forms.Droid;
+using CarouselView.FormsPlugin.Android;
+#else
+using FFImageLoading.Forms.Touch;
+using CarouselView.FormsPlugin.iOS;
+#endif
+
 namespace referenceguide
 {
     public class App : Application
 	{
 		public App()
 		{
+            InitCustomRenders();
 			AppSettings.NotificationTags.Add("referenceguide");
 			MainPage = new MainPage();
 		}
@@ -44,6 +53,12 @@ namespace referenceguide
             this.LoadViewModelState();
 		}
 
+        private void InitCustomRenders()
+        {
+            CachedImageRenderer.Init();
+            CarouselViewRenderer.Init();
+
+        }
 
 	}
 }

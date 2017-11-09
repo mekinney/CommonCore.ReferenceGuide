@@ -4,8 +4,6 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Runtime;
-using CarouselView.FormsPlugin.Android;
-using FFImageLoading.Forms.Droid;
 using Plugin.CurrentActivity;
 using PushNotification.Plugin; //Xam.Plugin.PushNotification from nuget or get from github and compile to latest version
 using Xamarin.Forms.CommonCore;
@@ -133,14 +131,8 @@ namespace referenceguide.Droid
         {
             AppSettings.AppIcon = Resource.Drawable.icon;
             AppContext = this.ApplicationContext;
-
-			CachedImageRenderer.Init();
-			CarouselViewRenderer.Init();
-
 			CrossPushNotification.Initialize<CrossPushNotificationListener>(AppSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
-
 			StartPushService();
-
 			CrossPushNotification.Current.Register();
         }
     }
