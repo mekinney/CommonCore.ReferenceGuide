@@ -2,14 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
-    <Files>
-      <File FileName="referenceguide/referenceguide.cs" Line="16" Column="2" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Droid/MainApplication.cs" Line="20" Column="34" />
-      <File FileName="iOS/AppDelegate.cs" Line="2" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
