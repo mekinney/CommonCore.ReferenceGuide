@@ -15,7 +15,7 @@ namespace referenceguide
 
     }
 
-    public class SearchContentPage : BoundPage<SearchViewModel>
+    public class SearchContentPage : CorePage<SearchViewModel>
     {
         private SearchBar searchBar;
         public SearchContentPage()

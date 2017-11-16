@@ -8,7 +8,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class CalendarViewModel : ObservableViewModel
+	public class CalendarViewModel : CoreViewModel
 	{
 		public TimeSpan StartTime{ get; set; }
 		public TimeSpan EndTime{ get; set; }
@@ -22,7 +22,7 @@ namespace referenceguide
 		public CalendarViewModel()
 		{
 			Appt = new Appointment();
-            CreateEvent = new RelayCommand(CreateEventMethod);
+            CreateEvent = new CoreCommand(CreateEventMethod);
 		}
 
         public override void LoadResources(string parameter = null)

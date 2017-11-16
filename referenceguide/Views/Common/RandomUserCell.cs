@@ -36,6 +36,8 @@ namespace referenceguide
 			{
 				Margin = new Thickness(4, 2, 4, -4)
 			};
+            lblFullName.SetBinding(Label.TextProperty, 
+                                   new Binding(path: "FullName", converter: AppConverters.UpperText));
 
 			lblFullAddress = new Label()
 			{
@@ -75,7 +77,7 @@ namespace referenceguide
 
 			var item = ((RandomUser)BindingContext);
 			img.Source = item.ImageUrl;
-			lblFullName.Text = item.FullName;
+			//lblFullName.Text = item.FullName;
 			lblFullAddress.FormattedText = item.FullAddress;
 			base.OnBindingContextChanged();
 		}

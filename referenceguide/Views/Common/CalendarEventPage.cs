@@ -6,7 +6,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class CalendarEventPage : BoundPage<CalendarViewModel>
+    public class CalendarEventPage : CorePage<CalendarViewModel>
     {
         private Entry evtNameEntry;
 

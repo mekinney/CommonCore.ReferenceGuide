@@ -22,7 +22,7 @@ namespace referenceguide
         public string Text { get; set; }
     }
 
-    public class SimpleViewModel : ObservableViewModel
+    public class SimpleViewModel : CoreViewModel
     {
         private int selectedRank;
         private AudioState playingState;
@@ -88,29 +88,29 @@ namespace referenceguide
             if (stateResults.Error == null)
                 States = stateResults.Response.ToObservable();
 
-            DialogClick = new RelayCommand(DialogClickMethod);
-            NotificationClick = new RelayCommand(NotificationClickMethod);
-            OverlayClick = new RelayCommand(OverlayClickMethod);
-            Blur = new RelayCommand(BlurNewMethod);
-            CreateCalendar = new RelayCommand(CreateCalendarMethod);
-            PushRegister = new RelayCommand(PushRegisterMethod);
-            ShowSnack = new RelayCommand(ShowSnackMethod);
-            PlaySound = new RelayCommand(PlaySoundMethod);
-            CommTest = new RelayCommand(CommTestMethod);
-            ContextMenu = new RelayCommand(ContextMenuMethod);
-            BindingTextChanged = new RelayCommand(BindingTextChangedMethod);
-            SendSMS = new RelayCommand(SendSMSMethod);
-            SendEmail = new RelayCommand(SendEmailMethod);
-            MakeCall = new RelayCommand(MakeCallMethod);
-            MakeCallEvent = new RelayCommand(MakeCallEventMethod);
-            FABClicked = new RelayCommand(FABClickedMethod);
-            ClickEvent = new RelayCommand((obj) => { ClickCount++; });
+            DialogClick = new CoreCommand(DialogClickMethod);
+            NotificationClick = new CoreCommand(NotificationClickMethod);
+            OverlayClick = new CoreCommand(OverlayClickMethod);
+            Blur = new CoreCommand(BlurNewMethod);
+            CreateCalendar = new CoreCommand(CreateCalendarMethod);
+            PushRegister = new CoreCommand(PushRegisterMethod);
+            ShowSnack = new CoreCommand(ShowSnackMethod);
+            PlaySound = new CoreCommand(PlaySoundMethod);
+            CommTest = new CoreCommand(CommTestMethod);
+            ContextMenu = new CoreCommand(ContextMenuMethod);
+            BindingTextChanged = new CoreCommand(BindingTextChangedMethod);
+            SendSMS = new CoreCommand(SendSMSMethod);
+            SendEmail = new CoreCommand(SendEmailMethod);
+            MakeCall = new CoreCommand(MakeCallMethod);
+            MakeCallEvent = new CoreCommand(MakeCallEventMethod);
+            FABClicked = new CoreCommand(FABClickedMethod);
+            ClickEvent = new CoreCommand((obj) => { ClickCount++; });
 
             /*
                 This is an example of command validators. ValidateTextFields is part of the CommonCore
                 extensions and validators can be chained with more complex rules for numbers and dates 
             */
-            CanExecute = new RelayCommand(CanExecuteMethod,
+            CanExecute = new CoreCommand(CanExecuteMethod,
                                           () => { return this.ValidateTextFields(this.FirstName); },
                                           this);
         }

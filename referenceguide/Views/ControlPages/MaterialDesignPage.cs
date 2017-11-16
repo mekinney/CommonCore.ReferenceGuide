@@ -5,14 +5,14 @@ using Xamarin.Forms.CommonCore.MaterialDesign;
 
 namespace referenceguide
 {
-	public class MaterialDesignPage : AbsoluteLayoutPage<SimpleViewModel>
+	public class MaterialDesignPage : CoreAbsoluteLayoutPage<SimpleViewModel>
 	{
 
 		public MaterialDesignPage()
 		{
 			this.Title = "Material Design";
 
-			var fab = new FABControl()
+			var fab = new CoreFloatingActionButton()
 			{
 				Size = FABControlSize.Normal,
 				ColorNormal = Color.FromHex("#DF8049"),
@@ -20,26 +20,26 @@ namespace referenceguide
 				ImageName = "plus.png"
 			};
 
-			fab.SetBinding(FABControl.CommandProperty, "FABClicked");
+			fab.SetBinding(CoreFloatingActionButton.CommandProperty, "FABClicked");
 			AbsoluteLayout.SetLayoutFlags(fab, AbsoluteLayoutFlags.PositionProportional);
 			AbsoluteLayout.SetLayoutBounds(fab, new Rectangle(0.95f, 0.95f, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
 
-			var fteUserName = new FTEControl()
+			var fteUserName = new CoreFloatingTextEntry()
 			{
 				Placeholder = "User Name",
 				ErrorText = "Required Field",
 				ErrorColor = Color.Red,
-				Validator = FTEControl.RequiredValidator
+				Validator = CoreFloatingTextEntry.RequiredValidator
 			};
 
-			var ftePassword = new FTEControl()
+			var ftePassword = new CoreFloatingTextEntry()
 			{
 				Placeholder = "Password",
 				IsPassword = true,
 				ErrorText = "Required Field",
 				ErrorColor = Color.Red,
-				Validator = FTEControl.RequiredValidator
+				Validator = CoreFloatingTextEntry.RequiredValidator
 			};
 
 

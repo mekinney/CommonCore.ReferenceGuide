@@ -7,7 +7,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-	public class MasterDetailViewModel : ObservableViewModel
+	public class MasterDetailViewModel : CoreViewModel
 	{
 		private Dictionary<string, NavigationPage> navPages { get; set; } = new Dictionary<string, NavigationPage>();
 	
@@ -19,7 +19,7 @@ namespace referenceguide
 		public MasterDetailViewModel()
 		{
 			SetNavigation();
-            NavClicked = new RelayCommand((obj) => { NavClickedMethod(obj); });
+            NavClicked = new CoreCommand((obj) => { NavClickedMethod(obj); });
 		}
 
         private void NavClickedMethod(object obj)

@@ -57,15 +57,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\BindingViews\BindingViewMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsCollectionView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Fonts\FontsMainPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BLL\DataBusinessLayer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialConfigurationModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialObservableViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\DataBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialCoreConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\PartialCoreViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Person.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BLL\OAuthBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\OAuthBusinessLayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\CarouselBindingObject.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BLL\CryptoBusinessLayer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BLL\WebBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\CryptoBusinessLayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Business\WebBusinessLayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FontItemRow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\AppConverters.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
@@ -78,7 +79,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\BindingViews\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Fonts\" />
-    <Folder Include="$(MSBuildThisFileDirectory)BLL\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Business\" />
     <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
   </ItemGroup>
 </Project>

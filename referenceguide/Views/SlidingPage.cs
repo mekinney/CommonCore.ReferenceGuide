@@ -50,7 +50,7 @@ namespace referenceguide
 		}
 	}
 
-	public class SlidingPage : BoundPage<MasterDetailViewModel>
+	public class SlidingPage : CorePage<MasterDetailViewModel>
 	{
 
 		public SlidingPage()

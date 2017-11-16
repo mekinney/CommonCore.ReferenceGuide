@@ -3,13 +3,13 @@ using referenceguide;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public partial class ObservableViewModel
+    public partial class CoreViewModel
     {
         public DataBusinessLayer DataBLL
         {
             get
             {
-                return InjectionManager.GetBusinessLayer<DataBusinessLayer>();
+                return CoreDependencyService.GetBusinessLayer<DataBusinessLayer>();
             }
         }
 
@@ -17,7 +17,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			get
 			{
-				return InjectionManager.GetBusinessLayer<OAuthBusinessLayer>();
+				return CoreDependencyService.GetBusinessLayer<OAuthBusinessLayer>();
 			}
 		}
 
@@ -25,7 +25,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			get
 			{
-				return InjectionManager.GetBusinessLayer<CryptoBusinessLayer>();
+				return CoreDependencyService.GetBusinessLayer<CryptoBusinessLayer>();
 			}
 		}
 
@@ -33,7 +33,7 @@ namespace Xamarin.Forms.CommonCore
         {
 			get
 			{
-				return InjectionManager.GetBusinessLayer<WebBusinessLayer>();
+				return CoreDependencyService.GetBusinessLayer<WebBusinessLayer>();
 			}
         }
     }

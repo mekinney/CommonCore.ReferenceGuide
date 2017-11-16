@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 
 namespace referenceguide
 {
-    public class OAuthBusinessLayer : BusinessBase
+    public class OAuthBusinessLayer : CoreBusiness
 	{
 		public OAuth2Authenticator GetAuthenticator(AuthenticatorType type, Action<string> tokenCallBack)
 		{

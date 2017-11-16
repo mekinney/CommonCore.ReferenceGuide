@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class PaginagedListControl: BoundPage<DataExampleViewModel>
+    public class PaginagedListControl: CorePage<DataExampleViewModel>
     {
         public PaginagedListControl()
         {

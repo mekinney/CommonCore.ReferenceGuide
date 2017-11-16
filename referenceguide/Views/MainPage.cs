@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class MainPage : BoundMasterDetailPage<MasterDetailViewModel>
+    public class MainPage : CoreMasterDetailPage<MasterDetailViewModel>
 	{
 		public static Page CurrentDetail { get; set; }
 		public MainPage()

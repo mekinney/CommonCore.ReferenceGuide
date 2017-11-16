@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 namespace referenceguide
 {
 
-    public class HttpServicesPage : BoundPage<DataExampleViewModel>
+    public class HttpServicesPage : CorePage<DataExampleViewModel>
     {
         public HttpServicesPage()
         {

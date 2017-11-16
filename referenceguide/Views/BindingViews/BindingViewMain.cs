@@ -5,26 +5,26 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class ViewModel1: ObservableViewModel
+    public class ViewModel1: CoreViewModel
     {
         public string Content { get; set; } = "This is content from view model 1 and unrelated to another binding class";
         public Color TextColor { get; set; } = Color.Black;
         public ICommand ChangeColor { get; set; }
         public ViewModel1()
         {
-            ChangeColor = new RelayCommand((obj) => {
+            ChangeColor = new CoreCommand((obj) => {
                 TextColor = Color.Orange;
             });
         }
     }
-    public class ViewModel2 : ObservableViewModel
+    public class ViewModel2 : CoreViewModel
     {
         public string Content { get; set; } = "This is content from view model 2 and demonstrates that a page can have multiple bindings";
         public Color TextColor { get; set; } = Color.Black;
         public ICommand ChangeColor { get; set; }
         public ViewModel2()
         {
-            ChangeColor = new RelayCommand((obj) => {
+            ChangeColor = new CoreCommand((obj) => {
                 TextColor = Color.Blue;
             });
         }
@@ -49,7 +49,7 @@ namespace referenceguide
             btn2.SetBinding(Button.CommandProperty, "ChangeColor");
 
             //All objects in this view1 are bound to ViewModel 1
-            var view1 = new BoundContenView<ViewModel1>()
+            var view1 = new CoreContenView<ViewModel1>()
             {
                 Content = new StackLayout()
                 {
@@ -58,7 +58,7 @@ namespace referenceguide
             };
 
             //All objects in this view1 are bound to ViewModel 2
-            var view2 = new BoundContenView<ViewModel2>()
+            var view2 = new CoreContenView<ViewModel2>()
             {
                 Content = new StackLayout()
                 {

@@ -66,10 +66,10 @@ namespace referenceguide
                 {
                     var appt = (Appointment)obj;
                     appt.MarkedForDelete = true;
-                    var sqlite = InjectionManager.GetService<ISqliteDb, SqliteDb>();
+                    var sqlite = CoreDependencyService.GetService<ISqliteDb, SqliteDb>();
                     var result = await sqlite.AddOrUpdate<Appointment>(appt);
                     if (result.Success)
-                        InjectionManager.SendViewModelMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, null);
+                        CoreDependencyService.SendViewModelMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, null);
 
                 })
             };
@@ -92,7 +92,7 @@ namespace referenceguide
             base.OnBindingContextChanged();
         }
     }
-    public class SqlitePage : BoundPage<DataExampleViewModel>
+    public class SqlitePage : CorePage<DataExampleViewModel>
     {
         public SqlitePage()
         {

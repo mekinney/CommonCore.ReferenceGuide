@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class BehaviorsMain : BoundPage<SimpleViewModel>
+    public class BehaviorsMain : CorePage<SimpleViewModel>
     {
         
         public BehaviorsMain()

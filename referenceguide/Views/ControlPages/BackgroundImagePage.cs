@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class BackgroundImagePage: BoundPage<SimpleViewModel>
+    public class BackgroundImagePage: CorePage<SimpleViewModel>
     {
         public BackgroundImagePage()
         {

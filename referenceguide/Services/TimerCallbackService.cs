@@ -9,7 +9,7 @@ namespace referenceguide
         public void TimeElapsedEvent()
         {
             //example of routing execution to some view model in the application
-            var vm = InjectionManager.GetViewModel<SimpleViewModel>();
+            var vm = CoreDependencyService.GetViewModel<SimpleViewModel>();
             vm.DisplayNotification(new LocalNotification()
             {
                 Id = 1,

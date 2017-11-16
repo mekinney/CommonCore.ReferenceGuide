@@ -8,7 +8,7 @@ using System.Collections.ObjectModel;
 namespace referenceguide
 {
 
-    public class SearchViewModel : ObservableViewModel, ISearchProvider
+    public class SearchViewModel : CoreViewModel, ISearchProvider
     {
         public ObservableCollection<Person> People { get; set; } = new ObservableCollection<Person>();
         public bool SearchIsDefaultAction { get; set; } = false;
@@ -17,7 +17,7 @@ namespace referenceguide
 
         public SearchViewModel()
         {
-            SearchCommand = new RelayCommand(SearchCommandMethod);
+            SearchCommand = new CoreCommand(SearchCommandMethod);
         }
 
         private void SearchCommandMethod(object obj)

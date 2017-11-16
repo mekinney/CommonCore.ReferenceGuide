@@ -7,7 +7,7 @@ using System.Collections;
 
 namespace referenceguide
 {
-    public class DataBusinessLayer : BusinessBase
+    public class DataBusinessLayer : CoreBusiness
     {
         public IBackgroundTimer TimerService
         {

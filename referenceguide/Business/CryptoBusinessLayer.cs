@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class CryptoBusinessLayer :BusinessBase 
+    public class CryptoBusinessLayer :CoreBusiness 
     {
 		public (string Response, Exception Error) EncryptText(string text)
 		{

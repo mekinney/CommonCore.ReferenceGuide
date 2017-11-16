@@ -35,7 +35,7 @@ namespace referenceguide
             };
         }
     }
-    public class Nav2ViewModel : ObservableViewModel
+    public class Nav2ViewModel : CoreViewModel
     {
         public override bool OnBackButtonPressed()
         {
@@ -47,7 +47,7 @@ namespace referenceguide
 
         }
     }
-    public class Nav2 : BoundPage<Nav2ViewModel>
+    public class Nav2 : CorePage<Nav2ViewModel>
     {
         public Nav2()
         {
@@ -86,7 +86,7 @@ namespace referenceguide
             };
         }
     }
-    public class Nav3ViewModel : ObservableViewModel
+    public class Nav3ViewModel : CoreViewModel
     {
         public override bool OnBackButtonPressed()
         {
@@ -104,7 +104,7 @@ namespace referenceguide
 
         }
     }
-    public class Nav3 : BoundPage<Nav3ViewModel>
+    public class Nav3 : CorePage<Nav3ViewModel>
     {
         public Nav3()
         {
@@ -147,7 +147,7 @@ namespace referenceguide
     {
         public string Description { get; set; }
     }
-    public class Nav4ViewModel : ObservableViewModel
+    public class Nav4ViewModel : CoreViewModel
     {
 
         public string AnimalDescription { get; set; }
@@ -182,7 +182,7 @@ namespace referenceguide
 
         }
     }
-    public class Nav4 : BoundPage<Nav4ViewModel>
+    public class Nav4 : CorePage<Nav4ViewModel>
     {
         public Nav4()
         {
@@ -211,7 +211,7 @@ namespace referenceguide
                 AutomationId = "btnRelease",
                 Command = new Command((obj) =>
                 {
-                    InjectionManager.ReleaseResources<Nav4ViewModel>();
+                    CoreDependencyService.ReleaseResources<Nav4ViewModel>();
                 })
             };
 

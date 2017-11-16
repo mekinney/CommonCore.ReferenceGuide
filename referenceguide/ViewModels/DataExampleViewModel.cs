@@ -7,7 +7,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class DataExampleViewModel : ObservableViewModel
+    public class DataExampleViewModel : CoreViewModel
     {
 
         private RandomUser selectedPagingatedUser;
@@ -59,17 +59,17 @@ namespace referenceguide
         {
             BackgroundButtonTitle = "Background Timer";
 
-            CreateErrorEntry = new RelayCommand(CreateErrorEntryMethod);
-            ClearErrorEntries = new RelayCommand(ClearErrorEntriesMethod);
-            ClearAnalyticEntries = new RelayCommand(ClearAnalyticEntriesMethod);
-            LoadMorePaginatedUsers = new RelayCommand(GetPaginatedRandomUsers);
-            HashText = new RelayCommand(HashTextMethod);
-            EncryptText = new RelayCommand(EncryptTextMethod);
-            HttpDownloadStart = new RelayCommand(GetRandomUsers);
-            SqliteLoadStart = new RelayCommand(GetDbAppointments);
-            StartBackgrounding = new RelayCommand(StartBackgroundingMethod);
-            HttpPost = new RelayCommand(HttpPostMethod);
-            LongDownload = new RelayCommand(LongDownloadMethod);
+            CreateErrorEntry = new CoreCommand(CreateErrorEntryMethod);
+            ClearErrorEntries = new CoreCommand(ClearErrorEntriesMethod);
+            ClearAnalyticEntries = new CoreCommand(ClearAnalyticEntriesMethod);
+            LoadMorePaginatedUsers = new CoreCommand(GetPaginatedRandomUsers);
+            HashText = new CoreCommand(HashTextMethod);
+            EncryptText = new CoreCommand(EncryptTextMethod);
+            HttpDownloadStart = new CoreCommand(GetRandomUsers);
+            SqliteLoadStart = new CoreCommand(GetDbAppointments);
+            StartBackgrounding = new CoreCommand(StartBackgroundingMethod);
+            HttpPost = new CoreCommand(HttpPostMethod);
+            LongDownload = new CoreCommand(LongDownloadMethod);
 
         }
 
@@ -126,7 +126,7 @@ namespace referenceguide
             }
             else
             {
-                var timerService = InjectionManager.GetService<IIntervalCallback, TimerCallbackService>(true);
+                var timerService = CoreDependencyService.GetService<IIntervalCallback, TimerCallbackService>(true);
                 DataBLL.TimerService.Start(1, timerService);
                 BackgroundButtonTitle = $"Stop {BackgroundButtonTitle}";
             }

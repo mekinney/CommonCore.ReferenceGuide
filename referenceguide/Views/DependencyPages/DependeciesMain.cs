@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class DependeciesMain : BoundPage<SimpleViewModel>
+    public class DependeciesMain : CorePage<SimpleViewModel>
     {
         public DependeciesMain()
         {

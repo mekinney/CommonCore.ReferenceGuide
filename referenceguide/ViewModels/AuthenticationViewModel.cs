@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class AuthenticationViewModel : ObservableViewModel
+    public class AuthenticationViewModel : CoreViewModel
     {
         public string AccessToken { get; set; }
         public ICommand GoogleAuth { get; set; }
@@ -14,9 +14,9 @@ namespace referenceguide
 
         public AuthenticationViewModel()
         {
-            GoogleAuth = new RelayCommand((obj) => { GoogleAuthMethod(); });
-            FaceBookAuth = new RelayCommand((obj) => { FaceBookAuthMethod(); });
-            MicrosoftAuth = new RelayCommand(async (obj) => { await MicrosoftAuthMethod(); });
+            GoogleAuth = new CoreCommand((obj) => { GoogleAuthMethod(); });
+            FaceBookAuth = new CoreCommand((obj) => { FaceBookAuthMethod(); });
+            MicrosoftAuth = new CoreCommand(async (obj) => { await MicrosoftAuthMethod(); });
 
         }
 

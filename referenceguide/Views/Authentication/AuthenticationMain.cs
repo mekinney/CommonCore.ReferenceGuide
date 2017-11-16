@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class AuthenticationMain :BoundPage<AuthenticationViewModel>
+    public class AuthenticationMain :CorePage<AuthenticationViewModel>
     {
         public AuthenticationMain()
         {

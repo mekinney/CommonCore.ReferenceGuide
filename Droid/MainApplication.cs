@@ -45,7 +45,7 @@ namespace referenceguide.Droid
 
         private static void TaskSchedulerOnUnobservedTaskException(object sender, UnobservedTaskExceptionEventArgs unobservedTaskExceptionEventArgs)
         {
-            InjectionManager.GetService<ILogService, LogService>().LogException(
+            CoreDependencyService.GetService<ILogService, LogService>().LogException(
                 unobservedTaskExceptionEventArgs.Exception,
                 "MainApplication -TaskSchedulerOnUnobservedTaskException");
 
@@ -55,7 +55,7 @@ namespace referenceguide.Droid
         private static void CurrentDomainOnUnhandledException(object sender, UnhandledExceptionEventArgs unhandledExceptionEventArgs)
         {
             var ex = unhandledExceptionEventArgs.ExceptionObject as Exception;
-            InjectionManager.GetService<ILogService, LogService>().LogException(
+            CoreDependencyService.GetService<ILogService, LogService>().LogException(
                 ex,
                 "MainApplication -CurrentDomainOnUnhandledException");
 

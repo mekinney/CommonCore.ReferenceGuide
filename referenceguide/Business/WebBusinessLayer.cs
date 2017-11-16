@@ -5,7 +5,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class WebBusinessLayer:BusinessBase
+    public class WebBusinessLayer:CoreBusiness
     {
 		private WebDownloadClient downloadClient;
 

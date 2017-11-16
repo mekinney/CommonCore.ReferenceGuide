@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class FontsMainPage : BoundPage<DataExampleViewModel>
+    public class FontsMainPage : CorePage<DataExampleViewModel>
     {
         public FontsMainPage()
         {

@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-    public class EncryptionPage : BoundPage<DataExampleViewModel>
+    public class EncryptionPage : CorePage<DataExampleViewModel>
     {
         public EncryptionPage()
         {

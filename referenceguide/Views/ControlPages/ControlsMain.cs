@@ -66,7 +66,7 @@ namespace referenceguide
 
 
     }
-    public class ControlsMain : AbsoluteLayoutPage<SimpleViewModel>
+    public class ControlsMain : CoreAbsoluteLayoutPage<SimpleViewModel>
     {
 
         public ControlsMain()
@@ -173,7 +173,7 @@ namespace referenceguide
                 TextColor = Color.FromHex("#E8A47D"),
                 SelectedImage = "checked.png",
                 UnSelectedImage = "unchecked.png",
-                CheckedCommand = new RelayCommand((obj) => {
+                CheckedCommand = new CoreCommand((obj) => {
                     
                     var z = obj;
                 })
