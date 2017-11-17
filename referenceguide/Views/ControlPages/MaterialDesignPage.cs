@@ -43,7 +43,7 @@ namespace referenceguide
 			};
 
 
-			Content = new StackLayout()
+            Content = new CompressedStackLayout()
 			{
 				Padding = new Thickness(20, 30, 20, 20),
 				Spacing = Device.OnPlatform<double>(40,5,5),

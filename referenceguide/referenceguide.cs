@@ -14,6 +14,8 @@ using CarouselView.FormsPlugin.iOS;
 
 namespace referenceguide
 {
+
+
     public class App : Application
 	{
 		public App()

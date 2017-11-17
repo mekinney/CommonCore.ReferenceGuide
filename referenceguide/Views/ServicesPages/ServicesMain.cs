@@ -90,17 +90,19 @@ namespace referenceguide
             timerSrv.SetBinding(CoreButton.TextProperty,"BackgroundButtonTitle");
             timerSrv.SetBinding(CoreButton.CommandProperty,"StartBackgrounding");
 
-            var stack = new StackLayout()
+            var stack = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { http, httpPost, httpDownload, sqlite, encrypt, analytics, errors, timerSrv, new StackLayout() { HeightRequest = 5 } }
             };
+           
 
             Content = new ScrollView()
             {
                 Content = stack
             };
+
         }
     }
 }

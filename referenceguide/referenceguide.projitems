@@ -67,6 +67,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Business\WebBusinessLayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\FontItemRow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\AppConverters.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)_roadmap\CompressedContainers.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
@@ -82,5 +83,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Business\" />
     <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_roadmap\" />
   </ItemGroup>
 </Project>

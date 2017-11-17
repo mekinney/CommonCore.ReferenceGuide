@@ -18,16 +18,11 @@ namespace referenceguide
 			};
             img.SetBinding(CachedImage.SourceProperty,"ImageUrl");
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { img }
             };
         }
 
-        //protected override void OnBindingContextChanged()
-        //{
-            
-        //    base.OnBindingContextChanged();
-        //}
     }
 }

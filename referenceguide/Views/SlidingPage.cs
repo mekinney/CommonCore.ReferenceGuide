@@ -32,7 +32,7 @@ namespace referenceguide
 				VerticalOptions = LayoutOptions.Center,
 			};
 
-			View = new StackLayout()
+			View = new CompressedStackLayout()
 			{
 				Orientation = StackOrientation.Horizontal,
 				Children = { img, lbl }
@@ -96,7 +96,7 @@ namespace referenceguide
 			Padding = new Thickness(0, 40, 0, 0);
 			Icon = "hamburger.png";
 			Title = "Reference Guide";
-			Content = new StackLayout
+            Content = new CompressedStackLayout
 			{
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				Children = {

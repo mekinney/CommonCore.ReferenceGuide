@@ -25,7 +25,7 @@ namespace referenceguide
             webView.Effects.Add(new DisableWebViewScrollEffect());
 #endif
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { webView }
             };

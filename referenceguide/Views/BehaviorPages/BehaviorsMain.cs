@@ -131,7 +131,7 @@ namespace referenceguide
             };
             btnCanExecute.SetBinding(CoreButton.CommandProperty,"CanExecute");
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 15,
                 Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel, lblBindingEvent, bindingEntry, btnCanExecute }

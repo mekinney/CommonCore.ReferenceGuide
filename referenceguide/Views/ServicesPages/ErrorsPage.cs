@@ -14,10 +14,11 @@ namespace referenceguide
             };
             lbl.SetBinding(Label.TextProperty, "ErrorType");
 
-            View = new StackLayout()
+            View = new CompressedStackLayout()
             {
                 Children = { lbl }
             };
+           
 		}
     }
 
@@ -57,12 +58,13 @@ namespace referenceguide
             };
             btnClear.SetBinding(CoreButton.CommandProperty,"ClearErrorEntries");
            
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { lst ,btnAdd, btnClear }
             };
+      
         }
 
 		protected override void OnAppearing()

@@ -27,12 +27,13 @@ namespace referenceguide
                })
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { btn }
             };
+        
         }
     }
     public class Nav2ViewModel : CoreViewModel
@@ -78,12 +79,13 @@ namespace referenceguide
                })
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { btn, btnBack }
             };
+         
         }
     }
     public class Nav3ViewModel : CoreViewModel
@@ -135,12 +137,13 @@ namespace referenceguide
                })
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { btn, btnBack }
             };
+          
         }
     }
     public class Animal
@@ -221,12 +224,13 @@ namespace referenceguide
             };
             lbl.SetBinding(Label.TextProperty, "AnimalDescription");
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { btnBack, btnRelease, lbl }
             };
+
         }
 
         protected override void OnAppearing()

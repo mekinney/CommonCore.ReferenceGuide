@@ -83,7 +83,7 @@ namespace referenceguide
             };
             btnCreate.SetBinding(CoreButton.CommandProperty, "CreateEvent");
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 15,
                 Children = 
@@ -112,7 +112,7 @@ namespace referenceguide
             return body.Member.Name;
         }
 
-        private StackLayout CreateCalendarSelectionPanel()
+        private CompressedStackLayout CreateCalendarSelectionPanel()
         {
             var calendarSelect = new Label()
             {
@@ -132,13 +132,13 @@ namespace referenceguide
             calendarPicker.SetBinding(CorePicker.ItemsSourceProperty, "DeviceCalendars");
             calendarPicker.SetBinding(CorePicker.SelectedItemProperty,"SelectedDeviceCalendar");
 
-            return new StackLayout()
+            return new CompressedStackLayout()
             {
                 Children = { calendarSelect, calendarPicker }
             };
         }
 
-        private StackLayout CreateStartDateTimePanel()
+        private CompressedStackLayout CreateStartDateTimePanel()
         {
             var evtStartDate = new Label()
             {
@@ -181,7 +181,7 @@ namespace referenceguide
                 Children = { evtStartTime, evtStartTimeEntry }
             };
 
-            var startDateTimePanel = new StackLayout()
+            var startDateTimePanel = new CompressedStackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 Children = { startDatePanel, startTimePanel }
@@ -191,7 +191,7 @@ namespace referenceguide
         }
 
 
-        private StackLayout CreateEndDateTimePanel()
+        private CompressedStackLayout CreateEndDateTimePanel()
         {
             var evtEndDate = new Label()
             {
@@ -233,7 +233,7 @@ namespace referenceguide
                 Children = { evtEndTime, evtEndTimeEntry }
             };
 
-            var endDateTimePanel = new StackLayout()
+            var endDateTimePanel = new CompressedStackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 Children = { endDatePanel, endTimePanel }

@@ -51,7 +51,7 @@ namespace referenceguide
             }
 
 
-            View = new StackLayout()
+            View = new CompressedStackLayout()
             {
                 Children = { lbl }
             };
@@ -93,7 +93,7 @@ namespace referenceguide
                 ItemsSource = names
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { lst }
             };

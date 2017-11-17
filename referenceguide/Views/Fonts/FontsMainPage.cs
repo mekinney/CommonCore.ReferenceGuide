@@ -106,12 +106,13 @@ namespace referenceguide
                })
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { fontAwesome, entypoPlus, ionicons, material, meteocons, simpleLineIcons, typicons, weatherIcons }
             };
+
         }
     }
 }

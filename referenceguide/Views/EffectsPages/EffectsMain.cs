@@ -43,14 +43,14 @@ namespace referenceguide
 				})
 			};
 
-			var stack = new StackLayout()
+            var stack = new CompressedStackLayout()
 			{
 				Padding = 20,
 				Spacing = 10,
 				Children = { removeEmptyRowsEffect, hideListSeparatorEffect, disableWebViewScrollEffect,new StackLayout() { HeightRequest = 5 } }
 			};
 
-			Content = new ScrollView()
+            Content = new ScrollView()
 			{
 				Content = stack
 			};

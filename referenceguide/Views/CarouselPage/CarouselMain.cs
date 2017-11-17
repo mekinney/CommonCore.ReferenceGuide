@@ -32,7 +32,7 @@ namespace referenceguide
                 Text = "Bacon ipsum dolor amet jerky picanha beef chicken ball tip, capicola shoulder pork belly boudin prosciutto shank sausage pig hamburger. Tongue pork cupim landjaeger chuck short loin kielbasa fatback tail strip steak. Spare ribs kielbasa tenderloin jerky alcatra tri-tip pork. Spare ribs jowl shankle, ball tip alcatra ham short ribs picanha chicken drumstick. Cupim corned beef bacon, shoulder brisket ground round leberkas bresaola.\n\nT-bone beef ribs pastrami chuck. T-bone tongue swine bacon picanha, tenderloin beef strip steak. Pork loin sirloin picanha, short loin bresaola brisket alcatra corned beef venison sausage prosciutto cupim turkey boudin chicken. Sirloin capicola cupim chuck alcatra pork. Pork jerky fatback, meatball short loin tri-tip doner beef ribs bacon porchetta."
             };
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { carousel, new ScrollView() { Content = lbl } }
             };

@@ -107,7 +107,7 @@ namespace referenceguide
             };
 
 
-            var stack = new StackLayout()
+            var stack = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,

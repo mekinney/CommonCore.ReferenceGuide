@@ -38,14 +38,14 @@ namespace referenceguide
 			var lblToken = new Label();
 			lblToken.SetBinding(Label.TextProperty, "AccessToken");
 
-            var stack = new StackLayout()
+            var stack = new CompressedStackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
                 Children = { googleAuth, facebookAuth, msAuth, lblToken,new StackLayout() { HeightRequest = 5 } }
             };
 
-			Content = new ScrollView()
+            Content = new ScrollView()
 			{
 				Content = stack
 			};

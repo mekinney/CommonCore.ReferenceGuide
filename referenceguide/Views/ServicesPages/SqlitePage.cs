@@ -76,11 +76,12 @@ namespace referenceguide
             deleteMenu.SetBinding(MenuItem.CommandParameterProperty, new Binding("."));
             ContextActions.Add(deleteMenu);
 
-            View = new StackLayout()
+            View = new CompressedStackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
                 Children = { img, rightPanel }
             };
+        
         }
 
         //On a listview that uses RecycleElement binding can be costly
@@ -118,10 +119,11 @@ namespace referenceguide
             lstView.SetBinding(ListView.ItemsSourceProperty, "Appointments");
 
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { lstView }
             };
+    
 
         }
     }

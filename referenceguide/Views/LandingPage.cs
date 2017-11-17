@@ -38,25 +38,18 @@ namespace referenceguide
 
 			var lbl = new Label() { FormattedText = fs, Margin = 10 };
 
-
-
-
-            var pnl = new StackLayout()
+            Content = new ScrollView()
             {
-                Children = 
-                { 
-                    topImage, 
-                    customFont,
-                    lbl 
+                Content = new CompressedStackLayout()
+                {
+                    Children =
+                    {
+                        topImage,
+                        customFont,
+                        lbl
+                    }
                 }
             };
-
-
-
-			Content = new ScrollView()
-			{
-				Content = pnl
-			};
 
 		}
 	}

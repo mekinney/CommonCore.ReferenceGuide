@@ -19,7 +19,7 @@ namespace referenceguide
             };
             lbl.SetBinding(Label.TextProperty,"Text");
 
-            View = new StackLayout()
+            View = new CompressedStackLayout()
             {
                 Children = { lbl }
             };
@@ -48,7 +48,7 @@ namespace referenceguide
 			if(hideSeparators)
                 lstView.Effects.Add(new HideListSeparatorEffect());
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Children = { lstView }
             };

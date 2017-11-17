@@ -27,11 +27,12 @@ namespace referenceguide
             };
             descript.SetBinding(Label.TextProperty, "FriendlyName");
 
-            Content = new StackLayout()
+            Content = new CompressedStackLayout()
             {
                 Spacing = 5,
                 Children = { imgLabel, descript }
             };
+     
         }
     }
 
@@ -44,7 +45,7 @@ namespace referenceguide
         public FontsCollectionViewCell()
         {
             Height = 75;
-            var gd = new Grid();
+            var gd = new CompressedGrid();
             gd.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1,GridUnitType.Star)});
             gd.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
             gd.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
