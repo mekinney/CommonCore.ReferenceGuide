@@ -8,7 +8,12 @@ using Xamarin.Forms.CommonCore;
 namespace referenceguide.Droid
 {
 
-    [Activity(Label = "referenceguide.Droid", Icon = "@drawable/icon", Theme = "@style/MyTheme", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "referenceguide.Droid", 
+              Exported = true,
+              Icon = "@drawable/icon", 
+              Theme = "@style/MyTheme", 
+              ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [MetaData("android.app.shortcuts", Resource = "@xml/shortcuts")]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -27,6 +32,13 @@ namespace referenceguide.Droid
             LoadApplication(new App());
 
             Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0)); //here
+
+            if (!string.IsNullOrWhiteSpace(Intent?.Data?.LastPathSegment)){
+                switch (Intent.Data.LastPathSegment){
+                    case "Home":
+                        break;
+                }
+            }
 
         }
 

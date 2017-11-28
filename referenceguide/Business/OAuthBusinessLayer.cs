@@ -6,6 +6,7 @@ using Xamarin.Auth;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using System.Net.Http.Headers;
+using Plugin.CurrentActivity;
 
 namespace referenceguide
 {
@@ -54,8 +55,10 @@ namespace referenceguide
 			UIParent uiParent = null;
 
 #if __ANDROID__
+
+
             if(Xamarin.Forms.Device.RuntimePlatform =="Android")
-                uiParent =new UIParent(Xamarin.Forms.Forms.Context as Android.App.Activity);
+                uiParent =new UIParent(CrossCurrentActivity.Current.Activity as Android.App.Activity);
 #endif
 			try
 			{

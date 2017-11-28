@@ -47,8 +47,14 @@ namespace referenceguide
                 AutomationId = "errorLabel"
             };
 
-            errorLabel.SetBinding(Label.TextProperty, new Binding(source: fNameEntry.Behaviors[0], path: "ErrorMessage", mode: BindingMode.OneWay));
-            errorLabel.SetBinding(Label.IsVisibleProperty, new Binding(source: fNameEntry.Behaviors[0], path: "HasError", mode: BindingMode.OneWay));
+            errorLabel.SetBinding(Label.TextProperty, new Binding(
+                source: fNameEntry.Behaviors[0], 
+                path: "ErrorMessage", 
+                mode: BindingMode.OneWay));
+            errorLabel.SetBinding(Label.IsVisibleProperty, new Binding(
+                source: fNameEntry.Behaviors[0], 
+                path: "HasError", 
+                mode: BindingMode.OneWay));
 
 
             var lblPhone = new Label()

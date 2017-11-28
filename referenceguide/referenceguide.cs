@@ -3,6 +3,7 @@ using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
 using Xamarin.Forms.CommonCore;
 using System;
+using System.Collections.Generic;
 
 #if __ANDROID__
 using FFImageLoading.Forms.Droid;
@@ -21,6 +22,24 @@ namespace referenceguide
 		public App()
 		{
             InitCustomRenders();
+
+            //if(CoreSettings.OS== DeviceOS.ANDROID){
+            //    var lst = new List<ShortDetail>();
+            //    lst.Add(new ShortDetail()
+            //    {
+            //        LongLabel = "Test",
+            //        ShortLabel = "Test",
+            //        Icon = "icon"
+            //    });
+            //    lst.Add(new ShortDetail()
+            //    {
+            //        LongLabel = "Test1",
+            //        ShortLabel = "Test1",
+            //        Icon = "icon"
+            //    });
+            //    DependencyService.Get<IAppShortCut>().CreateAppShortCuts("test", lst);
+            //}
+
 			AppSettings.NotificationTags.Add("referenceguide");
 			MainPage = new MainPage();
 		}

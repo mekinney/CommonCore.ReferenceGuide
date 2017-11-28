@@ -1,22 +1,40 @@
-﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default" NuGet.AddPackagesDialog.IncludePrerelease="True">
-  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A">
-    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
-  </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ServicesPages/ServicesMain.cs">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationService.cs">
     <Files>
-      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="11" Column="37" />
-      <File FileName="referenceguide/Views/Animations/AnimationsMain.cs" Line="186" Column="31" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Services/BackgroundTimerService.Droid.cs" Line="23" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/PushNotifications/Android/PushNotificationService.cs" Line="13" Column="10" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="referenceguide" expanded="True">
+            <Node name="referenceguide" expanded="True">
+              <Node name="Business" expanded="True" />
+            </Node>
+            <Node name="referenceguide.Droid" expanded="True" selected="True" />
+            <Node name="Xamarin.Forms.CommonCore" expanded="True">
+              <Node name="_init" expanded="True" />
+              <Node name="Controls" expanded="True">
+                <Node name="MaterialDesign" expanded="True">
+                  <Node name="CoreFloatingActionButton.cs" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Dependencies" expanded="True">
+                <Node name="IAudioPlayer.cs" expanded="True" />
+                <Node name="ICommunication.cs" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/SqliteDb.cs" line="50" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" line="1145" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.N624" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N624" />
   <MultiItemStartupConfigurations />
 </Properties>

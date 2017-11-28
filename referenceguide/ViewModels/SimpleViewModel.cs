@@ -117,7 +117,7 @@ namespace referenceguide
 
         private void CanExecuteMethod(object obj)
         {
-
+            
         }
         private void FABClickedMethod(object obj)
         {
