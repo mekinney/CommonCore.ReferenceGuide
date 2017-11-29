@@ -6,7 +6,10 @@ using Xamarin.Auth;
 using Microsoft.Graph;
 using Microsoft.Identity.Client;
 using System.Net.Http.Headers;
+
+#if __ANDROID__
 using Plugin.CurrentActivity;
+#endif
 
 namespace referenceguide
 {

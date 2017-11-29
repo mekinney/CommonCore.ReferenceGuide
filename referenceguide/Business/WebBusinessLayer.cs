@@ -7,8 +7,7 @@ namespace referenceguide
 {
     public class WebBusinessLayer:CoreBusiness
     {
-		private WebDownloadClient downloadClient;
-
+        
 		public async Task<(List<RandomUser> Response, Exception Error)> GetRandomUsers()
 		{
 			var url = this.WebApis["randomuser"];
@@ -59,17 +58,13 @@ namespace referenceguide
             }
         }
 
-        public async Task GetLongDownload(Action<double> percentCallBack, Action<object> completed)
+        public async Task<byte[]> GetLongDownload(Action<double> percentCallBack, Action<Exception> errorCallback)
         {
-			downloadClient = HttpService.GetWebDownloadClient();
-			downloadClient.DownloadUrl = this.WebApis["largefile"];
-			downloadClient.PercentageChanged += (percent) => {
-                percentCallBack?.Invoke(percent);
-			};
-			downloadClient.FinishedEvent += (data) => {
-                completed?.Invoke(data);
-			};
-			await downloadClient.StartDownload();
+            return await this.HttpService.DownloadFile(
+                this.WebApis["largefile"],
+                percentCallBack,
+                errorCallback,
+                null);
         }
     }
 }

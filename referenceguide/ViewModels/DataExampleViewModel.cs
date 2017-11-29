@@ -81,15 +81,27 @@ namespace referenceguide
                 {
                     ProgressIndicator.ShowProgress("Downloading...", percent);
                 });
-            }, (data) =>
+            }, (error) =>
             {
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     ProgressIndicator.Dismiss();
-                });
-                var fileData = data;
+                    this.DialogPrompt.ShowMessage(new Prompt()
+                    {
+                        Title = "Error",
+                        Message = error.Message
+                    });
 
-            }).ContinueOn();
+                });
+
+
+            }).ContinueWith((data) => { 
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    ProgressIndicator.Dismiss();
+                    var file = data;
+                });
+            });
         }
 
         private void HttpPostMethod(object obj)
