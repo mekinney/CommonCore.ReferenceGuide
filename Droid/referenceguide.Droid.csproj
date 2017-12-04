@@ -395,6 +395,8 @@
   <ItemGroup>
     <Folder Include="Resources\xml\" />
   </ItemGroup>
+  <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems')" />
+  <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.projitems')" />
   <Import Project="..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

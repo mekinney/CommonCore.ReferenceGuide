@@ -1,10 +1,9 @@
 ﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/DataExampleViewModel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt">
     <Files>
-      <File FileName="referenceguide/Business/WebBusinessLayer.cs" Line="61" Column="50" />
-      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="32" Column="51" />
-      <File FileName="referenceguide/Views/ServicesPages/HttpServicesPage.cs" Line="26" Column="79" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore.Sqlite/BusinessLayer/SqliteCoreBusiness.cs" Line="8" Column="22" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="14" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
