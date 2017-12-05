@@ -11,9 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "referenceguide.web", "refer
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore", "..\CommonCore\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.shproj", "{9FBF1BE8-6CC0-4DC2-BC5B-AB11181D64E3}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.AzurePush", "..\CommonCore\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.shproj", "{7C91473E-7771-4A21-838A-BF246D44537E}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.AzurePush", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.shproj", "{7C91473E-7771-4A21-838A-BF246D44537E}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Sqlite", "..\CommonCore\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.shproj", "{7094EB67-2CF8-4F78-ACA6-84DB242E0936}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Fonts", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Fonts\Xamarin.Forms.CommonCore.Fonts.shproj", "{99401032-3D63-4739-B1AC-221EB3A38F2B}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Sqlite", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.shproj", "{7094EB67-2CF8-4F78-ACA6-84DB242E0936}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

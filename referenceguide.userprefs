@@ -1,9 +1,8 @@
 ﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
-  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.53510EE6-45BE-4275-A7F4-A61ECDAD416A" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Info.plist">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore.Sqlite/BusinessLayer/SqliteCoreBusiness.cs" Line="8" Column="22" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="14" Column="9" />
+      <File FileName="iOS/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
