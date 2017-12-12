@@ -28,8 +28,15 @@ namespace referenceguide
 
         protected override void OnAppearing()
         {
-            base.OnAppearing();
+            this.SetAnalyticsTimeStamp();
             VM.GetPaginatedRandomUsers(null);
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
+
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
         }
     }
 }

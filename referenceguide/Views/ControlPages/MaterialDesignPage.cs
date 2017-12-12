@@ -53,6 +53,16 @@ namespace referenceguide
 			AbsoluteLayer.Children.Add(fab);
 		}
 
+        protected override void OnAppearing()
+        {
+            this.SetAnalyticsTimeStamp();
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
 
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
+        }
 	}
 }

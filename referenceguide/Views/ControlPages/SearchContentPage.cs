@@ -48,6 +48,18 @@ namespace referenceguide
             }
 
         }
+
+        protected override void OnAppearing()
+        {
+            this.SetAnalyticsTimeStamp();
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
+
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
+        }
     }
 }
 

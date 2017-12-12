@@ -52,11 +52,19 @@ namespace referenceguide
 			};
         }
 
-		protected override void OnAppearing()
-		{
-			base.OnAppearing();
-			VM.LoadResources();
-		}
+
+        protected override void OnAppearing()
+        {
+            VM.LoadResources();
+            this.SetAnalyticsTimeStamp();
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
+
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
+        }
 
     }
 }

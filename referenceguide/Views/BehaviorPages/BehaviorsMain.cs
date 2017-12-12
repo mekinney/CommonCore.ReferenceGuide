@@ -143,5 +143,17 @@ namespace referenceguide
                 Children = { explanation, lbl, fNameEntry, errorLabel, lblPhone, phoneEntry, phoneErrorLabel, customLabel, lblBindingEvent, bindingEntry, btnCanExecute }
             };
         }
+
+        protected override void OnAppearing()
+        {
+            this.SetAnalyticsTimeStamp();
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
+
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
+        }
     }
 }

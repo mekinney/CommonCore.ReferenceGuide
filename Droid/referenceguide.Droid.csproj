@@ -395,6 +395,7 @@
   <ItemGroup>
     <Folder Include="Resources\xml\" />
   </ItemGroup>
+  <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Fonts\Xamarin.Forms.CommonCore.Fonts.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Fonts\Xamarin.Forms.CommonCore.Fonts.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.AzurePush\Xamarin.Forms.CommonCore.AzurePush.projitems')" />

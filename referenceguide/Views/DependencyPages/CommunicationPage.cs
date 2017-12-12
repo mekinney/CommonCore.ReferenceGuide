@@ -107,5 +107,17 @@ namespace referenceguide
                 Children = { lbl, phoneNum, lblEmail, emailAddr, lblMsg, message, btnSMS, btnEmail, btnCall, btnCallEvent }
             };
         }
+
+        protected override void OnAppearing()
+        {
+            this.SetAnalyticsTimeStamp();
+            base.OnAppearing();
+        }
+        protected override void OnDisappearing()
+        {
+
+            this.SaveAnalyticsDetails();
+            base.OnDisappearing();
+        }
     }
 }

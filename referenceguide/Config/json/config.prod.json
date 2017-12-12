@@ -1,5 +1,4 @@
 ﻿{
-  "AnalyticsEnabled": true,
   "AESEncryptionKey": "P@ssw0rd",
   "AzureSettings": {
     "AzureHubName": "referenceguide",

@@ -17,6 +17,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Fo
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Sqlite", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.shproj", "{7094EB67-2CF8-4F78-ACA6-84DB242E0936}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Logging", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.shproj", "{2C560267-3C1F-417E-9D8E-E5EA5A816FD1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
