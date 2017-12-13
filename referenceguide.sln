@@ -19,6 +19,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Sq
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Logging", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.shproj", "{2C560267-3C1F-417E-9D8E-E5EA5A816FD1}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.OAuth", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.shproj", "{9BACBEEF-FDC6-4267-95BB-BF6DB2572F51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator

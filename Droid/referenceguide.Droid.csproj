@@ -151,9 +151,6 @@
     <Reference Include="Plugin.Connectivity">
       <HintPath>..\packages\Xam.Plugin.Connectivity.3.0.3\lib\MonoAndroid10\Plugin.Connectivity.dll</HintPath>
     </Reference>
-    <Reference Include="CommonServiceLocator">
-      <HintPath>..\packages\CommonServiceLocator.2.0.1\lib\netstandard2.0\CommonServiceLocator.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Graph">
       <HintPath>..\packages\Microsoft.Graph.1.6.2\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
     </Reference>
@@ -313,14 +310,8 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.5.0.91635\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="CarouselView.FormsPlugin.Abstractions">
-      <HintPath>..\packages\CarouselView.FormsPlugin.5.0.2\lib\MonoAndroid\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
-    </Reference>
     <Reference Include="CarouselView.FormsPlugin.Android">
       <HintPath>..\packages\CarouselView.FormsPlugin.5.0.2\lib\MonoAndroid\CarouselView.FormsPlugin.Android.dll</HintPath>
-    </Reference>
-    <Reference Include="FluentFTP">
-      <HintPath>..\packages\FluentFTP.19.1.2\lib\netstandard1.6\FluentFTP.dll</HintPath>
     </Reference>
     <Reference Include="ExoPlayer.Core">
       <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.Core.2.6.0\lib\MonoAndroid\ExoPlayer.Core.dll</HintPath>
@@ -339,6 +330,9 @@
     </Reference>
     <Reference Include="ExoPlayer">
       <HintPath>..\packages\Xam.Plugins.Android.ExoPlayer.2.6.0\lib\MonoAndroid\ExoPlayer.dll</HintPath>
+    </Reference>
+    <Reference Include="CarouselView.FormsPlugin.Abstractions">
+      <HintPath>..\packages\CarouselView.FormsPlugin.5.0.2\lib\MonoAndroid\CarouselView.FormsPlugin.Abstractions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -395,6 +389,7 @@
   <ItemGroup>
     <Folder Include="Resources\xml\" />
   </ItemGroup>
+  <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Fonts\Xamarin.Forms.CommonCore.Fonts.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Fonts\Xamarin.Forms.CommonCore.Fonts.projitems')" />

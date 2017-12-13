@@ -1,39 +1,17 @@
 ﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Logging/_init/readme.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Services/SqliteDb.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="6" Column="49" />
-      <File FileName="referenceguide/Views/Animations/AnimationsMain.cs" Line="259" Column="1" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Logging/Partials/LoggingPartials.cs" Line="44" Column="48" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Logging/Services/ILogService.cs" Line="69" Column="14" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Logging/_init/readme.txt" Line="10" Column="10" />
-      <File FileName="referenceguide/Views/Authentication/AuthenticationMain.cs" Line="63" Column="10" />
-      <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="146" Column="9" />
-      <File FileName="referenceguide/Views/BindingViews/BindingViewMain.cs" Line="88" Column="10" />
-      <File FileName="referenceguide/Views/CarouselPage/CarouselMain.cs" Line="50" Column="10" />
-      <File FileName="referenceguide/Views/CarouselPage/PictureView.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="255" Column="10" />
-      <File FileName="referenceguide/Views/ControlPages/BackgroundImagePage.cs" Line="51" Column="10" />
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="209" Column="10" />
-      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="66" Column="10" />
-      <File FileName="referenceguide/Views/ControlPages/PaginagedListControl.cs" Line="29" Column="1" />
-      <File FileName="referenceguide/Views/ControlPages/SearchContentPage.cs" Line="52" Column="1" />
-      <File FileName="referenceguide/Views/DependencyPages/CommunicationPage.cs" Line="121" Column="10" />
-      <File FileName="referenceguide/Views/DependencyPages/ContextMenuPage.cs" Line="112" Column="10" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="133" Column="10" />
-      <File FileName="referenceguide/Views/EffectsPages/EffectsMain.cs" Line="70" Column="10" />
-      <File FileName="referenceguide/Views/EffectsPages/ListViewEffect.cs" Line="68" Column="10" />
-      <File FileName="referenceguide/Views/EffectsPages/WebViewEffect.cs" Line="45" Column="10" />
-      <File FileName="referenceguide/Views/Fonts/FontsMainPage.cs" Line="128" Column="10" />
-      <File FileName="referenceguide/Views/ServicesPages/AnalyticsPage.cs" Line="56" Column="1" />
-      <File FileName="referenceguide/Views/ServicesPages/EncryptionPage.cs" Line="100" Column="1" />
-      <File FileName="referenceguide/Views/ServicesPages/ErrorsPage.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/ServicesPages/HttpServicesPage.cs" Line="46" Column="10" />
-      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="118" Column="10" />
-      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="140" Column="10" />
-      <File FileName="referenceguide/Views/MainPage.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/LandingPage.cs" Line="66" Column="10" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Logging/Services/LogService.cs" Line="36" Column="1" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.OAuth/Services/AuthenticatorService.Google.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Configurations/CoreConfiguration.cs" Line="23" Column="42" />
+      <File FileName="referenceguide/Config/json/config.dev.json" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/_init/Config/config.dev.json.txt" Line="14" Column="1" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="9" Column="1" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/_init/readme.txt" Line="9" Column="9" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Partials/SqlitePartials.cs" Line="6" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Settings/CoreSettings.cs" Line="145" Column="54" />
+      <File FileName="iOS/AppDelegate.cs" Line="32" Column="86" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Services/SqliteDb.cs" Line="39" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
