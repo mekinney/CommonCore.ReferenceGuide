@@ -68,6 +68,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\FontItemRow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Converters\AppConverters.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)_roadmap\CompressedContainers.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\CardViewPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\CardViewContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />

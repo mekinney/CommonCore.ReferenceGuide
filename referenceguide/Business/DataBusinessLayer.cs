@@ -4,6 +4,7 @@ using Xamarin.Forms.CommonCore;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections;
+using System.Text;
 
 namespace referenceguide
 {
@@ -43,6 +44,56 @@ namespace referenceguide
                 return (false, ex);
             }
 
+        }
+
+        private string CreateFontText(FontItem font, int count)
+        {
+            var sb = new StringBuilder();
+            for (int x = 0; x < count;x++){
+                sb.Append($"{font.Unicode} ");
+            }
+            return sb.ToString().TrimEnd();
+
+        }
+        public List<CardViewContent> GetCardViewList()
+        {
+            var font = FontUtil.GetFont("fa-star", FontType.FontAwesome);
+           
+
+            var lst = new List<CardViewContent>();
+            lst.Add(new CardViewContent(){
+                Title="Train Tracks",
+                Count=3,
+                ImageUrl="tracks.jpg",
+                FontFamily = font.FontFamily,
+                CountText=CreateFontText(font,3)
+            });
+            lst.Add(new CardViewContent()
+            {
+                Title = "Fall Images",
+                Count = 4,
+                ImageUrl = "fall.jpg",
+                FontFamily = font.FontFamily,
+                CountText = CreateFontText(font, 4)
+            });
+            lst.Add(new CardViewContent()
+            {
+                Title = "Distant Path",
+                Count = 2,
+                ImageUrl = "road.jpg",
+                FontFamily = font.FontFamily,
+                CountText = CreateFontText(font, 2)
+            });
+            lst.Add(new CardViewContent()
+            {
+                Title = "Solitary Mind",
+                Count = 5,
+                ImageUrl = "tree.jpg",
+                FontFamily = font.FontFamily,
+                CountText = CreateFontText(font, 5)
+            });
+
+            return lst;
         }
 
 

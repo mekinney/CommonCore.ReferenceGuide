@@ -1,17 +1,10 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Services/SqliteDb.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ControlPages/CardViewPage.cs">
     <Files>
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.OAuth/Services/AuthenticatorService.Google.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Configurations/CoreConfiguration.cs" Line="23" Column="42" />
-      <File FileName="referenceguide/Config/json/config.dev.json" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/_init/Config/config.dev.json.txt" Line="14" Column="1" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="9" Column="1" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/_init/readme.txt" Line="9" Column="9" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Partials/SqlitePartials.cs" Line="6" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Settings/CoreSettings.cs" Line="145" Column="54" />
-      <File FileName="iOS/AppDelegate.cs" Line="32" Column="86" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Sqlite/Services/SqliteDb.cs" Line="39" Column="18" />
+      <File FileName="referenceguide/Views/ControlPages/CardViewPage.cs" Line="12" Column="54" />
+      <File FileName="referenceguide/Models/CardViewContent.cs" Line="13" Column="32" />
+      <File FileName="referenceguide/Business/DataBusinessLayer.cs" Line="68" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -19,6 +12,6 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N624" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N724" />
   <MultiItemStartupConfigurations />
 </Properties>

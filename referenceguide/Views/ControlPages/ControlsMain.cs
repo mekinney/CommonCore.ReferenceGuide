@@ -134,6 +134,16 @@ namespace referenceguide
 			   })
 			};
 
+            var cardViewPage = new CoreButton()
+            {
+                Text = "Card View",
+                Style = AppStyles.LightOrange,
+                Command = new Command((obj) =>
+                {
+                    Navigation.PushNonAwaited<CardViewPage>();
+                })
+            };
+
             var pnl = new CompressedStackLayout()
             {
                 Orientation = StackOrientation.Horizontal,
@@ -186,7 +196,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { listPage, md, searchPage, popup, carouselPage, bckImage, pnl, ranking, starLbl, radioGroup }
+                Children = { listPage, md, searchPage, popup, carouselPage, bckImage, cardViewPage, pnl, ranking, starLbl, radioGroup }
             };
 
             Content = new ScrollView()

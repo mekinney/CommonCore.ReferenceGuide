@@ -54,6 +54,7 @@ namespace referenceguide
         public ObservableCollection<State> States { get; set; } = new ObservableCollection<State>();
         public ObservableCollection<string> RadioOptions { get; set; } = new ObservableCollection<string>();
         public ObservableCollection<CarouselBindingObject> ItemSource { get; set; }
+        public ObservableCollection<CardViewContent> CardCollection { get; set; } = new ObservableCollection<CardViewContent>();
 
         public ICommand ClickEvent { get; set; }
         public ICommand DialogClick { get; set; }
@@ -381,6 +382,8 @@ namespace referenceguide
             var result = DataBLL.GetCarouselData();
             if (result.Error == null)
                 ItemSource = result.Response.ToObservable<CarouselBindingObject>();
+
+            CardCollection = DataBLL.GetCardViewList().ToObservable<CardViewContent>();
         }
 
         public void DisplayNotification(LocalNotification note)
