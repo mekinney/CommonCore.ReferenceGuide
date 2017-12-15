@@ -133,7 +133,7 @@ namespace referenceguide
             {
                 Margin = new Thickness(5, 5, 5, 1) ,
                 Text="Can Execute",
-                Style = AppStyles.LightOrange
+                Style = CoreStyles.LightOrange
             };
             btnCanExecute.SetBinding(CoreButton.CommandProperty,"CanExecute");
 

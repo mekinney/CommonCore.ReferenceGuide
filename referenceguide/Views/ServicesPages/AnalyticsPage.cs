@@ -39,7 +39,7 @@ namespace referenceguide
 			var btnClear = new CoreButton()
 			{
 				Text = "Clear",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "btnClear"
 			};
 			btnClear.SetBinding(CoreButton.CommandProperty, "ClearAnalyticEntries");
@@ -55,7 +55,7 @@ namespace referenceguide
 
         protected override void OnAppearing()
         {
-            VM.LoadResources();
+            VM.OnViewMessageReceived(CoreSettings.LoadResources, null);
             this.SetAnalyticsTimeStamp();
             base.OnAppearing();
         }

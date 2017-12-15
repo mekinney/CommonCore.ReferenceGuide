@@ -13,7 +13,7 @@ namespace referenceguide
             var fontAwesome = new CoreButton()
             {
                 Text = "FontAwesome",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.FontAwesome;
@@ -25,7 +25,7 @@ namespace referenceguide
             var entypoPlus = new CoreButton()
             {
                 Text = "EntypoPlus",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.EntypoPlus;
@@ -37,7 +37,7 @@ namespace referenceguide
             var ionicons = new CoreButton()
             {
                 Text = "Ionicons",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     VM.FontType = FontType.Ionicons;
@@ -49,7 +49,7 @@ namespace referenceguide
             var material = new CoreButton()
             {
                 Text = "Material",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    VM.FontType = FontType.Material;
@@ -61,7 +61,7 @@ namespace referenceguide
             var meteocons = new CoreButton()
             {
                 Text = "Meteocons",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    VM.FontType = FontType.Meteocons;
@@ -73,7 +73,7 @@ namespace referenceguide
             var simpleLineIcons = new CoreButton()
             {
                 Text = "SimpleLineIcons",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    VM.FontType = FontType.SimpleLineIcons;
@@ -85,7 +85,7 @@ namespace referenceguide
             var typicons = new CoreButton()
             {
                 Text = "Typicons",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    VM.FontType = FontType.Typicons;
@@ -97,7 +97,7 @@ namespace referenceguide
             var weatherIcons = new CoreButton()
             {
                 Text = "WeatherIcons",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    VM.FontType = FontType.WeatherIcons;

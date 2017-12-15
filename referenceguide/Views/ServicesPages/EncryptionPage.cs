@@ -36,7 +36,7 @@ namespace referenceguide
             var btnEncrypt = new CoreButton()
             {
                 Text = "Encryption",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
                 AutomationId = "btnEncrypt"
             };
@@ -76,7 +76,7 @@ namespace referenceguide
             var btnHash = new CoreButton()
             {
                 Text = "Compare Clear Hash",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
                 AutomationId = "btnHash"
             };

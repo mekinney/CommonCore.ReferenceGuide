@@ -40,7 +40,7 @@ namespace referenceguide
 
             lblFullDisplay = new Label()
             {
-                Style = AppStyles.AddressCell,
+                Style = CoreStyles.AddressCell,
             };
 
             var rightPanel = new StackLayout()
@@ -69,7 +69,7 @@ namespace referenceguide
                     var sqlite = CoreDependencyService.GetService<ISqliteDb, SqliteDb>();
                     var result = await sqlite.AddOrUpdate<Appointment>(appt);
                     if (result.Success)
-                        CoreDependencyService.SendViewModelMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, null);
+                        CoreDependencyService.SendViewModelMessage<DataExampleViewModel>(CoreSettings.RefreshAppoints, null);
 
                 })
             };

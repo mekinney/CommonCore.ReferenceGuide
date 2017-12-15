@@ -13,7 +13,7 @@ namespace referenceguide
 			var removeEmptyRowsEffect = new CoreButton()
             {
                 Text = "Remove Empty Cell",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "removeEmptyRowsEffect",
                 Command = new Command( (obj) =>
                 {
@@ -24,7 +24,7 @@ namespace referenceguide
 			var hideListSeparatorEffect = new CoreButton()
 			{
 				Text = "Hide List Separator",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "hideListSeparatorEffect",
 				Command = new Command((obj) =>
 				{
@@ -35,7 +35,7 @@ namespace referenceguide
 			var disableWebViewScrollEffect = new CoreButton()
 			{
 				Text = "WebView Scroll Disable",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "disableWebViewScrollEffect",
 				Command = new Command((obj) =>
 				{

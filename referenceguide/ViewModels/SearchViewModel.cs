@@ -30,12 +30,15 @@ namespace referenceguide
             }
         }
 
-        public override void LoadResources(string parameter = null)
+        public override void OnViewMessageReceived(string key, object obj)
         {
-            var peopleResults = DataBLL.GetPeople(null);
-            if (peopleResults.Error == null)
-                People = peopleResults.Response.ToObservable();
+            switch(key){
+                case CoreSettings.LoadResources:
+                    var peopleResults = DataBLL.GetPeople(null);
+                    if (peopleResults.Error == null)
+                        People = peopleResults.Response.ToObservable();
+                    break;
+            }
         }
-
     }
 }

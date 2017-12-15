@@ -16,6 +16,11 @@ namespace referenceguide
                 TextColor = Color.Orange;
             });
         }
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            
+        }
     }
     public class ViewModel2 : CoreViewModel
     {
@@ -27,6 +32,11 @@ namespace referenceguide
             ChangeColor = new CoreCommand((obj) => {
                 TextColor = Color.Blue;
             });
+        }
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            
         }
     }
 

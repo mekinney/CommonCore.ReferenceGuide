@@ -9,9 +9,9 @@ namespace referenceguide
     {
         public CardViewCell()
         {
-            var baseHeight = (int)(AppSettings.ScreenSize.Height * 0.4);
-            var footerHeight = AppSettings.OnPlatform<int>(20, 30);
-            var lblMaring = AppSettings.OnPlatform<int>(5, 10);
+            var baseHeight = (int)(CoreSettings.ScreenSize.Height * 0.4);
+            var footerHeight = CoreSettings.On<int>(20, 30);
+            var lblMaring = CoreSettings.On<int>(5, 10);
 
             this.Height = baseHeight + footerHeight + 10;
 
@@ -79,7 +79,7 @@ namespace referenceguide
             this.Title = "Card View";
             var lst = new CoreListView()
             {
-                RowHeight = (int)(AppSettings.ScreenSize.Height * 0.4) + AppSettings.OnPlatform<int>(35,45),
+                RowHeight = (int)(CoreSettings.ScreenSize.Height * 0.4) + CoreSettings.On<int>(35,45),
                 ItemTemplate = new DataTemplate(typeof(CardViewCell)),
                 SeparatorVisibility = SeparatorVisibility.None,
                 SeparatorColor = Color.Transparent

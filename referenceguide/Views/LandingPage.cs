@@ -19,7 +19,7 @@ namespace referenceguide
 
 			var customFont = new Label()
 			{
-				Style = AppStyles.FontLabel,
+				Style = CoreStyles.FontLabel,
 				Text = "Xamarin.Forms.CommonCore"
 			};
 

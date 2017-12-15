@@ -77,7 +77,7 @@ namespace referenceguide
             var btnCreate = new CoreButton()
             {
                 Text = "Create Event",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
                 AutomationId = "btnCreate"
             };

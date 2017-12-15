@@ -72,7 +72,7 @@ namespace referenceguide
 			{
 				Text = "Options Menu",
 				TextColor = Color.White,
-				Style = AppStyles.AddressCell
+				Style = CoreStyles.AddressCell
 			};
 
 			var topPanel = new StackLayout()

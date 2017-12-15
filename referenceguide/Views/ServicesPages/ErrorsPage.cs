@@ -45,7 +45,7 @@ namespace referenceguide
 			var btnAdd = new CoreButton()
 			{
 				Text = "Add",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "btnAdd",
 			};
 			btnAdd.SetBinding(CoreButton.CommandProperty, "CreateErrorEntry");
@@ -53,7 +53,7 @@ namespace referenceguide
             var btnClear = new CoreButton()
             {
                 Text = "Clear",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "btnClear"
             };
             btnClear.SetBinding(CoreButton.CommandProperty,"ClearErrorEntries");
@@ -70,7 +70,7 @@ namespace referenceguide
 		protected override void OnAppearing()
 		{
 			base.OnAppearing();
-			VM.LoadResources();
+            VM.OnViewMessageReceived(CoreSettings.LoadResources, null);
 		}
     }
 }

@@ -34,7 +34,7 @@ namespace referenceguide
                     BarBackgroundColor = Color.FromHex("#b85921"),
                     BarTextColor = Color.White
                 };
-                AppSettings.AppNav = np.Navigation;
+                CoreSettings.AppNav = np.Navigation;
                 navPages.Add(item.TargetType.Name, np);
             }
             page.Detail = navPages[item.TargetType.Name];

@@ -41,7 +41,7 @@ namespace referenceguide
 
 			lblFullAddress = new Label()
 			{
-				Style = AppStyles.AddressCell
+				Style = CoreStyles.AddressCell
 			};
 
 			var rightPanel = new StackLayout()

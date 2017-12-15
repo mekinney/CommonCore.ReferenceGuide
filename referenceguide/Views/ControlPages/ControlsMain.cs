@@ -76,7 +76,7 @@ namespace referenceguide
             var md = new CoreButton()
             {
                 Text = "Material Design",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     Navigation.PushNonAwaited<MaterialDesignPage>();
@@ -86,7 +86,7 @@ namespace referenceguide
             var listPage = new CoreButton()
             {
                 Text = "List Control",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     Navigation.PushNonAwaited<PaginagedListControl>();
@@ -97,7 +97,7 @@ namespace referenceguide
             var searchPage = new CoreButton()
             {
                 Text = "Search Page",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     Navigation.PushNonAwaited<SearchContentPage>();
@@ -107,7 +107,7 @@ namespace referenceguide
             var popup = new CoreButton()
             {
                 Text = "Popup Control",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                {
                    this.ShowPopup(new StateView(), new Rectangle(0.5, 0.5, 0.85, 0.5), 5);
@@ -117,7 +117,7 @@ namespace referenceguide
 			var carouselPage = new CoreButton()
 			{
 				Text = "Carousel Page",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Command = new Command( (obj) =>
 			   {
                     Navigation.PushNonAwaited<CarouselMain>();
@@ -127,7 +127,7 @@ namespace referenceguide
 			var bckImage = new CoreButton()
 			{
 				Text = "Background Image",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Command = new Command((obj) =>
 			   {
                     Navigation.PushNonAwaited<BackgroundImagePage>();
@@ -137,7 +137,7 @@ namespace referenceguide
             var cardViewPage = new CoreButton()
             {
                 Text = "Card View",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Command = new Command((obj) =>
                 {
                     Navigation.PushNonAwaited<CardViewPage>();

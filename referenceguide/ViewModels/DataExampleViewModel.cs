@@ -231,21 +231,6 @@ namespace referenceguide
 
         }
 
-        public override void LoadResources(string parameter = null)
-        {
-            Task.Run(async () =>
-            {
-                var errorLogs = await DataBLL.GetLogFiles<ErrorLog>();
-                if (errorLogs.Error == null)
-                    ErrorLogs = errorLogs.Response.ToObservable<ErrorLog>();
-
-                var analyticLogs = await DataBLL.GetLogFiles<AnalyticLog>();
-                if (analyticLogs.Error == null)
-                    AnalyticLogs = analyticLogs.Response.ToObservable<AnalyticLog>();
-            });
-
-
-        }
 
         public void GetPaginatedRandomUsers(object obj)
         {
@@ -360,20 +345,27 @@ namespace referenceguide
 
         public override void OnViewMessageReceived(string key, object obj)
         {
-            if (key == AppSettings.RefreshAppoints)
-            {
-                GetDbAppointments(null);
+
+            switch(key){
+                case CoreSettings.LoadResources:
+                    Task.Run(async () =>
+                    {
+                        var errorLogs = await DataBLL.GetLogFiles<ErrorLog>();
+                        if (errorLogs.Error == null)
+                            ErrorLogs = errorLogs.Response.ToObservable<ErrorLog>();
+
+                        var analyticLogs = await DataBLL.GetLogFiles<AnalyticLog>();
+                        if (analyticLogs.Error == null)
+                            AnalyticLogs = analyticLogs.Response.ToObservable<AnalyticLog>();
+                    });
+                    break;
+                case CoreSettings.RefreshAppoints:
+                    GetDbAppointments(null);
+                    break;
             }
-        }
-
-        public override void SaveState()
-        {
-            this.SaveState<DataExampleViewModel>();
 
         }
-        public override void LoadState()
-        {
-            this.LoadState<DataExampleViewModel>();
-        }
+
+
     }
 }

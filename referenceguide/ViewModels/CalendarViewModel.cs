@@ -25,15 +25,6 @@ namespace referenceguide
             CreateEvent = new CoreCommand(CreateEventMethod);
 		}
 
-        public override void LoadResources(string parameter = null)
-        {
-            Task.Run(async()=>{
-                var result = await CalendarEvent.GetCalendars();
-                DeviceCalendars = result?.ToObservable<CalendarAccount>();
-            });
-
-        }
-
         private void CreateEventMethod(object obj)
         {
             Task.Run(async () =>
@@ -92,14 +83,26 @@ namespace referenceguide
             var result = await DataBLL.SaveAppointment(this.Appt);
 			if (result.Error==null)
 			{
-				SendViewMessage<DataExampleViewModel>(AppSettings.RefreshAppoints, this.Appt);
+                SendViewMessage<DataExampleViewModel>(CoreSettings.RefreshAppoints, this.Appt);
 				Appt = new Appointment();
 
                 Device.BeginInvokeOnMainThread(async()=>{
-                    await AppSettings.AppNav.PopAsync();
+                    await CoreSettings.AppNav.PopAsync();
                 });
 
 			}
 		}
-	}
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            switch(key){
+                case CoreSettings.LoadResources:
+                    Task.Run(async () => {
+                        var result = await CalendarEvent.GetCalendars();
+                        DeviceCalendars = result?.ToObservable<CalendarAccount>();
+                    });
+                    break;
+            }
+        }
+    }
 }

@@ -153,7 +153,7 @@ namespace referenceguide
 
                     if (status == PermissionStatus.Granted)
                     {
-                        Communication.PlaceCallWithCallBack(CommunicationNumber.ToString(), "PhoneCallBack");
+                        Communication.PlaceCallWithCallBack(CommunicationNumber.ToString(), CoreSettings.PhoneCallBack);
                     }
                     else if (status != PermissionStatus.Unknown)
                     {
@@ -376,15 +376,7 @@ namespace referenceguide
             });
         }
 
-        public override void LoadResources(string parameter = null)
-        {
 
-            var result = DataBLL.GetCarouselData();
-            if (result.Error == null)
-                ItemSource = result.Response.ToObservable<CarouselBindingObject>();
-
-            CardCollection = DataBLL.GetCardViewList().ToObservable<CardViewContent>();
-        }
 
         public void DisplayNotification(LocalNotification note)
         {
@@ -396,17 +388,28 @@ namespace referenceguide
 
         public override void OnViewMessageReceived(string key, object obj)
         {
-            if (key == "PhoneCallBack")
-            {
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    DialogPrompt.ShowMessage(new Prompt()
+            switch(key){
+                case CoreSettings.LoadResources:
+                    var result = DataBLL.GetCarouselData();
+                    if (result.Error == null)
+                        ItemSource = result.Response.ToObservable<CarouselBindingObject>();
+
+                    CardCollection = DataBLL.GetCardViewList().ToObservable<CardViewContent>();
+                    break;
+                case CoreSettings.ReleaseResources:
+                    break;
+                case CoreSettings.PhoneCallBack:
+                    Device.BeginInvokeOnMainThread(() =>
                     {
-                        Title = "Completed",
-                        Message = "Phone call action has been complete and action logged"
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Completed",
+                            Message = "Phone call action has been complete and action logged"
+                        });
                     });
-                });
+                    break;
             }
+
         }
 
     }

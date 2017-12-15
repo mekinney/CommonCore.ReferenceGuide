@@ -18,7 +18,7 @@ namespace referenceguide
 
             var btn = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
                 Command = new Command((obj) =>
@@ -43,10 +43,12 @@ namespace referenceguide
             return true;
         }
 
-        public override void ReleaseResources(string parameter = null)
+        public override void OnViewMessageReceived(string key, object obj)
         {
-
+            
         }
+
+
     }
     public class Nav2 : CorePage<Nav2ViewModel>
     {
@@ -54,23 +56,23 @@ namespace referenceguide
         {
             this.NeedOverrideSoftBackButton = false;
 #if __IOS__
-			this.OverrideBackButton = true;
+            this.OverrideBackButton = true;
 #endif
             this.Title = "Nav2";
             var btn = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
                 Command = new Command((obj) =>
                {
-                    Navigation.PushNonAwaited<Nav3>();
+                   Navigation.PushNonAwaited<Nav3>();
                })
             };
 
             var btnBack = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Back",
                 AutomationId = "btnBack",
                 Command = new Command((obj) =>
@@ -85,7 +87,7 @@ namespace referenceguide
                 Spacing = 10,
                 Children = { btn, btnBack }
             };
-         
+
         }
     }
     public class Nav3ViewModel : CoreViewModel
@@ -101,10 +103,12 @@ namespace referenceguide
             await Navigation.PopTo<Nav1>(true);
         }
 
-        public override void ReleaseResources(string parameter = null)
+        public override void OnViewMessageReceived(string key, object obj)
         {
-
+            
         }
+
+
     }
     public class Nav3 : CorePage<Nav3ViewModel>
     {
@@ -117,7 +121,7 @@ namespace referenceguide
             this.Title = "Nav3";
             var btn = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Navigate",
                 AutomationId = "btn",
                 Command = new Command((obj) =>
@@ -128,7 +132,7 @@ namespace referenceguide
 
             var btnBack = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Back",
                 AutomationId = "btnBack",
                 Command = new Command((obj) =>
@@ -166,23 +170,25 @@ namespace referenceguide
             Navigation.PopTo<Nav2>(false).ContinueOn();
         }
 
-        public override void LoadResources(string parameter = null)
-        {
-            Task.Run(async () =>
-            {
-                var result = await DataBLL.GetFileData<Animal>("animal");
-                if (result.Error == null)
-                    AnimalDescription = result.Response?.Description;
-            });
-        }
 
-        public override void ReleaseResources(string parameter = null)
+        public override void OnViewMessageReceived(string key, object obj)
         {
-            Task.Run(async () =>
-            {
-                await DataBLL.SaveFileData<Animal>("animal", new Animal() { Description = "Dog" });
-            });
-
+            switch(key){
+                case CoreSettings.LoadResources:
+                    Task.Run(async () =>
+                    {
+                        var result = await DataBLL.GetFileData<Animal>("animal");
+                        if (result.Error == null)
+                            AnimalDescription = result.Response?.Description;
+                    });
+                    break;
+                case CoreSettings.ReleaseResources:
+                    Task.Run(async () =>
+                    {
+                        await DataBLL.SaveFileData<Animal>("animal", new Animal() { Description = "Dog" });
+                    });
+                    break;
+            }
         }
     }
     public class Nav4 : CorePage<Nav4ViewModel>
@@ -198,7 +204,7 @@ namespace referenceguide
 
             var btnBack = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Back",
                 AutomationId = "btnBack",
                 Command = new Command(async (obj) =>
@@ -209,7 +215,7 @@ namespace referenceguide
 
             var btnRelease = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Release Resources",
                 AutomationId = "btnRelease",
                 Command = new Command((obj) =>
@@ -236,12 +242,14 @@ namespace referenceguide
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            VM.LoadResources();
+            VM.OnViewMessageReceived(CoreSettings.LoadResources, null);
+     
         }
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-            VM.ReleaseResources();
+            VM.OnViewMessageReceived(CoreSettings.ReleaseResources, null);
+
         }
     }
 }

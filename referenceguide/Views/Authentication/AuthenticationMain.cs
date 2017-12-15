@@ -12,7 +12,7 @@ namespace referenceguide
 
 			var googleAuth = new CoreButton()
 			{
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Text = "Google Authentication",
 				AutomationId = "googleAuth"
 			};
@@ -21,7 +21,7 @@ namespace referenceguide
 
 			var facebookAuth = new CoreButton()
 			{
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Text = "FaceBook Authentication",
 				AutomationId = "facebookAuth"
 			};
@@ -29,7 +29,7 @@ namespace referenceguide
 
 			var msAuth = new CoreButton()
 			{
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Text = "Microsoft Authentication",
 				AutomationId = "msAuth"
 			};

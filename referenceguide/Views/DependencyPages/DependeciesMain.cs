@@ -13,7 +13,7 @@ namespace referenceguide
 
             var dlg = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Dialog",
                 AutomationId = "dialogButton"
             };
@@ -22,7 +22,7 @@ namespace referenceguide
 
             var not = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Notification",
                 AutomationId = "notifyButton"
             };
@@ -31,7 +31,7 @@ namespace referenceguide
 
             var overlay = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Overlay",
                 AutomationId = "overlayButton"
             };
@@ -40,7 +40,7 @@ namespace referenceguide
 
             var blur = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Create Blur",
                 AutomationId = "blurButton"
             };
@@ -48,7 +48,7 @@ namespace referenceguide
 
             var snack = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "SnackBar",
                 AutomationId = "snack"
             };
@@ -56,7 +56,7 @@ namespace referenceguide
 
             var playSound = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Play Sound",
                 AutomationId = "playSound"
             };
@@ -65,7 +65,7 @@ namespace referenceguide
 
             var commTest = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Communication Dependencies",
                 AutomationId = "commTest"
             };
@@ -73,7 +73,7 @@ namespace referenceguide
 
             var cal = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Text = "Create Calendar Event",
                 AutomationId = "calendarbutton"
             };
@@ -81,7 +81,7 @@ namespace referenceguide
 
 			var ctxMnu = new CoreButton()
 			{
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Text = "Native Context Menu",
 				AutomationId = "contextMenu"
 			};
@@ -89,7 +89,7 @@ namespace referenceguide
 
             var pnRegister = new CoreButton()
             {
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "pnRegister"
             };
             pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
@@ -98,7 +98,7 @@ namespace referenceguide
             var btnNav = new CoreButton()
             {
                 Text = "Navigation Example",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "btnNav",
                 Command = new Command((obj) =>
                 {

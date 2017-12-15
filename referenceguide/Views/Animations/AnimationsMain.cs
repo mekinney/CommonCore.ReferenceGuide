@@ -203,7 +203,7 @@ namespace referenceguide
             var btn = new CoreButton()
             {
                 Text = buttonText,
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Triggers = { trigger }
             };
 
@@ -244,7 +244,7 @@ namespace referenceguide
 			var btn = new CoreButton()
 			{
                 Text = "Data Trigger (3)",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				Triggers = { trigger }
 			};
             btn.SetBinding(CoreButton.CommandProperty,"ClickEvent");

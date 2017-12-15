@@ -23,39 +23,22 @@ namespace referenceguide
 		{
             InitCustomRenders();
 
-            //if(CoreSettings.OS== DeviceOS.ANDROID){
-            //    var lst = new List<ShortDetail>();
-            //    lst.Add(new ShortDetail()
-            //    {
-            //        LongLabel = "Test",
-            //        ShortLabel = "Test",
-            //        Icon = "icon"
-            //    });
-            //    lst.Add(new ShortDetail()
-            //    {
-            //        LongLabel = "Test1",
-            //        ShortLabel = "Test1",
-            //        Icon = "icon"
-            //    });
-            //    DependencyService.Get<IAppShortCut>().CreateAppShortCuts("test", lst);
-            //}
-
-			AppSettings.NotificationTags.Add("referenceguide");
+			CoreSettings.NotificationTags.Add("referenceguide");
 			MainPage = new MainPage();
 		}
 
 		private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
 		{
-			AppSettings.IsConnected = args.IsConnected;
+            this.SetConnectionStatus(args.IsConnected);
 		}
         private void AppScreenSizeChanged(object sender, EventArgs args)
         {
-            AppSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
+            CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
         }
 
 		protected override void OnStart()
 		{
-            AppSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
+            CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
             MainPage.SizeChanged += AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
 		}
@@ -64,14 +47,12 @@ namespace referenceguide
 		{
             MainPage.SizeChanged -= AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
-            this.SaveViewModelState();
 		}
 
 		protected override void OnResume()
 		{
 			MainPage.SizeChanged += AppScreenSizeChanged;
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
-            this.LoadViewModelState();
 		}
 
         private void InitCustomRenders()

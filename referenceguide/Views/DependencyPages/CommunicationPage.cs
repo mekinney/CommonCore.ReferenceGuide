@@ -71,7 +71,7 @@ namespace referenceguide
             btnSMS = new CoreButton()
             {
                 Text = "Send SMS",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
             };
             btnSMS.SetBinding(CoreButton.CommandProperty, "SendSMS");
@@ -79,7 +79,7 @@ namespace referenceguide
             btnEmail = new CoreButton()
             {
                 Text = "Send Email",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
             };
             btnEmail.SetBinding(CoreButton.CommandProperty, "SendEmail");
@@ -87,7 +87,7 @@ namespace referenceguide
             btnCall = new CoreButton()
             {
                 Text = "Call",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
             };
             btnCall.SetBinding(CoreButton.CommandProperty, "MakeCall");
@@ -95,7 +95,7 @@ namespace referenceguide
             btnCallEvent = new CoreButton()
             {
                 Text = "Call With Event",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin = 5,
             };
             btnCallEvent.SetBinding(CoreButton.CommandProperty, "MakeCallEvent");

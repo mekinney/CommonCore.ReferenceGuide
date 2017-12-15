@@ -13,7 +13,7 @@ namespace referenceguide
             var http = new CoreButton()
             {
                 Text = "Http Services",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "http",
                 Command = new Command(async (obj) =>
                 {
@@ -24,7 +24,7 @@ namespace referenceguide
 			var httpPost = new CoreButton()
 			{
 				Text = "Http Post",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "httpPost",
 			};
             httpPost.SetBinding(CoreButton.CommandProperty,"HttpPost");
@@ -32,7 +32,7 @@ namespace referenceguide
 			var httpDownload = new CoreButton()
 			{
 				Text = "Http Download",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "httpDownload",
 			};
 			httpDownload.SetBinding(CoreButton.CommandProperty, "LongDownload");
@@ -40,7 +40,7 @@ namespace referenceguide
             var sqlite = new CoreButton()
             {
                 Text = "Sqlite",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "sqlite",
                 Command = new Command(async (obj) =>
                 {
@@ -51,7 +51,7 @@ namespace referenceguide
             var encrypt = new CoreButton()
             {
                 Text = "Encryption",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 AutomationId = "encrypt",
                 Command = new Command(async (obj) =>
                 {
@@ -62,7 +62,7 @@ namespace referenceguide
 			var analytics = new CoreButton()
 			{
 				Text = "Analytics",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "analytics",
 				Command = new Command(async (obj) =>
 				{
@@ -73,7 +73,7 @@ namespace referenceguide
 			var errors = new CoreButton()
 			{
 				Text = "Errors",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "errors",
 				Command = new Command(async (obj) =>
 				{
@@ -84,7 +84,7 @@ namespace referenceguide
 			var timerSrv = new CoreButton()
 			{
 				Text = "Background Timer",
-				Style = AppStyles.LightOrange,
+				Style = CoreStyles.LightOrange,
 				AutomationId = "timerSrv",
 			};
             timerSrv.SetBinding(CoreButton.TextProperty,"BackgroundButtonTitle");

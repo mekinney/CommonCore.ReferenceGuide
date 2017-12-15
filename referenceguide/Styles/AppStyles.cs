@@ -2,11 +2,10 @@ using System;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 
-namespace referenceguide
+namespace Xamarin.Forms.CommonCore
 {
-    public class AppStyles : CoreStyles
+    public partial class CoreStyles
     {
-
         public static Style LightOrange { get; } = new Style(typeof(CoreButton))
         {
             Setters =
@@ -17,8 +16,8 @@ namespace referenceguide
                 new Setter(){Property=CoreButton.TextColorProperty ,Value=Color.White},
                 new Setter(){Property=CoreButton.ShadowOffsetProperty ,Value=1},
                 new Setter(){Property=CoreButton.ShadowOpacityProperty ,Value=1},
-                new Setter(){Property=CoreButton.ShadowRadiusProperty ,Value= CoreSettings.OnPlatform<float>(6f,10f,6f)},
-                new Setter(){Property=CoreButton.CornerRadiusProperty ,Value= CoreSettings.OnPlatform<float>(6f,10f,6f)},
+                new Setter(){Property=CoreButton.ShadowRadiusProperty ,Value= CoreSettings.On<float>(6f,10f,6f)},
+                new Setter(){Property=CoreButton.CornerRadiusProperty ,Value= CoreSettings.On<float>(6f,10f,6f)},
             }
         };
 
@@ -43,7 +42,7 @@ namespace referenceguide
                 new Setter(){Property=Label.MarginProperty ,Value=10},
                 new Setter(){Property=Label.HorizontalOptionsProperty ,Value=LayoutOptions.Center},
                 new Setter(){Property=Label.HorizontalTextAlignmentProperty ,Value=TextAlignment.Center},
-                new Setter(){Property=Label.FontFamilyProperty ,Value=CoreSettings.OnPlatform<string>("Boxise","BoxiseFont.otf#Boxise")}
+                new Setter(){Property=Label.FontFamilyProperty ,Value=CoreSettings.On<string>("Boxise","BoxiseFont.otf#Boxise")}
             }
         };
 
