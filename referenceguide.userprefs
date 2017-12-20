@@ -1,22 +1,6 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/CalendarViewModel.cs">
-    <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Settings/CoreSettings.cs" Line="102" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/ViewModels/CoreCommand.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Partials/PartialCoreConfiguration.cs" Line="8" Column="5" />
-      <File FileName="referenceguide/Views/ServicesPages/ErrorsPage.cs" Line="61" Column="30" />
-      <File FileName="referenceguide/Views/NavigationPages/NavigationPages.cs" Line="251" Column="38" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="102" Column="72" />
-      <File FileName="referenceguide/ViewModels/SearchViewModel.cs" Line="36" Column="34" />
-      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="72" Column="102" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="401" Column="34" />
-      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="362" Column="34" />
-      <File FileName="referenceguide/Views/ServicesPages/AnalyticsPage.cs" Line="71" Column="1" />
-      <File FileName="referenceguide/referenceguide.cs" Line="29" Column="9" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/_init/Partials/BasePartialStyles.cs.txt" Line="50" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

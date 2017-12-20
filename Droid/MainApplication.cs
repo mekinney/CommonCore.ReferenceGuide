@@ -5,7 +5,7 @@ using Android.Content;
 using Android.OS;
 using Android.Runtime;
 using Plugin.CurrentActivity;
-using PushNotification.Plugin; //Xam.Plugin.PushNotification from nuget or get from github and compile to latest version
+using PushNotification.Plugin;
 using Xamarin.Forms.CommonCore;
 
 namespace referenceguide.Droid
@@ -26,11 +26,11 @@ namespace referenceguide.Droid
             base.OnCreate();
 
 #if DEBUG
-            AppSettings.CurrentBuid = "dev";
+           CoreSettings.CurrentBuid = "dev";
 #elif QA
-            AppSettings.CurrentBuid = "qa";
+            CoreSettings.CurrentBuid = "qa";
 #elif RELEASE
-			AppSettings.CurrentBuid = "prod";
+            CoreSettings.CurrentBuid = "prod";
 #endif
 
             RegisterActivityLifecycleCallbacks(this);
@@ -129,9 +129,9 @@ namespace referenceguide.Droid
 
         private void InitGlobalLibraries()
         {
-            AppSettings.AppIcon = Resource.Drawable.icon;
+            CoreSettings.AppIcon = Resource.Drawable.icon;
             AppContext = this.ApplicationContext;
-			CrossPushNotification.Initialize<CrossPushNotificationListener>(AppSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
+            CrossPushNotification.Initialize<CrossPushNotificationListener>(CoreSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
 			StartPushService();
 			CrossPushNotification.Current.Register();
         }

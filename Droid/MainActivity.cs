@@ -22,11 +22,11 @@ namespace referenceguide.Droid
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-            AppSettings.SearchView = Resource.Id.searchView;
+            CoreSettings.SearchView = Resource.Id.searchView;
 
 			base.OnCreate(bundle);
 
-            global::Xamarin.Forms.Forms.SetFlags(AppSettings.FastRenderers);
+            global::Xamarin.Forms.Forms.SetFlags(CoreSettings.FastRenderers);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());

@@ -57,7 +57,7 @@ namespace referenceguide
 
         private void InitCustomRenders()
         {
-            CachedImageRenderer.Init();
+            CachedImageRenderer.Init(true);
             CarouselViewRenderer.Init();
 
         }
