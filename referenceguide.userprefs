@@ -1,6 +1,13 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/PushNotifications/Android/PushNotificationGcmListener.cs">
+    <Files>
+      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="46" Column="50" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.Droid.cs" Line="44" Column="30" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreUnderlineEntryRenderer.Droid.cs" Line="154" Column="35" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/PushNotifications/Android/PushNotificationGcmListener.cs" Line="179" Column="49" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
