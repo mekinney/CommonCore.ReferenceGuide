@@ -1,11 +1,20 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/PushNotifications/Android/PushNotificationGcmListener.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
     <Files>
       <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="46" Column="50" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.Droid.cs" Line="44" Column="30" />
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreUnderlineEntryRenderer.Droid.cs" Line="154" Column="35" />
       <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/PushNotifications/Android/PushNotificationGcmListener.cs" Line="179" Column="49" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="15" Column="7" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/ILocalize.cs" Line="4" Column="76" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.Droid.cs" Line="13" Column="10" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.IOS.cs" Line="19" Column="10" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.IOS.cs" Line="7" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.Droid.cs" Line="13" Column="1" />
+      <File FileName="Droid/FodyWeavers.xml" Line="1" Column="1" />
+      <File FileName="iOS/FodyWeavers.xml" Line="1" Column="1" />
+      <File FileName="referenceguide/referenceguide.cs" Line="16" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

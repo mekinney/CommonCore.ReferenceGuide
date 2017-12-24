@@ -18,46 +18,51 @@ namespace referenceguide
 
 
     public class App : Application
-	{
-		public App()
-		{
+    {
+        public App()
+        {
             InitCustomRenders();
 
-			CoreSettings.NotificationTags.Add("referenceguide");
-			MainPage = new MainPage();
-		}
+            CoreSettings.NotificationTags.Add("referenceguide");
+            MainPage = new MainPage();
+        }
 
-		private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
-		{
+        private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
+        {
             this.SetConnectionStatus(args.IsConnected);
-		}
+        }
         private void AppScreenSizeChanged(object sender, EventArgs args)
         {
             CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
         }
 
-		protected override void OnStart()
-		{
+        protected override void OnStart()
+        {
             CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
             MainPage.SizeChanged += AppScreenSizeChanged;
-			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
-		}
+            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
+        }
 
-		protected override void OnSleep()
-		{
+        protected override void OnSleep()
+        {
             MainPage.SizeChanged -= AppScreenSizeChanged;
-			CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
-		}
+            CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
+        }
 
-		protected override void OnResume()
-		{
-			MainPage.SizeChanged += AppScreenSizeChanged;
-			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
-		}
+        protected override void OnResume()
+        {
+            MainPage.SizeChanged += AppScreenSizeChanged;
+            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
+        }
 
         private void InitCustomRenders()
         {
+            
+#if __IOS__
+            CachedImageRenderer.Init();
+#else
             CachedImageRenderer.Init(true);
+#endif
             CarouselViewRenderer.Init();
 
         }
