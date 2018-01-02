@@ -317,26 +317,26 @@
     <Reference Include="Microsoft.Graph">
       <HintPath>..\packages\Microsoft.Graph.1.7.0\lib\netstandard1.1\Microsoft.Graph.dll</HintPath>
     </Reference>
-    <Reference Include="FFImageLoading">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.3.1\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Platform">
-      <HintPath>..\packages\Xamarin.FFImageLoading.2.3.1\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Transformations">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.3.1\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Forms">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.3.1\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="FFImageLoading.Forms.Droid">
-      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.3.1\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Transition">
       <HintPath>..\packages\Xamarin.Android.Support.Transition.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Transition.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Exif">
       <HintPath>..\packages\Xamarin.Android.Support.Exif.26.1.0.1\lib\MonoAndroid80\Xamarin.Android.Support.Exif.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.3.2\lib\MonoAndroid10\FFImageLoading.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Platform">
+      <HintPath>..\packages\Xamarin.FFImageLoading.2.3.2\lib\MonoAndroid10\FFImageLoading.Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Transformations">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Transformations.2.3.2\lib\MonoAndroid10\FFImageLoading.Transformations.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.3.2\lib\MonoAndroid10\FFImageLoading.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FFImageLoading.Forms.Droid">
+      <HintPath>..\packages\Xamarin.FFImageLoading.Forms.2.3.2\lib\MonoAndroid10\FFImageLoading.Forms.Droid.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -397,6 +397,7 @@
   <ItemGroup>
     <Folder Include="Resources\xml\" />
   </ItemGroup>
+  <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Localization\Xamarin.Forms.CommonCore.Localization.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Localization\Xamarin.Forms.CommonCore.Localization.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Logging\Xamarin.Forms.CommonCore.Logging.projitems')" />
   <Import Project="..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems" Label="Shared" Condition="Exists('..\..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Sqlite\Xamarin.Forms.CommonCore.Sqlite.projitems')" />
@@ -435,5 +436,5 @@
   <Import Project="..\packages\Xamarin.GooglePlayServices.Iid.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Iid.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Iid.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Iid.targets')" />
   <Import Project="..\packages\Xamarin.GooglePlayServices.Gcm.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Gcm.targets" Condition="Exists('..\packages\Xamarin.GooglePlayServices.Gcm.60.1142.0\build\MonoAndroid80\Xamarin.GooglePlayServices.Gcm.targets')" />
   <Import Project="..\packages\Xamarin.Android.Support.Exif.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Exif.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Exif.26.1.0.1\build\MonoAndroid80\Xamarin.Android.Support.Exif.targets')" />
-  <Import Project="..\packages\Fody.2.3.5\build\netstandard1.0\Fody.targets" Condition="Exists('..\packages\Fody.2.3.5\build\netstandard1.0\Fody.targets')" />
+  <Import Project="..\packages\Fody.2.3.15\build\netstandard1.0\Fody.targets" Condition="Exists('..\packages\Fody.2.3.15\build\netstandard1.0\Fody.targets')" />
 </Project>

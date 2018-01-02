@@ -100,6 +100,13 @@ namespace referenceguide
                 TargetType = typeof(FontsMainPage)
             });
 
+            lst.Add(new SlidingPageItem
+            {
+                Title = "Localization",
+                IconSource = "index24.png",
+                TargetType = typeof(LocalizationMain)
+            });
+
 			MasterPageItems = lst.ToObservable();
 		}
 

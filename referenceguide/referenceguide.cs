@@ -3,15 +3,6 @@ using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
 using Xamarin.Forms.CommonCore;
 using System;
-using System.Collections.Generic;
-
-#if __ANDROID__
-using FFImageLoading.Forms.Droid;
-using CarouselView.FormsPlugin.Android;
-#else
-using FFImageLoading.Forms.Touch;
-using CarouselView.FormsPlugin.iOS;
-#endif
 
 namespace referenceguide
 {
@@ -21,8 +12,6 @@ namespace referenceguide
     {
         public App()
         {
-            InitCustomRenders();
-
             CoreSettings.NotificationTags.Add("referenceguide");
             MainPage = new MainPage();
         }
@@ -55,17 +44,7 @@ namespace referenceguide
             CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
         }
 
-        private void InitCustomRenders()
-        {
-            
-#if __IOS__
-            CachedImageRenderer.Init();
-#else
-            CachedImageRenderer.Init(true);
-#endif
-            CarouselViewRenderer.Init();
 
-        }
 
 	}
 }

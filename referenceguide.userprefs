@@ -1,25 +1,27 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/referenceguide.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/MasterDetailViewModel.cs">
     <Files>
-      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="46" Column="50" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.Droid.cs" Line="44" Column="30" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreUnderlineEntryRenderer.Droid.cs" Line="154" Column="35" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/PushNotifications/Android/PushNotificationGcmListener.cs" Line="179" Column="49" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.AzurePush/_init/readme.txt" Line="15" Column="7" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/ILocalize.cs" Line="4" Column="76" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.Droid.cs" Line="13" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.IOS.cs" Line="19" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.IOS.cs" Line="7" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/LocalNotify.Droid.cs" Line="13" Column="1" />
-      <File FileName="Droid/FodyWeavers.xml" Line="1" Column="1" />
-      <File FileName="iOS/FodyWeavers.xml" Line="1" Column="1" />
-      <File FileName="referenceguide/referenceguide.cs" Line="16" Column="19" />
+      <File FileName="referenceguide/Views/SlidingPage.cs" Line="53" Column="45" />
+      <File FileName="referenceguide/ViewModels/MasterDetailViewModel.cs" Line="45" Column="36" />
+      <File FileName="referenceguide/Views/LocalizationPages/LocalizationMain.cs" Line="11" Column="1" />
+      <File FileName="referenceguide/ViewModels/LocalizationViewModel.cs" Line="25" Column="1" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" Line="81" Column="1" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Dependencies/Localize.Droid.cs" Line="14" Column="1" />
+      <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/Droid/MainApplication.cs" relfile="Droid/MainApplication.cs" line="50" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/Droid/MainApplication.cs" relfile="Droid/MainApplication.cs" line="59" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.IOS.cs" line="15" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Localize.IOS.cs" line="20" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/LocalizationViewModel.cs" relfile="referenceguide/ViewModels/LocalizationViewModel.cs" line="25" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" line="81" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" line="84" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N724" />

@@ -21,6 +21,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Lo
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.OAuth", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.OAuth\Xamarin.Forms.CommonCore.OAuth.shproj", "{9BACBEEF-FDC6-4267-95BB-BF6DB2572F51}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.Localization", "..\CommonCore\CommonCore Extensions\Xamarin.Forms.CommonCore.Localization\Xamarin.Forms.CommonCore.Localization.shproj", "{C7B1E101-4CF8-4338-B9D0-E64CCA814166}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
@@ -89,5 +91,7 @@ Global
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhone.Build.0 = QA|Any CPU
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhoneSimulator.ActiveCfg = QA|Any CPU
 		{86F351D7-2AA0-457C-A729-131910C7B6BC}.QA|iPhoneSimulator.Build.0 = QA|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 EndGlobal

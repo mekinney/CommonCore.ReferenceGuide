@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Reflection;
+using CarouselView.FormsPlugin.iOS;
+using FFImageLoading.Forms.Touch;
 using Foundation;
 using Microsoft.Identity.Client;
 using PushNotification.Plugin;
@@ -91,8 +94,11 @@ namespace referenceguide.iOS
 
         private void InitGlobalLibraries()
         {
+            LocalizationService.Init("1.0");
 			CrossPushNotification.Initialize<CrossPushNotificationListener>();
 			CrossPushNotification.Current.Register();
+            CarouselViewRenderer.Init();
+            CachedImageRenderer.Init();
         }
 
     }

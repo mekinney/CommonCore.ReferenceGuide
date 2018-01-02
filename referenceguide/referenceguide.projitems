@@ -10,7 +10,6 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)referenceguide.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Config\AppSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PushMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\RandomUserServiceModel.cs" />
@@ -70,11 +69,15 @@
     <Compile Include="$(MSBuildThisFileDirectory)_roadmap\CompressedContainers.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\CardViewPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\CardViewContent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LocalizationPages\LocalizationMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LocalizationViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\AppSettings.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.prod.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.qa.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\settings\config.dev.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\settings\config.prod.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\settings\config.qa.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\lang\localization.csv" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\CarouselPage\" />
@@ -86,5 +89,9 @@
     <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)_roadmap\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\LocalizationPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\lang\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\lang\" />
   </ItemGroup>
 </Project>
