@@ -4,6 +4,15 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
+    public static class Lang
+    {
+        static ILocalizationService srv { get; set; } = (ILocalizationService)CoreDependencyService.GetService<ILocalizationService, LocalizationService>(true);
+        public static string GreetingText { get; } = srv["Greeting"];
+        public static string LoginText { get; } = srv["Login"];
+        public static string PasswordText { get; } = srv["Password"];
+        public static string UserNameText { get; } = srv["UserName"];
+
+    }
     public class LocalizationMain: CorePage<LocalizationViewModel>
     {
         public LocalizationMain()
@@ -12,16 +21,18 @@ namespace referenceguide
 
             var lblGreeting = new Label()
             {
-                FontSize=50,
-                HorizontalTextAlignment = TextAlignment.Center
+                FontSize = 50,
+                HorizontalTextAlignment = TextAlignment.Center,
+                Text = Lang.GreetingText
+                                                       
             };
-            lblGreeting.SetBinding(Label.TextProperty,"GreetingText");
+            //lblGreeting.SetBinding(Label.TextProperty,"GreetingText");
 
             var lblUserName = new Label()
             {
-
+                Text = Lang.UserNameText
             };
-            lblUserName.SetBinding(Label.TextProperty, "UserNameText");
+            //lblUserName.SetBinding(Label.TextProperty, "UserNameText");
 
             var txtUserName = new CoreMaskedEntry()
             {
@@ -31,9 +42,9 @@ namespace referenceguide
 
             var lblPassword = new Label()
             {
-
+                Text = Lang.PasswordText
             };
-            lblPassword.SetBinding(Label.TextProperty, "PasswordText");
+            //lblPassword.SetBinding(Label.TextProperty, "PasswordText");
 
             var txtPassword = new CoreMaskedEntry()
             {
@@ -44,8 +55,9 @@ namespace referenceguide
             {
                 Style = CoreStyles.LightOrange,
                 AutomationId = "errors",
+                Text = Lang.LoginText
             };
-            btnLogin.SetBinding(CoreButton.TextProperty, "LoginText");
+            //btnLogin.SetBinding(CoreButton.TextProperty, "LoginText");
 
             Content = new CompressedStackLayout()
             {

@@ -12,6 +12,7 @@ namespace referenceguide
     {
         public App()
         {
+            LocalizationService.Init("1.0");
             CoreSettings.NotificationTags.Add("referenceguide");
             MainPage = new MainPage();
         }

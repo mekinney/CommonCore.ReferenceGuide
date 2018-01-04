@@ -94,7 +94,6 @@ namespace referenceguide.iOS
 
         private void InitGlobalLibraries()
         {
-            LocalizationService.Init("1.0");
 			CrossPushNotification.Initialize<CrossPushNotificationListener>();
 			CrossPushNotification.Current.Register();
             CarouselViewRenderer.Init();

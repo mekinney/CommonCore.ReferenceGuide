@@ -29,8 +29,7 @@ namespace referenceguide.Droid
             global::Xamarin.Forms.Forms.SetFlags(CoreSettings.FastRenderers);
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            LocalizationService.Init("1.0");
-
+   
             LoadApplication(new App());
 
             Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0)); //here
