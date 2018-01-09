@@ -59,8 +59,10 @@ namespace referenceguide
             };
             //btnLogin.SetBinding(CoreButton.TextProperty, "LoginText");
 
-            Content = new CompressedStackLayout()
+            Content = new CoreStackLayout()
             {
+                StartColor = Color.White,
+                EndColor = Color.Black,
                 Padding = 20,
                 Spacing = 15,
                 Children = { lblGreeting, lblUserName, txtUserName, lblPassword, txtPassword, btnLogin }

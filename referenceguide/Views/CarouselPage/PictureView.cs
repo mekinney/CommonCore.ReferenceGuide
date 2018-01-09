@@ -11,7 +11,9 @@ namespace referenceguide
         {
 			img = new CachedImage()
 			{
+                HeightRequest = 300,
 				RetryCount = 0,
+                Aspect = Aspect.AspectFill,
 				RetryDelay = 250,
 				LoadingPlaceholder = "placeholder.png",
 				CacheDuration = TimeSpan.FromDays(10),

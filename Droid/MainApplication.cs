@@ -28,7 +28,7 @@ namespace referenceguide.Droid
             base.OnCreate();
 
 #if DEBUG
-           CoreSettings.CurrentBuid = "dev";
+            CoreSettings.CurrentBuid = "dev";
 #elif QA
             CoreSettings.CurrentBuid = "qa";
 #elif RELEASE
@@ -135,8 +135,8 @@ namespace referenceguide.Droid
             CoreSettings.AppIcon = Resource.Drawable.icon;
             AppContext = this.ApplicationContext;
             CrossPushNotification.Initialize<CrossPushNotificationListener>(CoreSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
-			StartPushService();
-			CrossPushNotification.Current.Register();
+            StartPushService();
+            CrossPushNotification.Current.Register();
             CarouselViewRenderer.Init();
             CachedImageRenderer.Init(true);
         }

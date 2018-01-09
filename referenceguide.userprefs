@@ -1,9 +1,14 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/LocalizationPages/LocalizationMain.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="referenceguide/Views/LocalizationPages/LocalizationMain.cs" Line="18" Column="34" />
-      <File FileName="referenceguide/ViewModels/LocalizationViewModel.cs" Line="8" Column="18" />
+      <File FileName="referenceguide/Views/LocalizationPages/LocalizationMain.cs" Line="65" Column="39" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="packages/Plugin.Permissions.2.2.1/readme.txt" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/CarouselPage/CarouselMain.cs" Line="15" Column="30" />
+      <File FileName="referenceguide/Views/CarouselPage/PictureView.cs" Line="23" Column="50" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" Line="14" Column="37" />
+      <File FileName="Droid/MainApplication.cs" Line="140" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

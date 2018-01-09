@@ -15,7 +15,7 @@ namespace referenceguide
                 HeightRequest=300,
                 ItemTemplate = new PictureTemplateSelector(),
                 ShowIndicators=true,
-                IsSwipingEnabled=true,
+                //IsSwipingEnabled=true,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
                 //VerticalOptions = LayoutOptions.StartAndExpand,
                 AnimateTransition = true,
