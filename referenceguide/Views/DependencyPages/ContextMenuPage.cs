@@ -1,10 +1,42 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
+using System.Linq;
 
 namespace referenceguide
 {
+    public class ContextMenuViewModel : CoreViewModel
+    {
+        public ObservableCollection<string> Names { get; set; }
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            switch(key){
+                case CoreSettings.LoadResources:
+                    var names = new string[]{
+                        "Jack Sparrow",
+                        "Jill Reed",
+                        "Max Headroom",
+                        "Bob Smith",
+                        "Will Marks",
+                        "Monty Quimby",
+                        "Adam Williams"
+                    };
+                    Names = names.ToObservable<string>();
+                    break;
+                case "NameDeleted":
+                    if (obj != null)
+                    {
+                        var item = Names.FirstOrDefault(x => x.Equals((string)obj));
+                        if(item!=null)
+                            Names.Remove(item);
+                    }
+                    break;
+            }
+        }
+    }
     public class ContextMenuViewCell : ViewCell
     {
         Label lbl;
@@ -63,7 +95,8 @@ namespace referenceguide
 			
         }
         private void Delete(){
-		
+            var str = (string)this.BindingContext;
+            CoreDependencyService.GetViewModel<ContextMenuViewModel>().OnViewMessageReceived("NameDeleted", str);
         }
         protected override void OnBindingContextChanged()
         {
@@ -73,25 +106,15 @@ namespace referenceguide
         }
     }
 
-    public class ContextMenuPage : ContentPage
+    public class ContextMenuPage : CorePage<ContextMenuViewModel>
     {
         public ContextMenuPage()
         {
-            var names = new string[]{
-                "Jack Sparrow",
-                "Jill Reed",
-                "Max Headroom",
-                "Bob Smith",
-                "Will Marks",
-                "Monty Quimby",
-                "Adam Williams"
-            };
-
             var lst = new ListView()
             {
                 ItemTemplate = new DataTemplate(typeof(ContextMenuViewCell)),
-                ItemsSource = names
             };
+            lst.SetBinding(ListView.ItemsSourceProperty,"Names");
 
             Content = new CompressedStackLayout()
             {
