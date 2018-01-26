@@ -1,23 +1,24 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.Droid.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/LandingPage.cs">
     <Files>
-      <File FileName="referenceguide/Views/LocalizationPages/LocalizationMain.cs" Line="58" Column="38" />
-      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/CarouselPage/CarouselMain.cs" Line="15" Column="30" />
-      <File FileName="referenceguide/Views/CarouselPage/PictureView.cs" Line="23" Column="50" />
-      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" Line="14" Column="37" />
-      <File FileName="Droid/MainApplication.cs" Line="140" Column="36" />
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/DependencyPages/ContextMenuPage.cs" Line="123" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.Droid.cs" Line="79" Column="14" />
+      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="8" Column="3" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Pages/CoreAbsoluteLayoutPage.cs" Line="27" Column="27" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Dependencies/Localize.IOS.cs" Line="3" Column="11" />
+      <File FileName="referenceguide/Views/ControlPages/SearchContentPage.cs" Line="30" Column="13" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="213" Column="14" />
+      <File FileName="packages/Plugin.Permissions.2.2.1/readme.txt" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/LandingPage.cs" Line="11" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="30" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="44" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N724" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.n726" />
   <MultiItemStartupConfigurations />
 </Properties>

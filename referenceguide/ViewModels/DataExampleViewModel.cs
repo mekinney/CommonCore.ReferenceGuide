@@ -119,10 +119,12 @@ namespace referenceguide
                 }
                 else
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = result.Error.Message
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
                     });
                 }
 
@@ -158,10 +160,12 @@ namespace referenceguide
                     }
                     else
                     {
-                        DialogPrompt.ShowMessage(new Prompt()
-                        {
-                            Title = "Error",
-                            Message = result.Error.Message
+                        Device.BeginInvokeOnMainThread(() => {
+                            DialogPrompt.ShowMessage(new Prompt()
+                            {
+                                Title = "Error",
+                                Message = result.Error.Message
+                            });
                         });
                     }
 
@@ -178,10 +182,12 @@ namespace referenceguide
                 }
                 else
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = result.Error.Message
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
                     });
                 }
             }
@@ -252,10 +258,12 @@ namespace referenceguide
                 }
                 else
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = result.Error.Message
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
                     });
                 }
 
@@ -277,10 +285,12 @@ namespace referenceguide
                 }
                 else
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = result.Error.Message
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
                     });
                 }
             });
@@ -301,11 +311,14 @@ namespace referenceguide
                 }
                 else
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = result.Error.Message
+                    Device.BeginInvokeOnMainThread(()=>{
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = result.Error.Message
+                        });
                     });
+
                 }
             });
 

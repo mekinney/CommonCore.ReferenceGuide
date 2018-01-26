@@ -28,7 +28,6 @@ namespace referenceguide
             };
             lstPeople.SetBinding(CoreListView.ItemsSourceProperty, "People");
 
-            StackLayout container = null;
             if(Device.RuntimePlatform=="iOS"){
                 searchBar = new SearchBar() { 
                     SearchCommand=new Command((obj) => {

@@ -157,20 +157,25 @@ namespace referenceguide
                     }
                     else if (status != PermissionStatus.Unknown)
                     {
-                        DialogPrompt.ShowMessage(new Prompt()
-                        {
-                            Title = "Issue",
-                            Message = "There was a problem accessing the phone."
+
+                        Device.BeginInvokeOnMainThread(() => {
+                            DialogPrompt.ShowMessage(new Prompt()
+                            {
+                                Title = "Issue",
+                                Message = "There was a problem accessing the phone."
+                            });
                         });
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = "The application experience an error accessing the phone."
+                    
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = "The application experience an error accessing the phone."
+                        });
                     });
                 }
             });
@@ -205,20 +210,24 @@ namespace referenceguide
                     }
                     else if (status != PermissionStatus.Unknown)
                     {
-                        DialogPrompt.ShowMessage(new Prompt()
-                        {
-                            Title = "Issue",
-                            Message = "There was a problem accessing the phone."
+                        Device.BeginInvokeOnMainThread(() => {
+                            DialogPrompt.ShowMessage(new Prompt()
+                            {
+                                Title = "Issue",
+                                Message = "There was a problem accessing the phone."
+                            });
                         });
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
 
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = "The application experience an error accessing the phone."
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = "The application experience an error accessing the phone."
+                        });
                     });
                 }
             });
@@ -253,10 +262,12 @@ namespace referenceguide
                 var valid = int.TryParse(BindingTextValue, out num);
                 if (!valid)
                 {
-                    DialogPrompt.ShowMessage(new Prompt()
-                    {
-                        Title = "Error",
-                        Message = "Can't you even follow directions?"
+                    Device.BeginInvokeOnMainThread(() => {
+                        DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = "Can't you even follow directions?"
+                        });
                     });
                 }
             }

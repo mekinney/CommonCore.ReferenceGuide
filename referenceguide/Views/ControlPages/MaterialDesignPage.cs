@@ -2,17 +2,16 @@
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.CommonCore.MaterialDesign;
-
 namespace referenceguide
 {
 	public class MaterialDesignPage : CoreAbsoluteLayoutPage<SimpleViewModel>
 	{
-
+        private CoreFloatingActionButton fab;
 		public MaterialDesignPage()
 		{
 			this.Title = "Material Design";
 
-			var fab = new CoreFloatingActionButton()
+			fab = new CoreFloatingActionButton()
 			{
 				Size = FABControlSize.Normal,
 				ColorNormal = Color.FromHex("#DF8049"),
@@ -60,7 +59,7 @@ namespace referenceguide
         }
         protected override void OnDisappearing()
         {
-
+            ViewExtensions.CancelAnimations(fab);
             this.SaveAnalyticsDetails();
             base.OnDisappearing();
         }

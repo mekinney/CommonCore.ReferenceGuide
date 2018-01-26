@@ -14,7 +14,9 @@ namespace referenceguide
 
 			var topImage = new CachedImage()
 			{
-				Source = "sharedcode.png"
+				Source = "sharedcode.png",
+                Aspect = Aspect.AspectFill,
+                HorizontalOptions = LayoutOptions.FillAndExpand
 			};
 
 			var customFont = new Label()
