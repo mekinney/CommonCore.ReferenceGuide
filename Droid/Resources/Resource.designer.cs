@@ -2463,6 +2463,7 @@ namespace referenceguide.Droid
 			global::Microsoft.Identity.Client.Resource.Attribute.textAllCaps = global::referenceguide.Droid.Resource.Attribute.textAllCaps;
 			global::Microsoft.Identity.Client.Resource.Attribute.textAppearanceLargePopupMenu = global::referenceguide.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
 			global::Microsoft.Identity.Client.Resource.Attribute.textAppearanceListItem = global::referenceguide.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Microsoft.Identity.Client.Resource.Attribute.textAppearanceListItemSecondary = global::referenceguide.Droid.Resource.Attribute.textAppearanceListItemSecondary;
 			global::Microsoft.Identity.Client.Resource.Attribute.textAppearanceListItemSmall = global::referenceguide.Droid.Resource.Attribute.textAppearanceListItemSmall;
 			global::Microsoft.Identity.Client.Resource.Attribute.textAppearancePopupMenuHeader = global::referenceguide.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
 			global::Microsoft.Identity.Client.Resource.Attribute.textAppearanceSearchResultSubtitle = global::referenceguide.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
@@ -2478,6 +2479,8 @@ namespace referenceguide.Droid
 			global::Microsoft.Identity.Client.Resource.Attribute.tickMark = global::referenceguide.Droid.Resource.Attribute.tickMark;
 			global::Microsoft.Identity.Client.Resource.Attribute.tickMarkTint = global::referenceguide.Droid.Resource.Attribute.tickMarkTint;
 			global::Microsoft.Identity.Client.Resource.Attribute.tickMarkTintMode = global::referenceguide.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Microsoft.Identity.Client.Resource.Attribute.tint = global::referenceguide.Droid.Resource.Attribute.tint;
+			global::Microsoft.Identity.Client.Resource.Attribute.tintMode = global::referenceguide.Droid.Resource.Attribute.tintMode;
 			global::Microsoft.Identity.Client.Resource.Attribute.title = global::referenceguide.Droid.Resource.Attribute.title;
 			global::Microsoft.Identity.Client.Resource.Attribute.titleMargin = global::referenceguide.Droid.Resource.Attribute.titleMargin;
 			global::Microsoft.Identity.Client.Resource.Attribute.titleMarginBottom = global::referenceguide.Droid.Resource.Attribute.titleMarginBottom;
@@ -3376,6 +3379,8 @@ namespace referenceguide.Droid
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatImageView = global::referenceguide.Droid.Resource.Styleable.AppCompatImageView;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatImageView_android_src = global::referenceguide.Droid.Resource.Styleable.AppCompatImageView_android_src;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatImageView_srcCompat = global::referenceguide.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatImageView_tint = global::referenceguide.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatImageView_tintMode = global::referenceguide.Droid.Resource.Styleable.AppCompatImageView_tintMode;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatSeekBar = global::referenceguide.Droid.Resource.Styleable.AppCompatSeekBar;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatSeekBar_android_thumb = global::referenceguide.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatSeekBar_tickMark = global::referenceguide.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
@@ -3489,6 +3494,7 @@ namespace referenceguide.Droid
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_switchStyle = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
 			global::Microsoft.Identity.Client.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::referenceguide.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
