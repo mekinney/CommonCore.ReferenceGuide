@@ -13,7 +13,7 @@ namespace referenceguide
 			try
 			{
                 Master = new SlidingPage();
-				Detail = new NavigationPage(new LandingPage())
+				Detail = new Xamarin.Forms.NavigationPage(new LandingPage())
 				{
 					BarBackgroundColor = Color.FromHex("#b85921"),
 					BarTextColor = Color.White

@@ -31,8 +31,7 @@ namespace referenceguide.Droid
     ]
     public class ActivityCustomUrlSchemeInterceptor : Activity
     {
-        string message;
-
+     
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);

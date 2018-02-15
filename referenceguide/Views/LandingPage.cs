@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using System.Linq;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace referenceguide
 {
@@ -40,7 +41,7 @@ namespace referenceguide
 
 			var lbl = new Label() { FormattedText = fs, Margin = 10 };
 
-            Content = new ScrollView()
+            Content = new Xamarin.Forms.ScrollView()
             {
                 Content = new CompressedStackLayout()
                 {

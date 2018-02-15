@@ -32,7 +32,8 @@ namespace referenceguide
 
         public override void OnViewMessageReceived(string key, object obj)
         {
-            switch(key){
+            switch (key)
+            {
                 case CoreSettings.LoadResources:
                     var peopleResults = DataBLL.GetPeople(null);
                     if (peopleResults.Error == null)
