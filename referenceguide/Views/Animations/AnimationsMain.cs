@@ -263,7 +263,7 @@ namespace referenceguide
         }
         protected override void OnDisappearing()
         {
-            
+         
             this.SaveAnalyticsDetails();
             base.OnDisappearing();
         }
