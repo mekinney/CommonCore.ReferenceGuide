@@ -1,14 +1,8 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
-  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.786DEA5A-DF1F-4D7F-ACFE-09FA9BD630FB" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Controls/MaterialDesign/CoreFloatingTextEntryRenderer.IOS.cs">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Communication.Droid.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreButton.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreButtonRenderer.Droid.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreButtonRenderer.IOS.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/MaterialDesign/CoreFloatingActionButtonRenderer.Droid.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/MaterialDesign/CoreFloatingActionButton.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/MaterialDesign/CoreFloatingActionButtonRenderer.IOS.cs" Line="1" Column="1" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/MaterialDesign/CoreFloatingTextEntryRenderer.IOS.cs" Line="1" Column="1" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Communication.Droid.cs" Line="27" Column="97" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -16,7 +10,8 @@
     <BreakpointStore>
       <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="30" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="44" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.Droid.cs" line="270" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="38" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="74" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

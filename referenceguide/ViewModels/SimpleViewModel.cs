@@ -148,7 +148,7 @@ namespace referenceguide
                         }
 
                         var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
-                        status = results[Permission.Location];
+                        status = results[Permission.Phone];
                     }
 
                     if (status == PermissionStatus.Granted)

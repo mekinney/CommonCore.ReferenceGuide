@@ -54,16 +54,26 @@ namespace referenceguide
                 var response = await CalendarEvent.CreateCalendarEvent(evt);
                 if (response.result)
                 {
-
-                    //Example of updating an existing event
-                    //var obj =await CalendarEvent.GetCalendarEvent(response.model.Id);
-                    //if(obj!=null){
-                    //    obj.StartTime = new DateTime(2017, 10, 31, 14, 0, 0);
-                    //    obj.EndTime = new DateTime(2017, 10, 31, 15, 0, 0);
-                    //    obj.ReminderMinutes = 30;
-                    //    var objResult = await CalendarEvent.UpdateCalendarEvent(obj);
-                    //}
-
+                    try
+                    {
+                       
+                            var id = response.model.Id;
+                            var c = await CalendarEvent.GetCalendarEvent(id);
+                            c.ReminderMinutes = 90;
+                            c.Description = "hello kitty";
+                            var updateResponse = await CalendarEvent.UpdateCalendarEvent(c);
+                            if (updateResponse.result)
+                            {
+                                var x = "success update";
+                            }
+                     
+ 
+                    }
+                    catch (Exception ex)
+                    {
+                        var excep = ex;
+                    }
+ 
                     Appt = new Appointment();
                 }
                 else
