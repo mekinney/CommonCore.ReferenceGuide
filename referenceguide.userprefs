@@ -1,8 +1,9 @@
-﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
+﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Communication.Droid.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/Communication.Droid.cs" Line="27" Column="97" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="170" Column="1" />
+      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="65" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
