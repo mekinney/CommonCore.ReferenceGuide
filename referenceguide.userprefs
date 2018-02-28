@@ -1,9 +1,11 @@
-﻿<Properties StartupConfiguration="{6D17C96D-A484-4370-AC24-D1043E9ABC5D}|Default">
+﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs">
     <Files>
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="170" Column="1" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="65" Column="1" />
+      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="68" Column="30" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.Droid.cs" Line="274" Column="48" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="98" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -12,7 +14,7 @@
       <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="30" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="44" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="38" column="1" />
-      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="74" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="76" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

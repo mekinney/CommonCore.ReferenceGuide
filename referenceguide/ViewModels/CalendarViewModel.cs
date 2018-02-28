@@ -59,6 +59,8 @@ namespace referenceguide
                        
                             var id = response.model.Id;
                             var c = await CalendarEvent.GetCalendarEvent(id);
+                            c.StartTime = c.StartTime.AddHours(2);
+                            c.EndTime = c.EndTime.AddHours(2);
                             c.ReminderMinutes = 90;
                             c.Description = "hello kitty";
                             var updateResponse = await CalendarEvent.UpdateCalendarEvent(c);
