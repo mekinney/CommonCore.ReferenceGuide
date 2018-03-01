@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/DependencyPages/DialogExample.cs">
     <Files>
       <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="170" Column="1" />
       <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="68" Column="30" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.Droid.cs" Line="274" Column="48" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="98" Column="19" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.Droid.cs" Line="349" Column="6" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="10" Column="33" />
+      <File FileName="referenceguide/Views/DependencyPages/DialogExample.cs" Line="17" Column="36" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DialogPromp.Droid.cs" Line="51" Column="24" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

@@ -15,9 +15,12 @@ namespace referenceguide
             {
                 Style = CoreStyles.LightOrange,
                 Text = "Dialog",
-                AutomationId = "dialogButton"
+                AutomationId = "dialogButton",
+                Command = new Command(async() => {
+                    await Navigation.PushAsync(new DialogExample());
+                })
             };
-            dlg.SetBinding(Button.CommandProperty, "DialogClick");
+            //dlg.SetBinding(Button.CommandProperty, "DialogClick");
 
 
             var not = new CoreButton()

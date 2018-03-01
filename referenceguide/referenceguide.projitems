@@ -72,6 +72,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\LocalizationPages\LocalizationMain.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\LocalizationViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Partials\AppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\DialogExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\settings\config.dev.json" />
