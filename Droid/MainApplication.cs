@@ -16,7 +16,10 @@ namespace referenceguide.Droid
     [Application]
     public class MainApplication : Application, Application.IActivityLifecycleCallbacks
     {
-        public static Context AppContext;
+        public static Activity AppContext
+        {
+            get { return CrossCurrentActivity.Current.Activity; }
+        }
 
         public MainApplication(IntPtr handle, JniHandleOwnership transer)
           : base(handle, transer)
@@ -133,7 +136,6 @@ namespace referenceguide.Droid
         {
 
             CoreSettings.AppIcon = Resource.Drawable.icon;
-            AppContext = this.ApplicationContext;
             CrossPushNotification.Initialize<CrossPushNotificationListener>(CoreSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
             StartPushService();
             CrossPushNotification.Current.Register();

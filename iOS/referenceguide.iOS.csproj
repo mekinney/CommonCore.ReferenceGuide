@@ -268,11 +268,11 @@
     <Reference Include="ModernHttpClient">
       <HintPath>..\packages\modernhttpclient.2.4.2\lib\Xamarin.iOS10\ModernHttpClient.dll</HintPath>
     </Reference>
-    <Reference Include="PropertyChanged">
-      <HintPath>..\packages\PropertyChanged.Fody.2.2.6\lib\netstandard1.0\PropertyChanged.dll</HintPath>
-    </Reference>
     <Reference Include="WebP.Touch">
       <HintPath>..\packages\WebP.Touch.1.0.8\lib\Xamarin.iOS10\WebP.Touch.dll</HintPath>
+    </Reference>
+    <Reference Include="PropertyChanged">
+      <HintPath>..\packages\PropertyChanged.Fody.2.2.9\lib\netstandard1.0\PropertyChanged.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

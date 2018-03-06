@@ -109,7 +109,8 @@ namespace referenceguide
         {
             switch(key){
                 case CoreSettings.LoadResources:
-                    Task.Run(async () => {
+                    Device.BeginInvokeOnMainThread(async() =>
+                    {
                         var result = await CalendarEvent.GetCalendars();
                         DeviceCalendars = result?.ToObservable<CalendarAccount>();
                     });
