@@ -89,5 +89,7 @@
 	<array>
 		<string></string>
 	</array>
+	<key>Custom Property1</key>
+	<string></string>
 </dict>
 </plist>

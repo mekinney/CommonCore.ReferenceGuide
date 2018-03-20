@@ -1,19 +1,15 @@
 ﻿<Properties StartupConfiguration="{91806BB2-2DAB-4899-B281-9B953904B733}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.11E980B5-2AC0-4C25-BBCE-58E696C69621" automaticSigning="False" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreSegment.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/MainApplication.cs">
     <Files>
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="170" Column="1" />
-      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="13" Column="19" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.Droid.cs" Line="217" Column="33" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="10" Column="33" />
-      <File FileName="referenceguide/Views/DependencyPages/DialogExample.cs" Line="17" Column="36" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/DialogPromp.Droid.cs" Line="51" Column="24" />
-      <File FileName="Droid/MainActivity.cs" Line="49" Column="1" />
-      <File FileName="Droid/Properties/AndroidManifest.xml" Line="18" Column="12" />
-      <File FileName="Droid/MainApplication.cs" Line="22" Column="10" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Dependencies/ICalendarEvent.cs" Line="27" Column="6" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreSegmentRenderer.Droid.cs" Line="32" Column="38" />
-      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Controls/CoreSegment.cs" Line="2" Column="21" />
+      <File FileName="../CommonCore/CommonCore Extensions/Xamarin.Forms.CommonCore.Localization/Services/LocalizationService.cs" Line="70" Column="49" />
+      <File FileName="referenceguide/Views/LocalizationPages/LocalizationMain.cs" Line="7" Column="52" />
+      <File FileName="referenceguide/ViewModels/LocalizationViewModel.cs" Line="26" Column="14" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Settings/CoreSettings.cs" Line="24" Column="38" />
+      <File FileName="referenceguide/referenceguide.cs" Line="11" Column="36" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/IOC/CoreDependencyService.cs" Line="7" Column="18" />
+      <File FileName="../CommonCore/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="19" Column="26" />
+      <File FileName="Droid/MainApplication.cs" Line="140" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -23,6 +19,13 @@
       <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/Connectivity.Droid.cs" line="44" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/referenceguide/ViewModels/CalendarViewModel.cs" relfile="referenceguide/ViewModels/CalendarViewModel.cs" line="76" column="1" />
       <Breakpoint file="/Volumes/Personal240/CommonCore.ReferenceGuide/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="49" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="164" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="152" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="141" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="136" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="124" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="159" column="1" />
+      <Breakpoint file="/Volumes/Personal240/CommonCore/Xamarin.Forms.CommonCore/Services/EncryptionService.cs" line="147" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

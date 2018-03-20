@@ -137,7 +137,7 @@ namespace referenceguide.Droid
 
             CoreSettings.AppIcon = Resource.Drawable.icon;
             CrossPushNotification.Initialize<CrossPushNotificationListener>(CoreSettings.Config.SocialMedia.GoogleSettings.GoogleAppId);
-            StartPushService();
+            //StartPushService();
             CrossPushNotification.Current.Register();
             CarouselViewRenderer.Init();
             CachedImageRenderer.Init(true);

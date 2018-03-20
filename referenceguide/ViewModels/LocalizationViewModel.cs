@@ -12,22 +12,26 @@ namespace referenceguide
         public string PasswordText { get; set; }
         public string UserNameText { get; set; }
 
-        public LocalizationViewModel()
-        {
-
-        }
-
         public override void OnViewMessageReceived(string key, object obj)
         {
             switch (key)
             {
                 case CoreSettings.LoadResources:
-                    GreetingText = LocalizationService["Greeting"];
-                    LoginText = LocalizationService["Login"];
-                    PasswordText = LocalizationService["Password"];
-                    UserNameText = LocalizationService["UserName"];
+                    if (LocalizationService.IsLoaded)
+                        InitLocalizationString();
+                    break;
+                case CoreSettings.LocalizationLoaded:
+                    InitLocalizationString();
                     break;
             }
+        }
+
+        private void InitLocalizationString()
+        {
+            GreetingText = LocalizationService["Greeting"];
+            LoginText = LocalizationService["Login"];
+            PasswordText = LocalizationService["Password"];
+            UserNameText = LocalizationService["UserName"];
         }
     }
 }
